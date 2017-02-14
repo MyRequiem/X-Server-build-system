@@ -1,0 +1,10 @@
+glproto:1.4.17
+dri2proto:2.8
+dri3proto:1.0
+presentproto:1.1
+xproto:7.0.31
+xextproto:7.3.0
+kbproto:1.0.7
+inputproto:2.3.2
+damageproto:1.2.1
+fixesproto:5.0

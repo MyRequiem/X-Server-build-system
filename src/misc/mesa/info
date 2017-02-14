@@ -1,0 +1,16 @@
+Mesa - реализация графического API OpenGL. Ориентирована на обеспечение высокой
+производительности, в том числе за счёт использования аппаратного ускорения
+работы с графикой, поддерживаемого видеоадаптерами. Лежит в основе графической
+подсистемы операционных систем с открытым исходным кодом.
+
+Home page: https://www.mesa3d.org/
+
+Download:
+    https://mesa.freedesktop.org/archive/
+    ftp://ftp.freedesktop.org/pub/mesa/
+
+Git:
+    git clone git://anongit.freedesktop.org/git/mesa/mesa
+    git branch -r
+    VERSION="17.0"
+    git checkout ${VERSION}

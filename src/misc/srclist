@@ -1,0 +1,5 @@
+libdrm:2.4.75
+libvdpau:1.1.1
+mesa:17.0.0
+
+freeglut:3.0.0

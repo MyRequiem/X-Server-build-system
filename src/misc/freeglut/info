@@ -1,0 +1,11 @@
+freeglut - открытая альтернатива OpenGL Utility Toolkit (GLUT), которая
+позволяет пользователю создавать окна, предоставляющие контекст OpenGL на
+широком спектре платформ, и управлять ими, а также взаимодействовать с мышью,
+клавиатурой и джойстиком. freeglut предназначена для полной замены GLUT, и
+имеет очень немного отличий от неё.
+
+Home page: http://freeglut.sourceforge.net/
+
+Download:
+    $ VER="3.0.0"
+    $ wget http://prdownloads.sourceforge.net/freeglut/freeglut-${VER}.tar.gz
