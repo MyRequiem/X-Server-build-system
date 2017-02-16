@@ -14,5 +14,7 @@ export NUMJOBS=" -j7 "
 export DOCS="AUTHORS COPYING* INSTALL NEWS README TODO ChangeLog*"
 # install package after build (true, false)
 export INSTALL_AFTER_BUILD="false"
-# only download srt (without build)
+# check package version
+export CHECK_PACKAGE_VERSION="false"
+# only download src (without build)
 export ONLY_DOWNLOAD="false"

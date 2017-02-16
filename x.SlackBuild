@@ -5,11 +5,18 @@ BROWN="\033[0;33m"
 RED="\033[0;31m"
 MAGENTA="\033[0;35m"
 CYAN="\033[0;36m"
-CDEF="\033[0m"
+GREEN="\033[1;32m"
+export GREY="\033[0;37m"
+export YELLOW="\033[1;33m"
+export CDEF="\033[0m"
+
+CWD=$(pwd)
 
 # check current path
-if ! [ -r "$(pwd)/$(echo "$0" | rev | cut -d / -f 1 | rev)" ]; then
-    echo -en "${RED}x.SlackBuild can be run from a directory${CDEF} "
+SLACKBUILDNAME=$(basename "$0")
+if ! [ -r "${CWD}/${SLACKBUILDNAME}" ]; then
+    echo -en "${GREEN}${SLACKBUILDNAME} ${RED}can be run from a "
+    echo -en "directory${CDEF} "
     dirname "$0"
     exit 1
 fi
@@ -20,14 +27,15 @@ if [[ "$(id -u)" != "0" ]]; then
     exit 1
 fi
 
-CWD=$(pwd)
 QUEUE="${CWD}/queue"
+QUEUELINES=$(grep ":" "${QUEUE}" | grep -v "#")
+
 
 # show list available modules for build
 show_list_modules() {
-    echo -en "${BROWN}Available modules: "
-    echo -e "${MAGENTA} $(grep ":" "${QUEUE}" | grep -v "#" | \
-        cut -d ":" -f 1 | sort | uniq | tr '\n' ' ')${CDEF}"
+    echo -en "${BROWN}Available modules:"
+    echo -e "${MAGENTA} $(echo "${QUEUELINES}" | cut -d ":" -f 1 | \
+        sort | uniq | tr '\n' ' ')${CDEF}"
 }
 
 # show help
@@ -60,18 +68,63 @@ fi
 
 # check second parameter (package name)
 if [[ "x$2" != "x" ]]; then
-    # if the package is not found in the list (src/module_name/srclist)
+    # if package not found
     if ! grep -Eq "^$1:$2$" "${QUEUE}"; then
-        echo -e "${RED}Package ${CYAN}$2 ${RED}not found in${CDEF} src/$1/"
+        echo -en "${RED}Package ${CYAN}$2 ${RED}not found in${CDEF} "
+        echo -e "${BROWN}queue${CDEF}"
         exit 1
     fi
 fi
 
-# building packages
-. "${CWD}"/flags.sh
 . "${CWD}"/settings.sh
 
-grep ":" "${QUEUE}" | grep -v "#" | while read -r LINE; do
+# if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
+[[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
+
+# check exist source archives berore building packages
+if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
+    if [[ "x$2" != "x" ]]; then
+        MISC=""
+        [[ "$1" == "misc" ]] && MISC="/$2"
+        ARCHDIR="src/$1${MISC}"
+        SOURCEARCH=$(find "${ARCHDIR}"  -maxdepth 1 -type f -name "$2-*.tar.?z*")
+        if [[ "x${SOURCEARCH}" == "x" ]]; then
+            echo -en "${RED}Source archive ${CYAN}$2${RED} not found in "
+            echo -e "${BROWN}${ARCHDIR}/${CDEF}"
+            echo -en "Set variable ${BROWN}CHECK_PACKAGE_VERSION=\"true\" "
+            echo -en "${CDEF}in ${CYAN}settings.sh${CDEF} "
+            echo "for download missing source archive."
+            exit
+        fi
+    elif [[ "x$1" != "x" ]]; then
+        for LINE in ${QUEUELINES}; do
+            MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
+            if [[ "${MODULE}" == "$1" ]]; then
+                PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
+                MISC=""
+                [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
+                ARCHDIR="src/$1${MISC}"
+                SOURCEARCH=$(find "${ARCHDIR}"  -maxdepth 1 -type f \
+                    -name "$2-*.tar.?z*")
+                if [[ "x${SOURCEARCH}" == "x" ]]; then
+                    echo -en "${RED}Source archive ${CYAN}${PKGNAME}${RED} "
+                    echo -e "not found in ${BROWN}${ARCHDIR}/${CDEF}"
+                    echo -en "Set variable ${BROWN}CHECK_PACKAGE_VERSION="
+                    echo -en "\"true\" ${CDEF}in ${CYAN}settings.sh${CDEF} "
+                    echo "for download missing source archive."
+                    exit
+                fi
+            fi
+        done
+    # else
+    #     check_exist_srs
+    fi
+fi
+
+. "${CWD}"/flags.sh
+
+# building packages
+for LINE in ${QUEUELINES}; do
     MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
     # if module is specified
     [[ "x$1" != "x" && "$1" != "${MODULE}" ]] && continue

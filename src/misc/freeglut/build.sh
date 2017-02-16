@@ -2,20 +2,24 @@
 
 PRGNAM=freeglut
 
-# check latest release version
-echo -en "\033[0;37mCheck FreeGLUT latest release:\033[0m "
-LATESTRELEASELINK=$(wget -q -O - http://freeglut.sourceforge.net/ | \
-    grep -A 2 "Stable Releases" | tail -n 1 | cut -d \" -f 2 | cut -d \? -f 1)
-SOURCE=$(echo "${LATESTRELEASELINK}" | rev | cut -d / -f 1 | rev)
-VERSION=$(echo "${SOURCE}" | cut -d - -f 2 | rev | cut -d . -f 3- | rev)
-echo "${VERSION}"
+if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
+    # check latest release version
+    echo -en "${GREY}Check FreeGLUT latest release:${CDEF} "
+    LATESTRELEASELINK=$(wget -q -O - http://freeglut.sourceforge.net/ | \
+        grep -A 2 "Stable Releases" | tail -n 1 | cut -d \" -f 2 | \
+        cut -d \? -f 1)
+    SOURCE=$(echo "${LATESTRELEASELINK}" | rev | cut -d / -f 1 | rev)
+    VERSION=$(echo "${SOURCE}" | cut -d - -f 2 | rev | cut -d . -f 3- | rev)
+    echo "${VERSION}"
 
-# download source archive if does not exist
-if ! [ -r "${SOURCE}" ]; then
-    # delete old source archive if exist
-    rm -f ${PRGNAM}-*.tar.?z*
-    echo -e "\033[1;33mDownloading ${SOURCE} source archive\033[0m:"
-    wget "${LATESTRELEASELINK}"
+    # download source archive if does not exist
+    if ! [ -r "${SOURCE}" ]; then
+        echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
+        wget "${LATESTRELEASELINK}"
+    fi
+else
+    SOURCE=$(ls "${PRGNAM}-"*.tar.?z*)
+    VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
 fi
 
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
