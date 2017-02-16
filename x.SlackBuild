@@ -1,1 +1,87 @@
 #!/bin/bash
+
+# colors
+BROWN="\033[0;33m"
+RED="\033[0;31m"
+MAGENTA="\033[0;35m"
+CYAN="\033[0;36m"
+CDEF="\033[0m"
+
+# check current path
+if ! [ -r "$(pwd)/$(echo "$0" | rev | cut -d / -f 1 | rev)" ]; then
+    echo -en "${RED}x.SlackBuild can be run from a directory${CDEF} "
+    dirname "$0"
+    exit 1
+fi
+
+# check user (only root)
+if [[ "$(id -u)" != "0" ]]; then
+    echo "$0 can only be run as root"
+    exit 1
+fi
+
+CWD=$(pwd)
+QUEUE="${CWD}/queue"
+
+# show list available modules for build
+show_list_modules() {
+    echo -en "${BROWN}Available modules: "
+    echo -e "${MAGENTA} $(grep ":" "${QUEUE}" | grep -v "#" | \
+        cut -d ":" -f 1 | sort | uniq | tr '\n' ' ')${CDEF}"
+}
+
+# show help
+show_help() {
+    echo -e "${BROWN}Usage:${CDEF} ./$(basename "$0") [module] [package]"
+    show_list_modules
+}
+
+# if count parameters > 2
+if [[ $# -gt 2 ]]; then
+    show_help
+    exit 1
+fi
+
+
+# check first parameter (module name or -h, --help)
+if [[ "x$1" != "x" ]]; then
+    if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+        show_help
+        exit 1
+    fi
+
+    # if no module named $1
+    if ! grep -Eq "^$1:" "${QUEUE}"; then
+        echo -e "${RED}Module ${MAGENTA}$1 ${RED}not available"
+        show_list_modules
+        exit 1
+    fi
+fi
+
+# check second parameter (package name)
+if [[ "x$2" != "x" ]]; then
+    # if the package is not found in the list (src/module_name/srclist)
+    if ! grep -Eq "^$1:$2$" "${QUEUE}"; then
+        echo -e "${RED}Package ${CYAN}$2 ${RED}not found in${CDEF} src/$1/"
+        exit 1
+    fi
+fi
+
+# building packages
+. "${CWD}"/flags.sh
+. "${CWD}"/settings.sh
+
+grep ":" "${QUEUE}" | grep -v "#" | while read -r LINE; do
+    MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
+    # if module is specified
+    [[ "x$1" != "x" && "$1" != "${MODULE}" ]] && continue
+
+    PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
+    # if package name is specified
+    [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
+
+    if [[ "${MODULE}" == "misc" ]]; then
+        cd "${CWD}/src/${MODULE}/${PKGNAME}" || exit 1
+        sh build.sh
+    fi
+done
