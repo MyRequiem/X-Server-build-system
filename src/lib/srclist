@@ -6,3 +6,4 @@ libXfixes
 libpciaccess
 libxshmfence
 xtrans
+libXi

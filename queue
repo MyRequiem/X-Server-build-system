@@ -22,5 +22,6 @@ lib:libXdamage
 lib:libXext
 misc:libvdpau
 misc:mesa
-
+misc:glu
+lib:libXi
 misc:freeglut

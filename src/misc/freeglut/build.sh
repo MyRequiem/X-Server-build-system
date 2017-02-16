@@ -75,5 +75,5 @@ rm -f "${PKG}"
 makepkg -l y -c n "${PKG}"
 
 if [[ "${INSTALL_AFTER_BUILD}" == "true" ]]; then
-    installpkg --install-new --reinstall "${PKG}"
+    upgradepkg --install-new --reinstall "${PKG}"
 fi
