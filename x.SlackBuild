@@ -134,6 +134,18 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             fi
         done
     fi
+
+    # building mesa package require mesa-demos source
+    if [[ $# -eq 0 || $# -eq 1 && "$1" == "misc" || \
+            $# -eq 2 && "$1" == "misc" && "$2" == "mesa" ]]; then
+        MESADIR="${SRCDIR}/misc/mesa"
+        MESA_DEMOS=$(find "${MESADIR}" -maxdepth 1 -type f \
+            -name "mesa-demos-*${SRCEXT}")
+        if [[ "x${MESA_DEMOS}" == "x" ]]; then
+            src_arch_not_found_mess "mesa-demos" "${MESADIR}"
+            exit
+        fi
+    fi
 fi
 
 . "${CWD}"/flags.sh
