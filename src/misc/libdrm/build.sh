@@ -48,32 +48,8 @@ make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}" || exit 1
 
 . "${CWDD}"/strip-binaries.sh
-
-# compress manpages, if any
-MANDIR="${PKG}/usr/man"
-if [ -d "${MANDIR}" ]; then
-    (
-        cd "${MANDIR}" || exit 1
-        MANPAGEDIRS=$(find . -maxdepth 1 -type d -name "man*")
-        for MANPAGEDIR in ${MANPAGEDIRS}; do
-            (
-                cd "${MANPAGEDIR}" || exit 1
-                PAGES=$(find . -type f -maxdepth 1)
-                for PAGE in ${PAGES}; do
-                    gzip "${PAGE}"
-                done
-            )
-        done
-    )
-fi
-
-DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
-mkdir -p "${DOCDIR}"
-for DOC in ${DOCS}; do
-    if [ -r "${DOC}" ]; then
-        cp "${DOC}" "${DOCDIR}"
-    fi
-done
+. "${CWDD}"/copydocs.sh
+. "${CWDD}"/compressmanpages.sh
 
 mkdir -p "${PKG}/install"
 cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"

@@ -56,24 +56,18 @@ CXXFLAGS="${SLKCFLAGS}" \
 make "${NUMJOBS}" || make || exit 1
 make install-strip DESTDIR="${PKG}" || exit 1
 
+. "${CWDD}"/strip-binaries.sh
+. "${CWDD}"/copydocs.sh
+. "${CWDD}"/compressmanpages.sh
+
 mkdir -p "${PKG}"/etc/profile.d
 cp -a "${CWD}"/vdpau.sh "${PKG}"/etc/profile.d/vdpau.sh.new
 cp -a "${CWD}"/vdpau.csh "${PKG}"/etc/profile.d/vdpau.csh.new
 chown root:root "${PKG}"/etc/profile.d/*
 chmod 755 "${PKG}"/etc/profile.d/vdpau.sh.new
 
-. "${CWDD}"/strip-binaries.sh
-
 # don't clobber the config file on upgrades
 mv "${PKG}"/etc/vdpau_wrapper.cfg "${PKG}"/etc/vdpau_wrapper.cfg.new
-
-DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
-mkdir -p "${DOCDIR}"
-for DOC in ${DOCS}; do
-    if [ -r "${DOC}" ]; then
-        cp "${DOC}" "${DOCDIR}"
-    fi
-done
 
 mkdir -p "${PKG}"/install
 cat "${CWD}"/slack-desc > "${PKG}"/install/slack-desc

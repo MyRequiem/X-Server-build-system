@@ -10,8 +10,6 @@ export EXT="txz"
 export TAG="myreq"
 # number of assembly flows
 export NUMJOBS=" -j7 "
-# docs files
-export DOCS="AUTHORS COPYING* INSTALL NEWS README TODO ChangeLog*"
 # install package after build (true, false)
 export INSTALL_AFTER_BUILD="false"
 # check package version

@@ -55,6 +55,8 @@ make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}" || exit 1
 
 . "${CWDD}"/strip-binaries.sh
+. "${CWDD}"/copydocs.sh
+. "${CWDD}"/compressmanpages.sh
 
 mkdir -p "${PKG}"/install
 cat "${CWD}"/slack-desc > "${PKG}"/install/slack-desc

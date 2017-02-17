@@ -55,17 +55,8 @@ make install DESTDIR="${PKG}"
 cd ..
 
 . "${CWDD}"/strip-binaries.sh
-
-DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
-mkdir -p "${DOCDIR}/html"
-for DOC in ${DOCS}; do
-    if [ -r "${DOC}" ]; then
-        cp "${DOC}" "${DOCDIR}"
-    fi
-done
-
-cp -a doc/*.{html,png} "${DOCDIR}/html"
-find "${DOCDIR}" -type f -exec chmod 644 {} \;
+. "${CWDD}"/copydocs.sh
+. "${CWDD}"/compressmanpages.sh
 
 mkdir -p "${PKG}/install"
 cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"
