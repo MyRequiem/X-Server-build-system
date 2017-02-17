@@ -112,7 +112,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                 ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
                 SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-                    -name "$2-*${SRCEXT}")
+                    -name "${PKGNAME}-*${SRCEXT}")
                 if [[ "x${SOURCEARCH}" == "x" ]]; then
                     src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
                     exit 1

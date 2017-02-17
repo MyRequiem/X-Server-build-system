@@ -1,6 +1,0 @@
-VDPAU - The Video Decode and Presentation API for UNIX
-
-Home page: http://cgit.freedesktop.org/~aplattner/libvdpau
-
-Download:
-    git clone git://people.freedesktop.org/~aplattner/libvdpau
