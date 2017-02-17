@@ -57,10 +57,10 @@ make "${NUMJOBS}" || make || exit 1
 make install-strip DESTDIR="${PKG}" || exit 1
 
 mkdir -p "${PKG}"/etc/profile.d
-cp -a "${CWD}"/profile.d/vdpau.sh "${PKG}"/etc/profile.d/vdpau.sh.new
-cp -a "${CWD}"/profile.d/vdpau.csh "${PKG}"/etc/profile.d/vdpau.csh.new
+cp -a "${CWD}"/vdpau.sh "${PKG}"/etc/profile.d/vdpau.sh.new
+cp -a "${CWD}"/vdpau.csh "${PKG}"/etc/profile.d/vdpau.csh.new
 chown root:root "${PKG}"/etc/profile.d/*
-chmod 755 "${PKG}"/etc/profile.d/*
+chmod 755 "${PKG}"/etc/profile.d/vdpau.sh.new
 
 . "${CWDD}"/strip-binaries.sh
 
