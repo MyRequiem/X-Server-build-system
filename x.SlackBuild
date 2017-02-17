@@ -30,7 +30,6 @@ fi
 QUEUE="${CWD}/queue"
 QUEUELINES=$(grep ":" "${QUEUE}" | grep -v "#")
 
-
 # show list available modules for build
 show_list_modules() {
     echo -en "${BROWN}Available modules:"
@@ -42,22 +41,31 @@ show_list_modules() {
 show_help() {
     echo -e "${BROWN}Usage:${CDEF} ./$(basename "$0") [module] [package]"
     show_list_modules
+    echo "-h, --help    - show this message"
+}
+
+src_arch_not_found_mess() {
+    echo -en "${RED}Source archive ${CYAN}$1${RED} not found in "
+    echo -en "${BROWN}$2/${CDEF}\nSet variable ${BROWN}CHECK_PACKAGE_VERSION="
+    echo -en "\"true\" ${CDEF}in ${CYAN}settings.sh\n${CDEF}"
+    echo "for download missing source archives."
 }
 
 # if count parameters > 2
 if [[ $# -gt 2 ]]; then
     show_help
-    exit 1
+    exit 0
 fi
 
-
-# check first parameter (module name or -h, --help)
-if [[ "x$1" != "x" ]]; then
+if [[ $# -eq 1 ]]; then
     if [[ "$1" == "-h" || "$1" == "--help" ]]; then
         show_help
-        exit 1
+        exit 0
     fi
+fi
 
+# check first parameter
+if [[ $# -ge 1 ]]; then
     # if no module named $1
     if ! grep -Eq "^$1:" "${QUEUE}"; then
         echo -e "${RED}Module ${MAGENTA}$1 ${RED}not available"
@@ -67,11 +75,11 @@ if [[ "x$1" != "x" ]]; then
 fi
 
 # check second parameter (package name)
-if [[ "x$2" != "x" ]]; then
-    # if package not found
+if [[ $# -eq 2 ]]; then
+    # if package not found in module
     if ! grep -Eq "^$1:$2$" "${QUEUE}"; then
         echo -en "${RED}Package ${CYAN}$2 ${RED}not found in${CDEF} "
-        echo -e "${BROWN}queue${CDEF}"
+        echo -e "${BROWN}$1${RED} module${CDEF}"
         exit 1
     fi
 fi
@@ -81,43 +89,50 @@ fi
 # if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
 
+SRCDIR="src"
 # check exist source archives berore building packages
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
-    if [[ "x$2" != "x" ]]; then
+    SRCEXT=".tar.?z*"
+    if [[ $# -eq 2 ]]; then
         MISC=""
         [[ "$1" == "misc" ]] && MISC="/$2"
-        ARCHDIR="src/$1${MISC}"
-        SOURCEARCH=$(find "${ARCHDIR}"  -maxdepth 1 -type f -name "$2-*.tar.?z*")
+        ARCHDIR="${SRCDIR}/$1${MISC}"
+        SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
+            -name "$2-*${SRCEXT}")
         if [[ "x${SOURCEARCH}" == "x" ]]; then
-            echo -en "${RED}Source archive ${CYAN}$2${RED} not found in "
-            echo -e "${BROWN}${ARCHDIR}/${CDEF}"
-            echo -en "Set variable ${BROWN}CHECK_PACKAGE_VERSION=\"true\" "
-            echo -en "${CDEF}in ${CYAN}settings.sh${CDEF} "
-            echo "for download missing source archive."
-            exit
+            src_arch_not_found_mess "$2" "${ARCHDIR}"
+            exit 1
         fi
-    elif [[ "x$1" != "x" ]]; then
+    elif [[ $# -eq 1 ]]; then
         for LINE in ${QUEUELINES}; do
             MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
             if [[ "${MODULE}" == "$1" ]]; then
                 PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
-                ARCHDIR="src/$1${MISC}"
-                SOURCEARCH=$(find "${ARCHDIR}"  -maxdepth 1 -type f \
-                    -name "$2-*.tar.?z*")
+                ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
+                SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
+                    -name "$2-*${SRCEXT}")
                 if [[ "x${SOURCEARCH}" == "x" ]]; then
-                    echo -en "${RED}Source archive ${CYAN}${PKGNAME}${RED} "
-                    echo -e "not found in ${BROWN}${ARCHDIR}/${CDEF}"
-                    echo -en "Set variable ${BROWN}CHECK_PACKAGE_VERSION="
-                    echo -en "\"true\" ${CDEF}in ${CYAN}settings.sh${CDEF} "
-                    echo "for download missing source archive."
-                    exit
+                    src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
+                    exit 1
                 fi
             fi
         done
-    # else
-    #     check_exist_srs
+    else
+        for LINE in ${QUEUELINES}; do
+            MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
+            PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
+            MISC=""
+            [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
+            ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
+            SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
+                -name "${PKGNAME}-*${SRCEXT}")
+            if [[ "x${SOURCEARCH}" == "x" ]]; then
+                src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
+                exit 1
+            fi
+        done
     fi
 fi
 
@@ -134,7 +149,7 @@ for LINE in ${QUEUELINES}; do
     [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
 
     if [[ "${MODULE}" == "misc" ]]; then
-        cd "${CWD}/src/${MODULE}/${PKGNAME}" || exit 1
+        cd "${CWD}/${SRCDIR}/${MODULE}/${PKGNAME}" || exit 1
         sh build.sh
     fi
 done
