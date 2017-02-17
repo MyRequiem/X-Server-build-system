@@ -25,7 +25,8 @@ fi
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
 
 CWD=$(pwd)
-PKG=${TMP}/package-$PRGNAM
+TMP="${TMP}/misc"
+PKG="${TMP}/package-$PRGNAM"
 
 rm -rf "${PKG}"
 mkdir -p "${PKG}"
