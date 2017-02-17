@@ -1,24 +1,24 @@
 #!/bin/sh
 
-PKGNAME="freeglut"
+PKGNAME="libdrm"
 
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
+    DOWNLOADPAGE="https://dri.freedesktop.org/libdrm"
     # check latest release version
-    echo -en "${GREY}Check FreeGLUT latest release:${CDEF} "
-    LATESTRELEASELINK=$(wget -q -O - http://freeglut.sourceforge.net/ | \
-        grep -A 2 "Stable Releases" | tail -n 1 | cut -d \" -f 2 | \
-        cut -d \? -f 1)
-    SOURCE=$(echo "${LATESTRELEASELINK}" | rev | cut -d / -f 1 | rev)
-    VERSION=$(echo "${SOURCE}" | cut -d - -f 2 | rev | cut -d . -f 3- | rev)
+    echo -en "${GREY}Check ${PKGNAME} latest release:${CDEF} "
+    VERSION=$(wget -q -O - "${DOWNLOADPAGE}" | grep '.tar.bz2"' | \
+        cut -d \" -f 8 | cut -d - -f 2 | rev | cut -d . -f 3- | rev | \
+        sort -V | tail -n 1)
+    SOURCE="${PKGNAME}-${VERSION}.tar.bz2"
     echo "${VERSION}"
 
     # download source archive if does not exist
     if ! [ -r "${SOURCE}" ]; then
         echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
-        wget "${LATESTRELEASELINK}"
+        wget "${DOWNLOADPAGE}/${SOURCE}"
     fi
 else
-    SOURCE=$(ls "${PKGNAME}"-*.tar.?z*)
+    SOURCE=$(ls "${PKGNAME}-"*.tar.?z*)
     VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
 fi
 
@@ -36,36 +36,44 @@ tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
 . "${CWDD}"/setperm.sh
 
-mkdir build
-cd build || exit 1
-cmake \
-    -DCMAKE_C_FLAGS:STRING="${SLKCFLAGS}" \
-    -DCMAKE_C_FLAGS_RELEASE:STRING="${SLKCFLAGS}" \
-    -DCMAKE_CXX_FLAGS:STRING="${SLKCFLAGS}" \
-    -DCMAKE_CXX_FLAGS_RELEASE:STRING="${SLKCFLAGS}" \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DMAN_INSTALL_DIR=/usr/man \
-    -DSYSCONF_INSTALL_DIR=/etc \
-    -DLIB_SUFFIX="${LIBDIRSUFFIX}" \
-    ..
+CFLAGS="$SLKCFLAGS" \
+./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib"${LIBDIRSUFFIX}" \
+    --mandir=/usr/man \
+    --enable-udev \
+    --build="${ARCH}"-slackware-linux
 
 make "${NUMJOBS}" || make || exit 1
-make install DESTDIR="${PKG}"
-cd ..
+make install DESTDIR="${PKG}" || exit 1
 
 . "${CWDD}"/strip-binaries.sh
 
+# compress manpages, if any
+MANDIR="${PKG}/usr/man"
+if [ -d "${MANDIR}" ]; then
+    (
+        cd "${MANDIR}" || exit 1
+        MANPAGEDIRS=$(find . -maxdepth 1 -type d -name "man*")
+        for MANPAGEDIR in ${MANPAGEDIRS}; do
+            (
+                cd "${MANPAGEDIR}" || exit 1
+                PAGES=$(find . -type f -maxdepth 1)
+                for PAGE in ${PAGES}; do
+                    gzip "${PAGE}"
+                done
+            )
+        done
+    )
+fi
+
 DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
-mkdir -p "${DOCDIR}/html"
+mkdir -p "${DOCDIR}"
 for DOC in ${DOCS}; do
     if [ -r "${DOC}" ]; then
         cp "${DOC}" "${DOCDIR}"
     fi
 done
-
-cp -a doc/*.{html,png} "${DOCDIR}/html"
-find "${DOCDIR}" -type f -exec chmod 644 {} \;
 
 mkdir -p "${PKG}/install"
 cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"

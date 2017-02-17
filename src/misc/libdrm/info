@@ -1,5 +1,0 @@
-DRM (Direct Rendering Manager) - составная часть DRI (Direct Rendering
-Infrastructure) системы, которая обеспечивает эффективное ускорение видео,
-в частности, 3D-рендеринг.
-
-Download: https://dri.freedesktop.org/libdrm/
