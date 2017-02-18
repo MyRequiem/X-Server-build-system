@@ -1,19 +1,15 @@
 #!/bin/bash
 
-# compress manpages, if any
 MANDIR="${PKG}/usr/man"
 if [ -d "${MANDIR}" ]; then
-    (
-        cd "${MANDIR}" || exit 1
-        MANPAGEDIRS=$(find . -maxdepth 1 -type d -name "man*")
-        for MANPAGEDIR in ${MANPAGEDIRS}; do
-            (
-                cd "${MANPAGEDIR}" || exit 1
-                PAGES=$(find . -type f -maxdepth 1 ! -name "*.gz")
-                for PAGE in ${PAGES}; do
-                    gzip "${PAGE}"
-                done
-            )
-        done
-    )
+    cd "${MANDIR}" || exit 1
+    # compress manpages, if any
+    find . -type f -a ! -name "*.gz" -exec gzip -9 {} \;
+
+    # recreate links, if any
+    MANLINKS=$(find . -type l)
+    for MANLINK in ${MANLINKS}; do
+        ln -s "$(readlink "${MANLINK}").gz" "${MANLINK}".gz
+        rm -f "${MANLINK}"
+    done
 fi
