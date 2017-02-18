@@ -3,7 +3,7 @@
 # colors
 RED="\033[0;31m"
 MAGENTA="\033[0;35m"
-CYAN="\033[0;36m"
+export CYAN="\033[0;36m"
 export BROWN="\033[0;33m"
 export GREEN="\033[1;32m"
 export GREY="\033[0;37m"
@@ -84,10 +84,7 @@ if [[ $# -eq 2 ]]; then
     fi
 fi
 
-. "${CWD}"/settings.sh
-
-# if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
-[[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
+. "${CWD}"/additional-scripts/settings.sh
 
 SRCDIR="src"
 # check exist source archives berore building packages
@@ -148,9 +145,10 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
     fi
 fi
 
-. "${CWD}"/flags.sh
+. "${CWD}"/additional-scripts/flags.sh
 
 # building packages
+XDOWNLOAD="https://www.x.org/archive/individual"
 for LINE in ${QUEUELINES}; do
     MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
     # if module is specified
@@ -160,8 +158,112 @@ for LINE in ${QUEUELINES}; do
     # if package name is specified
     [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
 
+    # build packages from misc module
     if [[ "${MODULE}" == "misc" ]]; then
-        cd "${CWD}/${SRCDIR}/${MODULE}/${PKGNAME}" || exit 1
-        sh build.sh
+        (
+            cd "${SRCDIR}/${MODULE}/${PKGNAME}" || exit 1
+            sh build.sh
+        )
+
+        continue
     fi
+
+    # build packages from other modules
+    if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
+        # check latest release version
+        echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
+        VERSION=$(wget -q -O - "${XDOWNLOAD}/${MODULE}" | grep "${PKGNAME}" | \
+            grep 'tar.bz2"' | grep -v "\-rc[0-9]" | cut -d \" -f 8 | rev | \
+            cut -d - -f 1 | cut -d . -f 3- | rev | sort -V | tail -n 1)
+        echo "${VERSION}"
+        SOURCE="${PKGNAME}-${VERSION}.tar.bz2"
+
+        # download source archive if does not exist
+        if ! [ -r "${SRCDIR}/${MODULE}/${SOURCE}" ]; then
+            echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
+            (
+                cd "${SRCDIR}/${MODULE}" || exit 1
+                wget "${XDOWNLOAD}/${MODULE}/${SOURCE}"
+            )
+        fi
+    else
+        SOURCE=$(find "${SRCDIR}/${MODULE}" -type f \
+            -name "${PKGNAME}-[0-9]*.tar.?z*" | rev | cut -d / -f 1 | rev)
+        VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
+    fi
+
+    [[ "${ONLY_DOWNLOAD}" == "true" ]] && continue
+
+    TMP="${TMP}/${MODULE}"
+    PKG="${TMP}/package-${PKGNAME}"
+
+    rm -rf "${PKG}"
+    mkdir -p "${PKG}"
+    cd "${TMP}" || exit 1
+    rm -rf "${PKGNAME}-${VERSION}"
+    tar xvf "${CWD}/${SRCDIR}/${MODULE}/${SOURCE}"
+    cd "${PKGNAME}-${VERSION}" || exit 1
+    . "${CWD}"/additional-scripts/setperm.sh
+
+    # if any patches are needed, call this script to apply them
+    PKGPATCH="${CWD}/patch/${PKGNAME}.patch"
+    if [ -r "${PKGPATCH}" ]; then
+        . "${PKGPATCH}"
+    fi
+
+    # ./configure using custom configure script if needed,
+    # otherwise use default configure script
+    CONFIGURE="${CWD}/configure/${PKGNAME}"
+    ! [ -r "${CONFIGURE}" ] && CONFIGURE="${CWD}/configure/configure"
+    . "${CONFIGURE}"
+
+    make "${NUMJOBS}" || make || exit 1
+    make install DESTDIR="${PKG}"
+
+    . "${CWD}"/additional-scripts/strip-binaries.sh
+    . "${CWD}"/additional-scripts/copydocs.sh
+    . "${CWD}"/additional-scripts/compressmanpages.sh
+
+    # if there's any special post-install things to do, do them:
+    POSTINSTALL="${CWD}/post-install/${PKGNAME}.post-install"
+    if [ -r "${POSTINSTALL}" ]; then
+        RUNSCRIPT=$(mktemp -p "${TMP}")
+        # cat "${POSTINSTALL}" | \
+        sed -e "s#usr/lib#usr/lib${LIBDIRSUFFIX}#g" \
+            "${POSTINSTALL}" > "${RUNSCRIPT}"
+        . "${RUNSCRIPT}"
+        rm -f "${RUNSCRIPT}"
+    fi
+
+    mkdir -p "${PKG}"/install
+    cat "${CWD}/slack-desc/${PKGNAME}" > "${PKG}/install/slack-desc"
+
+    # if this package requires some doinst.sh, add it here
+    DOINSTALL="${CWD}/doinst.sh/${PKGNAME}"
+    if [ -r "${DOINSTALL}"  ]; then
+        sed -e "s#usr/lib#usr/lib${LIBDIRSUFFIX}#g" "${DOINSTALL}" >> \
+            "${PKG}/install/doinst.sh"
+    fi
+
+    PKGARCH="${ARCH}"
+    if grep -Eq "^${PKGNAME}$" "${CWD}/noarch"; then
+        PKGARCH="noarch"
+    fi
+
+    # make package
+    cd "${PKG}" || exit 1
+    OUTPUT="${OUTPUT}/${MODULE}"
+    mkdir -p "${OUTPUT}"
+    BUILD=$(cat "${CWD}/build/${PKGNAME}")
+    PKG="${OUTPUT}/${PKGNAME}-${VERSION}-${PKGARCH}-${BUILD}_${TAG}.${EXT}"
+    rm -f "${PKG}"
+    makepkg -l y -c n "${PKG}"
+
+    if [[ "${INSTALL_AFTER_BUILD}" == "true" ]]; then
+        upgradepkg --install-new --reinstall "${PKG}"
+    fi
+
+    # restore variable ${TMP} on each iteration
+    . "${CWD}"/additional-scripts/settings.sh
+    cd "${CWD}" || exit
 done

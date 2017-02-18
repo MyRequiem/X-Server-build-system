@@ -4,7 +4,7 @@ PKGNAME="libvdpau"
 
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
-    echo -en "${GREY}Check ${PKGNAME} latest release:${CDEF} "
+    echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
     VERSION=$(wget -q -O - https://cgit.freedesktop.org/~aplattner/libvdpau | \
         grep -A 1 Download | tail -n 1 | cut -d / -f 5 | rev | cut -d - -f 1 | \
         rev | cut -d "<" -f 1)
@@ -35,7 +35,7 @@ cd "${TMP}" || exit 1
 rm -rf "${PKGNAME}-${VERSION}"
 tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
-. "${CWDD}"/setperm.sh
+. "${CWDD}"/additional-scripts/setperm.sh
 
 if ! [ -x ./configure ]; then
     ./autogen.sh
@@ -56,9 +56,9 @@ CXXFLAGS="${SLKCFLAGS}" \
 make "${NUMJOBS}" || make || exit 1
 make install-strip DESTDIR="${PKG}" || exit 1
 
-. "${CWDD}"/strip-binaries.sh
-. "${CWDD}"/copydocs.sh
-. "${CWDD}"/compressmanpages.sh
+. "${CWDD}"/additional-scripts/strip-binaries.sh
+. "${CWDD}"/additional-scripts/copydocs.sh
+. "${CWDD}"/additional-scripts/compressmanpages.sh
 
 mkdir -p "${PKG}"/etc/profile.d
 cp -a "${CWD}"/vdpau.sh "${PKG}"/etc/profile.d/vdpau.sh.new

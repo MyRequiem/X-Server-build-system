@@ -5,7 +5,7 @@ PKGNAME="libdrm"
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     DOWNLOADPAGE="https://dri.freedesktop.org/libdrm"
     # check latest release version
-    echo -en "${GREY}Check ${PKGNAME} latest release:${CDEF} "
+    echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
     VERSION=$(wget -q -O - "${DOWNLOADPAGE}" | grep '.tar.bz2"' | \
         cut -d \" -f 8 | cut -d - -f 2 | rev | cut -d . -f 3- | rev | \
         sort -V | tail -n 1)
@@ -34,7 +34,7 @@ cd "${TMP}" || exit 1
 rm -rf "${PKGNAME}-${VERSION}"
 tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
-. "${CWDD}"/setperm.sh
+. "${CWDD}"/additional-scripts/setperm.sh
 
 CFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -47,9 +47,9 @@ CFLAGS="$SLKCFLAGS" \
 make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}" || exit 1
 
-. "${CWDD}"/strip-binaries.sh
-. "${CWDD}"/copydocs.sh
-. "${CWDD}"/compressmanpages.sh
+. "${CWDD}"/additional-scripts/strip-binaries.sh
+. "${CWDD}"/additional-scripts/copydocs.sh
+. "${CWDD}"/additional-scripts/compressmanpages.sh
 
 mkdir -p "${PKG}/install"
 cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"

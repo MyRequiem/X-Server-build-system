@@ -1,0 +1,7 @@
+libpthread-stubs
+glproto
+dri2proto
+dri3proto
+presentproto
+xcb-proto
+xproto

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                |-----handy-ruler----------------------------------------------|
+libpthread-stubs: libpthread-stubs (thread support stubs)
+libpthread-stubs:
+libpthread-stubs: This library provides weak aliases for pthread functions
+libpthread-stubs: not provided in libc or otherwise available by default.
+libpthread-stubs: Libraries like libxcb rely on pthread stubs to use pthreads
+libpthread-stubs: optionally, becoming thread-safe when linked to libpthread,
+libpthread-stubs: while avoiding any performance hit when running
+libpthread-stubs: single-threaded.
+libpthread-stubs:
+libpthread-stubs: Download: https://www.x.org/archive/individual/xcb/
+libpthread-stubs:

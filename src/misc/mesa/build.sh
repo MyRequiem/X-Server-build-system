@@ -5,7 +5,7 @@ DEMOS="demos"
 
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
-    echo -en "${GREY}Check ${PKGNAME} latest release:${CDEF} "
+    echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
     VERSION=$(wget -q -O - https://www.mesa3d.org/ | grep ">Mesa" | \
         grep "is released" | head -n 1 | cut -d " " -f 3 | cut -d "<" -f 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.xz"
@@ -18,7 +18,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     fi
 
     # building mesa package require mesa-demos source
-    echo -en "${GREY}Check "${PKGNAME}-${DEMOS}" latest release:${CDEF} "
+    echo -en "${GREY}Check ${CYAN}${PKGNAME}-${DEMOS}${GREY} "
+    echo -en "latest release:${CDEF} "
     DEMOSVERSION=$(wget -q -O - https://www.mesa3d.org/ | grep "${DEMOS}" | \
         grep released | head -n 1 | cut -d " " -f 3)
     DEMOSSOURCE="${PKGNAME}-${DEMOS}-${DEMOSVERSION}.tar.gz"
@@ -36,6 +37,8 @@ else
         cut -d . -f 3- | rev)
 fi
 
+[[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
+
 CWD=$(pwd)
 TMP="${TMP}/misc"
 PKG="${TMP}/package-${PKGNAME}"
@@ -46,7 +49,7 @@ cd "${TMP}" || exit 1
 rm -rf "${PKGNAME}-${VERSION}"
 tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
-. "${CWDD}"/setperm.sh
+. "${CWDD}"/additional-scripts/setperm.sh
 
 # let's kill the warning about operating on a dangling symlink:
 if [ -f src/gallium/state_trackers/d3d1x/w32api ]; then
@@ -105,7 +108,7 @@ make install DESTDIR="${PKG}" || exit 1
     rm -rf "${PKGNAME}-${DEMOS}-${DEMOSVERSION}"
     tar xvf "${CWD}/${DEMOSSOURCE}" || exit 1
     cd "${PKGNAME}-${DEMOS}-${DEMOSVERSION}" || exit 1
-    . "${CWDD}"/setperm.sh
+    . "${CWDD}"/additional-scripts/setperm.sh
 
     CFLAGS="${SLKCFLAGS}" \
     ./configure \
@@ -128,9 +131,9 @@ make install DESTDIR="${PKG}" || exit 1
     done
 )
 
-. "${CWDD}"/strip-binaries.sh
-. "${CWDD}"/copydocs.sh
-. "${CWDD}"/compressmanpages.sh
+. "${CWDD}"/additional-scripts/strip-binaries.sh
+. "${CWDD}"/additional-scripts/copydocs.sh
+. "${CWDD}"/additional-scripts/compressmanpages.sh
 
 mkdir -p "${PKG}"/install
 cat "${CWD}"/slack-desc > "${PKG}"/install/slack-desc

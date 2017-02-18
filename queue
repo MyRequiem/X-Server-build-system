@@ -25,3 +25,7 @@ misc:mesa
 misc:glu
 lib:libXi
 misc:freeglut
+
+
+
+xserver:xorg-server

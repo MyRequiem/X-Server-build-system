@@ -6,14 +6,14 @@
 # customary to leave one space after the ':'.
 
       |-----handy-ruler--------------------------------------------------------|
-libdrm: libdrm (A library to support Direct Rendering)
-libdrm:
-libdrm:
-libdrm:
-libdrm: This library implements an interface to the kernel's DRM services.
-libdrm: It is used to support hardware accelerated 3-D rendering.
-libdrm:
-libdrm:
-libdrm:
-libdrm: Download: https://dri.freedesktop.org/libdrm/
-libdrm:
+xproto: xproto (C prototypes for X Window System Core Protocol)
+xproto:
+xproto:
+xproto:
+xproto: Xproto headers
+xproto:
+xproto:
+xproto:
+xproto: Download: https://www.x.org/archive/individual/proto/
+xproto:
+xproto:

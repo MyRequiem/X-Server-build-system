@@ -28,15 +28,23 @@ if [[ -d doc || -d docs ]]; then
     fi
 fi
 
-# chmod 644 for all docs and info files
-if [ -d "${DOCDIR}" ]; then
-    chmod -R 644 "${DOCDIR}"/*
-fi
-
 # compress info files, if any:
 INFODIR="${PKG}/usr/info"
 if [ -d "${INFODIR}" ]; then
     rm -rf "${INFODIR}/dir"
     gzip -9 "${INFODIR}"/*
     chmod -R 644 "${INFODIR}"/*
+fi
+
+# if there are docs, move them:
+SHAREDOC="${PKG}/usr/share/doc"
+if [ -d "${SHAREDOC}" ]; then
+    mkdir -p "${DOCDIR}"
+    mv "${SHAREDOC}"/* "${DOCDIR}"
+    rm -rf "${SHAREDOC}"
+fi
+
+# chmod 644 for all docs and info files
+if [ -d "${DOCDIR}" ]; then
+    chmod -R 644 "${DOCDIR}"/*
 fi
