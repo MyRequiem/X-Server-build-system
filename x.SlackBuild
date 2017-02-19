@@ -206,7 +206,7 @@ for LINE in ${QUEUELINES}; do
     . "${CWD}"/additional-scripts/setperm.sh
 
     # if any patches are needed, call this script to apply them
-    PKGPATCH="${CWD}/patch/${PKGNAME}.patch"
+    PKGPATCH="${CWD}/patches/${PKGNAME}.patch"
     if [ -r "${PKGPATCH}" ]; then
         . "${PKGPATCH}"
     fi
