@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# of course, the libtool stuff included in the
+# tarball is broken, so we make autoreconf :)
+autoreconf -v -i -f
+
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
 ./configure \
@@ -10,6 +14,5 @@ CXXFLAGS="${SLKCFLAGS}" \
     --infodir=/usr/info \
     --mandir=/usr/man \
     --docdir=/usr/doc/"${PKGNAME}-${VERSION}" \
-    --with-udev-rules-dir=/lib/udev/rules.d \
     --disable-static \
     --build="${ARCH}"-slackware-linux

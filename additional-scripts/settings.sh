@@ -15,7 +15,7 @@ export INSTALL_AFTER_BUILD="false"
 # check package version
 export CHECK_PACKAGE_VERSION="false"
 # only download src (without build)
-export ONLY_DOWNLOAD="true"
+export ONLY_DOWNLOAD="false"
 
 # if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
