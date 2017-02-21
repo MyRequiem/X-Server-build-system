@@ -11,7 +11,7 @@ DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
 for DOC in ${DOCS}; do
     if [[ -r "${DOC}" && "$(stat -c%s "${DOC}")" != "0" ]]; then
         mkdir -p "${DOCDIR}"
-        cp -v "${DOC}" "${DOCDIR}"
+        cp "${DOC}" "${DOCDIR}"
     fi
 done
 
@@ -24,7 +24,7 @@ if [[ -d doc || -d docs ]]; then
 
     if [[ "x${HTML}" != "x" ]]; then
         mkdir -p "${DOCDIR}/html"
-        cp -v "${DOCD}"/*.{html,htm,png} "${DOCDIR}/html" 2>/dev/null
+        cp "${DOCD}"/*.{html,htm,png} "${DOCDIR}/html" 2>/dev/null
     fi
 fi
 
@@ -37,14 +37,19 @@ if [ -d "${INFODIR}" ]; then
 fi
 
 # if there are docs, move them:
-SHAREDOC="${PKG}/usr/share/doc"
-if [ -d "${SHAREDOC}" ]; then
+SHARE="${PKG}/usr/share"
+if [ -d "${SHARE}/doc" ]; then
     mkdir -p "${DOCDIR}"
-    mv "${SHAREDOC}"/* "${DOCDIR}"
-    rm -rf "${SHAREDOC}"
+    mv "${SHARE}"/doc/* "${DOCDIR}"
+    rm -rf "${SHARE}/doc"
+    # if "${PKG}/usr/share" directory is empty, remove it
+    if [[ "$(find "${SHARE}" | wc -l)" == "1" ]]; then
+        rm -rf "${SHARE}"
+    fi
 fi
 
-# chmod 644 for all docs and info files
+# chmod for all docs and info files
 if [ -d "${DOCDIR}" ]; then
-    chmod -R 644 "${DOCDIR}"/*
+    find "${DOCDIR}" -type d -exec chmod 755 {} \;
+    find "${DOCDIR}" -type f -exec chmod 644 {} \;
 fi

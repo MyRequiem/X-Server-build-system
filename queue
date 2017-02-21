@@ -25,10 +25,15 @@ misc:mesa
 misc:glu
 lib:libXi
 misc:freeglut
+
+
+misc:fontconfig
+
 proto:fontsproto
 lib:libfontenc
 lib:libXfont
 lib:libXfont2
+
 
 
 xserver:xorg-server

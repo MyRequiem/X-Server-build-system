@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -x usr/bin/fc-cache ]; then
+    if [[ "${COLOR}" == "on" || -r "${TMP}"/SeTcolor ]]; then
+        dialog --title "FONTCONFIG UPDATE" --infobox \
+        "Please wait while we generate font.cache-1 files with fc-cache.  \
+        For best results, fc-cache should be run whenever fonts are \
+        added to the system." 5 68
+    else
+        echo "Please wait while we generate font.cache-1 files with fc-cache."
+        echo "For best results, fc-cache should be run whenever fonts are added"
+        echo "to the system."
+    fi
+
+    chroot . /sbin/ldconfig 1> /dev/null 2> /dev/null
+    chroot . /usr/bin/fc-cache -f 1> /dev/null 2> /dev/null
+fi
