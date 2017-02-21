@@ -13,7 +13,7 @@ export NUMJOBS=" -j7 "
 # install package after build (true, false)
 export INSTALL_AFTER_BUILD="false"
 # check package version
-export CHECK_PACKAGE_VERSION="false"
+export CHECK_PACKAGE_VERSION="true"
 # only download src (without build)
 export ONLY_DOWNLOAD="false"
 
