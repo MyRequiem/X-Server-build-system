@@ -27,5 +27,6 @@ lib:libXi
 misc:freeglut
 
 
-
+lib:libXfont
+lib:libXfont2
 xserver:xorg-server

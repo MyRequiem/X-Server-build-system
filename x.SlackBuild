@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # colors
-RED="\033[0;31m"
-MAGENTA="\033[0;35m"
+export RED="\033[0;31m"
+export MAGENTA="\033[0;35m"
 export CYAN="\033[0;36m"
 export BROWN="\033[0;33m"
 export GREEN="\033[1;32m"
@@ -172,7 +172,7 @@ for LINE in ${QUEUELINES}; do
     if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
         # check latest release version
         echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-        VERSION=$(wget -q -O - "${XDOWNLOAD}/${MODULE}" | grep "${PKGNAME}" | \
+        VERSION=$(wget -q -O - "${XDOWNLOAD}/${MODULE}" | grep "${PKGNAME}-" | \
             grep 'tar.bz2"' | grep -v "\-rc[0-9]" | cut -d \" -f 8 | rev | \
             cut -d - -f 1 | cut -d . -f 3- | rev | sort -V | tail -n 1)
         echo "${VERSION}"
@@ -206,7 +206,7 @@ for LINE in ${QUEUELINES}; do
     . "${CWD}"/additional-scripts/setperm.sh
 
     # if any patches are needed, call this script to apply them
-    PKGPATCH="${CWD}/patches/${PKGNAME}.patch"
+    PKGPATCH="${CWD}/patches/${PKGNAME}-patch"
     if [ -r "${PKGPATCH}" ]; then
         . "${PKGPATCH}"
     fi
@@ -228,7 +228,6 @@ for LINE in ${QUEUELINES}; do
     POSTINSTALL="${CWD}/post-install/${PKGNAME}.post-install"
     if [ -r "${POSTINSTALL}" ]; then
         RUNSCRIPT=$(mktemp -p "${TMP}")
-        # cat "${POSTINSTALL}" | \
         sed -e "s#usr/lib#usr/lib${LIBDIRSUFFIX}#g" \
             "${POSTINSTALL}" > "${RUNSCRIPT}"
         . "${RUNSCRIPT}"
