@@ -29,9 +29,9 @@ proto:fontsproto
 lib:libfontenc
 lib:libXfont
 lib:libXfont2
-
 lib:pixman
 
+misc:links
 misc:fontconfig
 
 
