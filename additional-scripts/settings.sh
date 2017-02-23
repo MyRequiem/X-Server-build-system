@@ -13,7 +13,7 @@ export MESA_BRANCH="13"
 # install package after build
 export INSTALL_AFTER_BUILD="false"
 # check package version
-export CHECK_PACKAGE_VERSION="true"
+export CHECK_PACKAGE_VERSION="false"
 # only download src (without build)
 export ONLY_DOWNLOAD="false"
 
