@@ -21,9 +21,6 @@ else
 fi
 
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
-echo "${VERSION}"
-echo "${SOURCE}"
-exit
 
 CWD=$(pwd)
 TMP="${TMP}/misc"
