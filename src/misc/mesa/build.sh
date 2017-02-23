@@ -1,43 +1,29 @@
 #!/bin/sh
 
 PKGNAME="mesa"
-DEMOS="demos"
 
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    VERSION=$(wget -q -O - https://www.mesa3d.org/ | grep ">Mesa" | \
-        grep "is released" | head -n 1 | cut -d " " -f 3 | cut -d "<" -f 1)
+    VERSION=$(wget -q -O - https://www.mesa3d.org/ \
+        | grep ">Mesa ${MESA_BRANCH}." | grep "is released" | head -n 1 | \
+        cut -d " " -f 3 | cut -d "<" -f 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.xz"
     echo "${VERSION}"
 
-    DOWNLOAD="https://mesa.freedesktop.org/archive"
     if ! [ -r "${SOURCE}" ]; then
         echo -e "${YELLOW}Download ${SOURCE} source archive${CDEF}"
-        wget "${DOWNLOAD}/${VERSION}/${SOURCE}"
-    fi
-
-    # building mesa package require mesa-demos source
-    echo -en "${GREY}Check ${CYAN}${PKGNAME}-${DEMOS}${GREY} "
-    echo -en "latest release:${CDEF} "
-    DEMOSVERSION=$(wget -q -O - https://www.mesa3d.org/ | grep "${DEMOS}" | \
-        grep released | head -n 1 | cut -d " " -f 3)
-    DEMOSSOURCE="${PKGNAME}-${DEMOS}-${DEMOSVERSION}.tar.gz"
-    echo "${DEMOSVERSION}"
-
-    if ! [ -r "${DEMOSSOURCE}" ]; then
-        echo -e "${YELLOW}Download ${PKGNAME}-${DEMOS} source archive${CDEF}"
-        wget "${DOWNLOAD}/${DEMOS}/${DEMOSVERSION}/${DEMOSSOURCE}"
+        wget "https://mesa.freedesktop.org/archive/${VERSION}/${SOURCE}"
     fi
 else
-    SOURCE=$(ls "${PKGNAME}"-[0-9]*.tar.?z*)
+    SOURCE=$(ls "${PKGNAME}"-"${MESA_BRANCH}".*.tar.?z*)
     VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
-    DEMOSSOURCE=$(ls "${PKGNAME}-${DEMOS}"*.tar.?z*)
-    DEMOSVERSION=$(echo "${DEMOSSOURCE}" | rev | cut -d - -f 1 | \
-        cut -d . -f 3- | rev)
 fi
 
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
+echo "${VERSION}"
+echo "${SOURCE}"
+exit
 
 CWD=$(pwd)
 TMP="${TMP}/misc"
@@ -101,35 +87,6 @@ CFLAGS="${SLKCFLAGS}" \
 
 make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}" || exit 1
-
-# now build and install the demos
-(
-    cd "${TMP}" || exit 1
-    rm -rf "${PKGNAME}-${DEMOS}-${DEMOSVERSION}"
-    tar xvf "${CWD}/${DEMOSSOURCE}" || exit 1
-    cd "${PKGNAME}-${DEMOS}-${DEMOSVERSION}" || exit 1
-    . "${CWDD}"/additional-scripts/setperm.sh
-
-    CFLAGS="${SLKCFLAGS}" \
-    ./configure \
-        --prefix=/usr \
-        --build="${ARCH}"-slackware-linux
-
-    # build and install gears and glinfo, as well as a few other demos
-    BIN="${PKG}"/usr/bin
-    mkdir -p "$BIN"
-    make -C src/demos gears glinfo
-    cp -a src/demos/{gears,glinfo} "${BIN}"
-
-    XDEMOS="glthreads glxcontexts glxdemo glxgears glxgears_fbconfig \
-        glxheads glxinfo glxpbdemo glxpixmap"
-    for XDEMO in ${XDEMOS}; do
-        if [ -r "src/xdemos/${XDEMO}.c" ]; then
-            make -C src/xdemos "${XDEMO}"
-            cp -a src/xdemos/"${XDEMO}" "${BIN}"
-        fi
-    done
-)
 
 . "${CWDD}"/additional-scripts/strip-binaries.sh
 . "${CWDD}"/additional-scripts/copydocs.sh

@@ -45,7 +45,7 @@ show_help() {
 }
 
 src_arch_not_found_mess() {
-    echo -en "${RED}Source archive ${CYAN}$1${RED} not found in "
+    echo -en "${RED}Source archive ${CYAN}$1.tar.?z*${RED} not found in "
     echo -en "${BROWN}$2/${CDEF}\nSet variable ${BROWN}CHECK_PACKAGE_VERSION="
     echo -en "\"true\" ${CDEF}in ${CYAN}settings.sh\n${CDEF}"
     echo "for download missing source archives."
@@ -130,18 +130,6 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                 exit 1
             fi
         done
-    fi
-
-    # building mesa package require mesa-demos source
-    if [[ $# -eq 0 || $# -eq 1 && "$1" == "misc" || \
-            $# -eq 2 && "$1" == "misc" && "$2" == "mesa" ]]; then
-        MESADIR="${SRCDIR}/misc/mesa"
-        MESA_DEMOS=$(find "${MESADIR}" -maxdepth 1 -type f \
-            -name "mesa-demos-*${SRCEXT}")
-        if [[ "x${MESA_DEMOS}" == "x" ]]; then
-            src_arch_not_found_mess "mesa-demos" "${MESADIR}"
-            exit
-        fi
     fi
 fi
 

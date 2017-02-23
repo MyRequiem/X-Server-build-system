@@ -23,18 +23,20 @@ lib:libXext
 misc:libvdpau
 misc:mesa
 misc:glu
+misc:glew
 lib:libXi
 misc:freeglut
+
+misc:mesa-demos
+
+
 proto:fontsproto
 lib:libfontenc
 lib:libXfont
 lib:libXfont2
 lib:pixman
 
+
 misc:links
 misc:fontconfig
-
-
-
-
 xserver:xorg-server
