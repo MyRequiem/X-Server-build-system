@@ -27,9 +27,10 @@ misc:glew
 lib:libXi
 misc:freeglut
 misc:mesa-demos
-
 util:util-macros
 misc:libepoxy
+
+misc:libevdev
 
 proto:fontsproto
 lib:libfontenc
