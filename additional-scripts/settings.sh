@@ -15,7 +15,7 @@ export MESA_BRANCH="13"
 export INSTALL_AFTER_BUILD="false"
 # check package version
 export CHECK_PACKAGE_VERSION="true"
-# only download src (without build)
+# only download source code (without build)
 export ONLY_DOWNLOAD="false"
 # ========================== End of settings ===================================
 

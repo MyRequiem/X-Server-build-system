@@ -33,6 +33,7 @@ misc:libepoxy
 misc:libevdev
 misc:libva
 misc:m17n-lib
+misc:xdg-user-dirs
 
 proto:fontsproto
 lib:libfontenc
