@@ -31,6 +31,7 @@ util:util-macros
 misc:libepoxy
 
 misc:libevdev
+misc:libva
 
 proto:fontsproto
 lib:libfontenc
