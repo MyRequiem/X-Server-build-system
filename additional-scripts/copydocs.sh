@@ -1,18 +1,18 @@
 #!/bin/bash
 
-DOCS="AUTHORS COPYING* INSTALL NEWS README* TODO ChangeLog* VERSION\
-    doc/AUTHORS doc/COPYING* doc/INSTALL doc/NEWS doc/README* doc/TODO \
-    doc/ChangeLog* doc/GL* doc/VERSION docs/AUTHORS docs/COPYING* \
-    docs/INSTALL docs/NEWS docs/README* docs/TODO docs/ChangeLog* docs/GL* \
-    docs/VERSION"
-DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
+DDIRS=". doc docs"
+DOCS="AUTHORS COPYING* INSTALL NEWS README* TODO ChangeLog* VERSION ABOUT-NLS"
+DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}${ADDITIONAL_DIR}"
 
 # txt docs
-for DOC in ${DOCS}; do
-    if [[ -r "${DOC}" && "$(stat -c%s "${DOC}")" != "0" ]]; then
-        mkdir -p "${DOCDIR}"
-        cp "${DOC}" "${DOCDIR}"
-    fi
+for DIR in $DDIRS; do
+    for DOC in ${DOCS}; do
+        DOC="${DIR}/${DOC}"
+        if [[ -r "${DOC}" && "$(stat -c%s "${DOC}")" != "0" ]]; then
+            mkdir -p "${DOCDIR}"
+            cp "${DOC}" "${DOCDIR}"
+        fi
+    done
 done
 
 # html docs

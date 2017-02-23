@@ -32,6 +32,7 @@ misc:libepoxy
 
 misc:libevdev
 misc:libva
+misc:m17n-lib
 
 proto:fontsproto
 lib:libfontenc

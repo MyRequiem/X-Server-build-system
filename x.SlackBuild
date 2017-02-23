@@ -131,6 +131,18 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             fi
         done
     fi
+
+    # building m17n-lib package require m17n-db source archive
+    if [[ $# -eq 0 || $# -eq 1 && "$1" == "misc" || \
+            $# -eq 2 && "$1" == "misc" && "$2" == "m17n-lib" ]]; then
+        M17NDIR="${SRCDIR}/misc/m17n-lib"
+        M17NDB=$(find "${M17NDIR}" -maxdepth 1 -type f \
+            -name "m17n-db-*${SRCEXT}")
+        if [[ "x${M17NDB}" == "x" ]]; then
+            src_arch_not_found_mess "m17n-db" "${M17NDIR}"
+            exit
+        fi
+    fi
 fi
 
 . "${CWD}"/additional-scripts/flags.sh

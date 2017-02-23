@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# ============================== Settings ======================================
 # temp directory for building packages
 export TMP="/tmp/x-build"
 # output for packages
@@ -13,9 +14,10 @@ export MESA_BRANCH="13"
 # install package after build
 export INSTALL_AFTER_BUILD="false"
 # check package version
-export CHECK_PACKAGE_VERSION="false"
+export CHECK_PACKAGE_VERSION="true"
 # only download src (without build)
 export ONLY_DOWNLOAD="false"
+# ========================== End of settings ===================================
 
 # if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
