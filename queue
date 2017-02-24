@@ -30,6 +30,7 @@ misc:mesa-demos
 util:util-macros
 misc:libepoxy
 
+
 misc:libevdev
 misc:libva
 misc:m17n-lib
@@ -37,6 +38,12 @@ misc:xdg-user-dirs
 misc:xdg-utils
 misc:x11-skel
 misc:xterm
+app:mkfontscale
+app:mkfontdir
+misc:liberation-fonts-ttf
+misc:links
+misc:fontconfig
+
 
 proto:fontsproto
 lib:libfontenc
@@ -44,6 +51,5 @@ lib:libXfont
 lib:libXfont2
 lib:pixman
 
-misc:links
-misc:fontconfig
+
 xserver:xorg-server
