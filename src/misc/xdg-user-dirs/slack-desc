@@ -14,6 +14,6 @@ xdg-user-dirs: the Desktop folder.  It also handles localization/translation
 xdg-user-dirs: of the filenames.
 xdg-user-dirs:
 xdg-user-dirs:
-xdg-user-dirs: Homepage: http://freedesktop.org/wiki/Software/xdg-user-dirs
+xdg-user-dirs: Homepage: https://freedesktop.org/wiki/Software/xdg-user-dirs/
 xdg-user-dirs: Download: https://user-dirs.freedesktop.org/releases/
 xdg-user-dirs:
