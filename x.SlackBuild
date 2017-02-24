@@ -165,6 +165,17 @@ for LINE in ${QUEUELINES}; do
     # if package name is specified
     [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
 
+    BUILD=$(cat "${CWD}/build/${PKGNAME}")
+    # if package already exist in ${OUTPUT} directory
+    if [[ "${BUILD_ONLY_NOT_EXIST}" == "true" ]]; then
+        BINPKG=$(find "${OUTPUT}/${MODULE}" -type f \
+            -name "${PKGNAME}-[0-9]*-${BUILD}_${TAG}.${EXT}")
+        if [[ "x${BINPKG}" != "x" ]]; then
+            echo -e "${GREEN}Already exists: ${BROWN}${BINPKG}${CDEF}"
+            continue
+        fi
+    fi
+
     # build packages from misc module
     if [[ "${MODULE}" == "misc" ]]; then
         (
@@ -201,7 +212,7 @@ for LINE in ${QUEUELINES}; do
 
     [[ "${ONLY_DOWNLOAD}" == "true" ]] && continue
 
-    TMP="${TMP}/${MODULE}"
+    TMP="${TEMP}/${MODULE}"
     PKG="${TMP}/package-${PKGNAME}"
 
     rm -rf "${PKG}"
@@ -258,10 +269,9 @@ for LINE in ${QUEUELINES}; do
 
     # make package
     cd "${PKG}" || exit 1
-    OUTPUT="${OUTPUT}/${MODULE}"
-    mkdir -p "${OUTPUT}"
-    BUILD=$(cat "${CWD}/build/${PKGNAME}")
-    PKG="${OUTPUT}/${PKGNAME}-${VERSION}-${PKGARCH}-${BUILD}_${TAG}.${EXT}"
+    OUTPUTMOD="${OUTPUT}/${MODULE}"
+    mkdir -p "${OUTPUTMOD}"
+    PKG="${OUTPUTMOD}/${PKGNAME}-${VERSION}-${PKGARCH}-${BUILD}_${TAG}.${EXT}"
     rm -f "${PKG}"
     makepkg -l y -c n "${PKG}"
 
@@ -269,7 +279,5 @@ for LINE in ${QUEUELINES}; do
         upgradepkg --install-new --reinstall "${PKG}"
     fi
 
-    # restore variable ${TMP} on each iteration
-    . "${CWD}"/additional-scripts/settings.sh
-    cd "${CWD}" || exit
+    cd "${CWD}" || exit 1
 done

@@ -6,7 +6,7 @@ PKGNAME="x11-skel"
 VERSION="1.0"
 
 CWD="$(pwd)"
-TMP="${TMP}/misc"
+TMP="${TEMP}/misc"
 PKG="${TMP}/package-${PKGNAME}"
 
 rm -rf "${PKG}"
