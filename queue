@@ -36,6 +36,7 @@ misc:m17n-lib
 misc:xdg-user-dirs
 misc:xdg-utils
 misc:x11-skel
+misc:xterm
 
 proto:fontsproto
 lib:libfontenc
