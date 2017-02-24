@@ -45,7 +45,7 @@ show_help() {
 }
 
 src_arch_not_found_mess() {
-    echo -en "${RED}Source archive ${CYAN}$1.tar.?z*${RED} not found in "
+    echo -en "${RED}Source archive ${CYAN}$1-*.tar.?z*${RED} not found in "
     echo -en "${BROWN}$2/${CDEF}\nSet variable ${BROWN}CHECK_PACKAGE_VERSION="
     echo -en "\"true\" ${CDEF}in ${CYAN}settings.sh\n${CDEF}"
     echo "for download missing source archives."
@@ -88,23 +88,44 @@ fi
 
 SRCDIR="src"
 # check exist source archives berore building packages
+# (for x11-skel package source code not needed)
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
     SRCEXT=".tar.?z*"
     if [[ $# -eq 2 ]]; then
-        MISC=""
-        [[ "$1" == "misc" ]] && MISC="/$2"
-        ARCHDIR="${SRCDIR}/$1${MISC}"
-        SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-            -name "$2-*${SRCEXT}")
-        if [[ "x${SOURCEARCH}" == "x" ]]; then
-            src_arch_not_found_mess "$2" "${ARCHDIR}"
-            exit 1
+        if [[ "$2" != "x11-skel" ]]; then
+            MISC=""
+            [[ "$1" == "misc" ]] && MISC="/$2"
+            ARCHDIR="${SRCDIR}/$1${MISC}"
+            SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
+                -name "$2-*${SRCEXT}")
+            if [[ "x${SOURCEARCH}" == "x" ]]; then
+                src_arch_not_found_mess "$2" "${ARCHDIR}"
+                exit 1
+            fi
         fi
     elif [[ $# -eq 1 ]]; then
         for LINE in ${QUEUELINES}; do
             MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
             if [[ "${MODULE}" == "$1" ]]; then
                 PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
+                if [[ "${PKGNAME}" != "x11-skel" ]]; then
+                    MISC=""
+                    [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
+                    ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
+                    SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
+                        -name "${PKGNAME}-*${SRCEXT}")
+                    if [[ "x${SOURCEARCH}" == "x" ]]; then
+                        src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
+                        exit 1
+                    fi
+                fi
+            fi
+        done
+    else
+        for LINE in ${QUEUELINES}; do
+            MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
+            PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
+            if [[ "${PKGNAME}" != "x11-skel" ]]; then
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                 ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
@@ -114,20 +135,6 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                     src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
                     exit 1
                 fi
-            fi
-        done
-    else
-        for LINE in ${QUEUELINES}; do
-            MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
-            PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
-            MISC=""
-            [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
-            ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
-            SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-                -name "${PKGNAME}-*${SRCEXT}")
-            if [[ "x${SOURCEARCH}" == "x" ]]; then
-                src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
-                exit 1
             fi
         done
     fi
