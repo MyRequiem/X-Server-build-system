@@ -29,27 +29,30 @@ misc:freeglut
 misc:mesa-demos
 util:util-macros
 misc:libepoxy
-
-
 misc:libevdev
 misc:libva
 misc:m17n-lib
 misc:xdg-user-dirs
+misc:links
 misc:xdg-utils
 misc:x11-skel
+
+lib:libICE
+lib:libSM
+lib:libXt
+lib:libXmu
+lib:libXpm
+lib:libXaw
 misc:xterm
+lib:libfontenc
 app:mkfontscale
 app:mkfontdir
 misc:liberation-fonts-ttf
-misc:links
 misc:fontconfig
-
-
+lib:pixman
 proto:fontsproto
-lib:libfontenc
 lib:libXfont
 lib:libXfont2
-lib:pixman
 
 
 xserver:xorg-server

@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Compiling a package "fontconfig" requires HTML to text converter utility.
+# Compiling a package "fontconfig" (as well as "xdg-utils", etc.) requires
+# HTML to text converter utility.
 # /usr/bin/links can do it, but the package from standard repository n/links
 # compiled with libfontconfig.so and will not work without it.
 # So, build "links" in advance that worked without libfontconfig.so.

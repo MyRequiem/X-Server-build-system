@@ -54,7 +54,7 @@ CFLAGS="${SLKCFLAGS}" \
     --with-icon-theme=hicolor \
     --with-icondir=/usr/share/icons \
     --with-pixmapdir=/usr/share/pixmaps \
-    --build="${ARCH}"-slackware-linux
+    --build="${ARCH}"-slackware-linux || exit 1
 
 make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}" || exit 1

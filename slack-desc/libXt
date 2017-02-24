@@ -5,15 +5,15 @@
 # make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':'.
 
-      |-----handy-ruler--------------------------------------------------------|
-libX11: libX11 (Core X11 protocol client library)
-libX11:
-libX11:
-libX11:
-libX11: X Library and XCB interface
-libX11:
-libX11:
-libX11:
-libX11:
-libX11: Download: http://www.x.org/archive/individual/lib/
-libX11:
+     |-----handy-ruler---------------------------------------------------------|
+libXt: libXt (X Toolkit Intrinsics library)
+libXt:
+libXt:
+libXt:
+libXt: X Toolkit Library
+libXt:
+libXt:
+libXt:
+libXt:
+libXt: Download: http://www.x.org/archive/individual/lib/
+libXt:

@@ -6,14 +6,14 @@
 # customary to leave one space after the ':'.
 
       |-----handy-ruler--------------------------------------------------------|
-libX11: libX11 (Core X11 protocol client library)
-libX11:
-libX11:
-libX11:
-libX11: X Library and XCB interface
-libX11:
-libX11:
-libX11:
-libX11:
-libX11: Download: http://www.x.org/archive/individual/lib/
-libX11:
+libICE: libICE (X Inter-Client Exchange Library)
+libICE:
+libICE:
+libICE:
+libICE: X Inter Client Exchange Library
+libICE:
+libICE:
+libICE:
+libICE:
+libICE: Download: http://www.x.org/archive/individual/lib/
+libICE:
