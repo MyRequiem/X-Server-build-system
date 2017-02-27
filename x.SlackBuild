@@ -171,7 +171,7 @@ for LINE in ${QUEUELINES}; do
         BINPKG=$(find "${OUTPUT}/${MODULE}" -type f \
             -name "${PKGNAME}-[0-9]*-${BUILD}_${TAG}.${EXT}")
         if [[ "x${BINPKG}" != "x" ]]; then
-            echo -e "${GREEN}Already exists: ${BROWN}${BINPKG}${CDEF}"
+            echo -e "${MAGENTA}Already exists: ${BROWN}${BINPKG}${CDEF}"
             continue
         fi
     fi
@@ -224,15 +224,15 @@ for LINE in ${QUEUELINES}; do
     . "${CWD}"/additional-scripts/setperm.sh
 
     # if any patches are needed, call this script to apply them
-    PKGPATCH="${CWD}/patches/${PKGNAME}-patch"
+    PKGPATCH="${CWD}/patches/${PKGNAME}.sh"
     if [ -r "${PKGPATCH}" ]; then
         . "${PKGPATCH}"
     fi
 
     # ./configure using custom configure script if needed,
     # otherwise use default configure script
-    CONFIGURE="${CWD}/configure/${PKGNAME}"
-    ! [ -r "${CONFIGURE}" ] && CONFIGURE="${CWD}/configure/configure"
+    CONFIGURE="${CWD}/configure/${PKGNAME}.sh"
+    ! [ -r "${CONFIGURE}" ] && CONFIGURE="${CWD}/configure/configure.sh"
     . "${CONFIGURE}"
 
     make "${NUMJOBS}" || make || exit 1
@@ -243,7 +243,7 @@ for LINE in ${QUEUELINES}; do
     . "${CWD}"/additional-scripts/compressmanpages.sh
 
     # if there's any special post-install things to do, do them:
-    POSTINSTALL="${CWD}/post-install/${PKGNAME}.post-install"
+    POSTINSTALL="${CWD}/post-install/${PKGNAME}.sh"
     if [ -r "${POSTINSTALL}" ]; then
         RUNSCRIPT=$(mktemp -p "${TMP}")
         sed -e "s#usr/lib#usr/lib${LIBDIRSUFFIX}#g" \

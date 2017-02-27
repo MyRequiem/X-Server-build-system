@@ -99,13 +99,6 @@ export ADDITIONAL_DIR="/${MINNAME}-db"
 . "${CWDD}"/additional-scripts/strip-binaries.sh
 . "${CWDD}"/additional-scripts/compressmanpages.sh
 
-# mv and remove "${PKG}/usr/share/pkgconfig"
-PKGCONFIG="${PKG}/usr/share/pkgconfig"
-if [ -d "${PKGCONFIG}" ]; then
-    mv "${PKGCONFIG}"/* "${PKG}/usr/lib${LIBDIRSUFFIX}/pkgconfig"
-    rm -rf "${PKGCONFIG}"
-fi
-
 mkdir -p "${PKG}/install"
 cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"
 

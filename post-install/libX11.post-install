@@ -1,5 +1,0 @@
-#!/bin/bash
-
-mkdir -p "${PKG}"/usr/share/X11
-zcat "${CWD}"/post-install/libX11/XKeysymDB.gz > \
-    "${PKG}"/usr/share/X11/XKeysymDB

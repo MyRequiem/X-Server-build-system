@@ -67,6 +67,14 @@ mkdir -p "${SHAREFONTCONFIG}"
 . "${CWDD}"/additional-scripts/copydocs.sh
 . "${CWDD}"/additional-scripts/compressmanpages.sh
 
+# remove extra documentation
+DOCDIR="${PKG}/usr/doc/${PKGNAME}-${VERSION}"
+TXT="${DOCDIR}/${PKGNAME}/${PKGNAME}-user.txt"
+if [ -f "${TXT}" ]; then
+    mv "${TXT}" "${DOCDIR}"
+    rm -rf "${PKG}/usr/doc/${PKGNAME}-${VERSION}/${PKGNAME}"
+fi
+
 mkdir -p "${PKG}/var/log/setup"
 cat "${CWD}/setup.05.fontconfig" > "${PKG}/var/log/setup/setup.05.fontconfig"
 chmod 755 "${PKG}/var/log/setup/setup.05.fontconfig"

@@ -8,6 +8,7 @@ proto:presentproto
 xcb:xcb-proto
 proto:xproto
 lib:libXau
+lib:libXdmcp
 xcb:libxcb
 lib:libxshmfence
 proto:xextproto
@@ -21,6 +22,8 @@ lib:libXfixes
 lib:libXdamage
 lib:libXext
 misc:libvdpau
+proto:xf86vidmodeproto
+lib:libXxf86vm
 misc:mesa
 misc:glu
 misc:glew
@@ -36,7 +39,6 @@ misc:xdg-user-dirs
 misc:links
 misc:xdg-utils
 misc:x11-skel
-
 lib:libICE
 lib:libSM
 lib:libXt
