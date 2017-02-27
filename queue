@@ -65,6 +65,8 @@ proto:resourceproto
 proto:xf86driproto
 proto:xineramaproto
 lib:libxkbfile
+app:xinit
 
+app:xauth
 
 xserver:xorg-server

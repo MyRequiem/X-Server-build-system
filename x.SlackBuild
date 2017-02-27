@@ -256,7 +256,7 @@ for LINE in ${QUEUELINES}; do
     cat "${CWD}/slack-desc/${PKGNAME}" > "${PKG}/install/slack-desc"
 
     # if this package requires some doinst.sh, add it here
-    DOINSTALL="${CWD}/doinst.sh/${PKGNAME}"
+    DOINSTALL="${CWD}/doinst.sh/${PKGNAME}.sh"
     if [ -r "${DOINSTALL}"  ]; then
         sed -e "s#usr/lib#usr/lib${LIBDIRSUFFIX}#g" "${DOINSTALL}" >> \
             "${PKG}/install/doinst.sh"
