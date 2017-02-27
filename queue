@@ -55,6 +55,16 @@ lib:pixman
 proto:fontsproto
 lib:libXfont
 lib:libXfont2
+proto:xcmiscproto
+proto:bigreqsproto
+proto:randrproto
+proto:renderproto
+proto:videoproto
+proto:compositeproto
+proto:resourceproto
+proto:xf86driproto
+proto:xineramaproto
+lib:libxkbfile
 
 
 xserver:xorg-server

@@ -16,7 +16,7 @@ export BUILD_ONLY_NOT_EXIST="true"
 # install package after build
 export INSTALL_AFTER_BUILD="false"
 # check package version
-export CHECK_PACKAGE_VERSION="false"
+export CHECK_PACKAGE_VERSION="true"
 # only download source code (without build)
 export ONLY_DOWNLOAD="false"
 # ========================== End of settings ===================================

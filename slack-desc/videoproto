@@ -5,15 +5,15 @@
 # make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':'.
 
-         |-----handy-ruler-----------------------------------------------------|
-dri3proto: dri3proto (C prototypes for X11 Direct Rendering Infrastructure 3)
-dri3proto:
-dri3proto:
-dri3proto:
-dri3proto: DRI3 extension headers
-dri3proto:
-dri3proto:
-dri3proto:
-dri3proto:
-dri2proto: Download: https://www.x.org/archive/individual/proto/
-dri3proto:
+          |-----handy-ruler----------------------------------------------------|
+videoproto: videoproto (C prototypes for X Video Extension)
+videoproto:
+videoproto:
+videoproto: Video extension headers
+videoproto:
+videoproto:
+videoproto:
+videoproto:
+videoproto:
+videoproto: Download: https://www.x.org/archive/individual/proto/
+videoproto:
