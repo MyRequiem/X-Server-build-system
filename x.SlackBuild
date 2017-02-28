@@ -192,7 +192,11 @@ for LINE in ${QUEUELINES}; do
     if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
         # check latest release version
         echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-        VERSION=$(wget -q -O - "${XDOWNLOAD}/${MODULE}" | grep "${PKGNAME}-" | \
+        DOWNLOADURL="${XDOWNLOAD}/${MODULE}"
+        # source code for "xkeyboard-config" package in a separate directory
+        [[ "${PKGNAME}" == "xkeyboard-config" ]] &&
+            DOWNLOADURL="${DOWNLOADURL}/${PKGNAME}"
+        VERSION=$(wget -q -O - "${DOWNLOADURL}" | grep "${PKGNAME}-" | \
             grep 'tar.bz2"' | grep -v "\-rc[0-9]" | cut -d \" -f 8 | rev | \
             cut -d - -f 1 | cut -d . -f 3- | rev | sort -V | tail -n 1)
         echo "${VERSION}"
@@ -203,7 +207,7 @@ for LINE in ${QUEUELINES}; do
             echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
             (
                 cd "${SRCDIR}/${MODULE}" || exit 1
-                wget "${XDOWNLOAD}/${MODULE}/${SOURCE}"
+                wget "${DOWNLOADURL}/${SOURCE}"
             )
         fi
     else

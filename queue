@@ -34,6 +34,11 @@ proto:xf86bigfontproto
 proto:xf86dgaproto
 proto:xf86miscproto
 
+# data module
+data:xbitmaps
+data:xcursor-themes
+data:xkeyboard-config
+
 # xcb:libpthread-stubs
 # lib:libpciaccess
 # misc:libdrm
@@ -91,7 +96,6 @@ proto:xf86miscproto
 # lib:libXtst
 # lib:libXinerama
 # app:xset
-# data:xbitmaps
 # app:xsetroot
 # app:xprop
 # lib:libXScrnSaver
