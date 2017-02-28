@@ -1,60 +1,20 @@
-xcb:libpthread-stubs
+####
+# Modules: proto data util xcb lib app doc xserver driver font
+####
+
+# primarily proto module
 proto:glproto
-lib:libpciaccess
-misc:libdrm
 proto:dri2proto
 proto:dri3proto
 proto:presentproto
-xcb:xcb-proto
 proto:xproto
-lib:libXau
-lib:libXdmcp
-xcb:libxcb
-lib:libxshmfence
 proto:xextproto
 proto:kbproto
 proto:inputproto
-lib:xtrans
-lib:libX11
 proto:damageproto
 proto:fixesproto
-lib:libXfixes
-lib:libXdamage
-lib:libXext
-misc:libvdpau
 proto:xf86vidmodeproto
-lib:libXxf86vm
-misc:mesa
-misc:glu
-misc:glew
-lib:libXi
-misc:freeglut
-misc:mesa-demos
-util:util-macros
-misc:libepoxy
-misc:libevdev
-misc:libva
-misc:m17n-lib
-misc:xdg-user-dirs
-misc:links
-misc:xdg-utils
-misc:x11-skel
-lib:libICE
-lib:libSM
-lib:libXt
-lib:libXmu
-lib:libXpm
-lib:libXaw
-misc:xterm
-lib:libfontenc
-app:mkfontscale
-app:mkfontdir
-misc:liberation-fonts-ttf
-misc:fontconfig
-lib:pixman
 proto:fontsproto
-lib:libXfont
-lib:libXfont2
 proto:xcmiscproto
 proto:bigreqsproto
 proto:randrproto
@@ -67,24 +27,72 @@ proto:xineramaproto
 proto:recordproto
 proto:scrnsaverproto
 proto:dmxproto
+proto:evieext
+proto:fontcacheproto
+proto:printproto
+proto:xf86bigfontproto
+proto:xf86dgaproto
+proto:xf86miscproto
 
-
-lib:libxkbfile
-app:xinit
-app:xauth
-app:setxkbmap
-app:xkbcomp
-data:xkeyboard-config
-lib:libXrender
-lib:libXft
-lib:libXcursor
-lib:libXtst
-lib:libXinerama
-app:xset
-data:xbitmaps
-app:xsetroot
-app:xprop
-lib:libXScrnSaver
-
-
-xserver:xorg-server
+# xcb:libpthread-stubs
+# lib:libpciaccess
+# misc:libdrm
+# xcb:xcb-proto
+# lib:libXau
+# lib:libXdmcp
+# xcb:libxcb
+# lib:libxshmfence
+# lib:xtrans
+# lib:libX11
+# lib:libXfixes
+# lib:libXdamage
+# lib:libXext
+# misc:libvdpau
+# lib:libXxf86vm
+# misc:mesa
+# misc:glu
+# misc:glew
+# lib:libXi
+# misc:freeglut
+# misc:mesa-demos
+# util:util-macros
+# misc:libepoxy
+# misc:libevdev
+# misc:libva
+# misc:m17n-lib
+# misc:xdg-user-dirs
+# misc:links
+# misc:xdg-utils
+# misc:x11-skel
+# lib:libICE
+# lib:libSM
+# lib:libXt
+# lib:libXmu
+# lib:libXpm
+# lib:libXaw
+# misc:xterm
+# lib:libfontenc
+# app:mkfontscale
+# app:mkfontdir
+# misc:liberation-fonts-ttf
+# misc:fontconfig
+# lib:pixman
+# lib:libXfont
+# lib:libXfont2
+# lib:libxkbfile
+# app:xinit
+# app:xauth
+# app:setxkbmap
+# app:xkbcomp
+# data:xkeyboard-config
+# lib:libXrender
+# lib:libXft
+# lib:libXcursor
+# lib:libXtst
+# lib:libXinerama
+# app:xset
+# data:xbitmaps
+# app:xsetroot
+# app:xprop
+# lib:libXScrnSaver
+# xserver:xorg-server
