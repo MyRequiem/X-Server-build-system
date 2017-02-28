@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                |-----handy-ruler----------------------------------------------|
+xkeyboard-config: xkeyboard-config (X Keyboard Extension config files)
+xkeyboard-config:
+xkeyboard-config: The X Keyboard Extension essentially replaces the core
+xkeyboard-config: protocol definition of keyboard. The extension makes possible
+xkeyboard-config: to clearly and explicitly specify most aspects of keyboard
+xkeyboard-config: behaviour on per-key basis and to more closely track the
+xkeyboard-config: logical and physical state of the keyboard. It also includes
+xkeyboard-config: a number of keyboard controls designed to make keyboards more
+xkeyboard-config: accessible to people with physical impairments.
+xkeyboard-config:
+xkeyboard-config: Download: https://www.x.org/archive/individual/data/

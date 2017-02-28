@@ -67,6 +67,23 @@ proto:xineramaproto
 lib:libxkbfile
 app:xinit
 
+
 app:xauth
+app:setxkbmap
+app:xkbcomp
+data:xkeyboard-config
+lib:libXrender
+lib:libXft
+lib:libXcursor
+proto:recordproto
+lib:libXtst
+lib:libXinerama
+app:xset
+data:xbitmaps
+app:xsetroot
+app:xprop
+proto:scrnsaverproto
+lib:libXScrnSaver
+
 
 xserver:xorg-server

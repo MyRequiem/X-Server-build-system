@@ -84,7 +84,7 @@ if [[ $# -eq 2 ]]; then
     fi
 fi
 
-. "${CWD}"/additional-scripts/settings.sh
+. "${CWD}"/settings.sh
 
 SRCDIR="src"
 # check exist source archives berore building packages
@@ -168,11 +168,13 @@ for LINE in ${QUEUELINES}; do
     BUILD=$(cat "${CWD}/build/${PKGNAME}")
     # if package already exist in ${OUTPUT} directory
     if [[ "${BUILD_ONLY_NOT_EXIST}" == "true" ]]; then
-        BINPKG=$(find "${OUTPUT}/${MODULE}" -type f \
-            -name "${PKGNAME}-[0-9]*-${BUILD}_${TAG}.${EXT}")
-        if [[ "x${BINPKG}" != "x" ]]; then
-            echo -e "${MAGENTA}Already exists: ${BROWN}${BINPKG}${CDEF}"
-            continue
+        if [ -d "${OUTPUT}/${MODULE}" ]; then
+            BINPKG=$(find "${OUTPUT}/${MODULE}" -type f \
+                -name "${PKGNAME}-[0-9]*-${BUILD}_${TAG}.${EXT}")
+            if [[ "x${BINPKG}" != "x" ]]; then
+                echo -e "${MAGENTA}Already exists: ${BROWN}${BINPKG}${CDEF}"
+                continue
+            fi
         fi
     fi
 

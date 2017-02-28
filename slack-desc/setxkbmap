@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+setxkbmap: setxkbmap (change X11 keyboard layout)
+setxkbmap:
+setxkbmap:
+setxkbmap: setxkbmap is an X11 client to change the keymaps in the X server for
+setxkbmap: a specified keyboard to use the layout determined by the options
+setxkbmap: listed on the command line.
+setxkbmap:
+setxkbmap:
+setxkbmap:
+setxkbmap: Download: https://www.x.org/archive/individual/app/
+setxkbmap:
