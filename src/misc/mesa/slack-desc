@@ -13,7 +13,7 @@ mesa: Mesa is a 3-D graphics library with an API very similar to that of
 mesa: another well-known 3-D graphics library. The Mesa libraries are
 mesa: used by X to provide both software and hardware accelerated graphics.
 mesa:
+mesa:
 mesa: Homepage: https://www.mesa3d.org/
 mesa: Download: https://mesa.freedesktop.org/archive/
-mesa: Demos: https://mesa.freedesktop.org/archive/demos/
 mesa:
