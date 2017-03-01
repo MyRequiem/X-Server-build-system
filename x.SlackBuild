@@ -165,7 +165,10 @@ for LINE in ${QUEUELINES}; do
     # if package name is specified
     [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
 
-    BUILD=$(cat "${CWD}/build/${PKGNAME}")
+    BUILD="1"
+    BUILDFILE="${CWD}/build/${PKGNAME}"
+    [ -r "${BUILDFILE}" ] && BUILD=$(cat "${BUILDFILE}")
+
     # if package already exist in ${OUTPUT} directory
     if [[ "${BUILD_ONLY_NOT_EXIST}" == "true" ]]; then
         if [ -d "${OUTPUT}/${MODULE}" ]; then

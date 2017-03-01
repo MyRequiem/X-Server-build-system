@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+      |-----handy-ruler--------------------------------------------------------|
+libdmx: libdmx (DMX - Distributed Multihead X extension library)
+libdmx:
+libdmx:
+libdmx: The dmx Library
+libdmx:
+libdmx:
+libdmx:
+libdmx:
+libdmx:
+libdmx: Download: https://www.x.org/archive/individual/lib/
+libdmx:

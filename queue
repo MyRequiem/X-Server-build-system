@@ -1,8 +1,8 @@
 ####
-# Modules: proto util data xcb lib app doc xserver driver font
+# Modules: proto util lib xcb app data misc xserver driver font
 ####
 
-## proto module
+### proto module
 proto:bigreqsproto
 proto:compositeproto
 proto:damageproto
@@ -34,7 +34,7 @@ proto:xf86vidmodeproto
 proto:xineramaproto
 proto:xproto
 
-## util module
+### util module
 util:gccmakedep
 util:imake
 util:lndir
@@ -42,7 +42,7 @@ util:makedepend
 util:util-macros
 util:xorg-cf-files
 
-## lib+xcb module
+### lib and xcb modules
 xcb:libpthread-stubs
 xcb:xcb-proto
 lib:libXau
@@ -85,15 +85,73 @@ xcb:xcb-util-image
 xcb:xcb-util-cursor
 xcb:xcb-util-keysyms
 xcb:xcb-util-wm
+lib:libFS
+lib:libXcomposite
+lib:libXevie
+lib:libXfontcache
+lib:libXp
+lib:libXrandr
+lib:libXpresent
+lib:libXres
+lib:libXv
+lib:libXvMC
+lib:libXxf86dga
+lib:libXxf86misc
+lib:libdmx
+
+### app module
+app:mkfontscale
+app:mkfontdir
+app:xinit
+app:xauth
+app:setxkbmap
+app:xkbcomp
+app:xset
+app:xsetroot
+app:xprop
+app:appres
+app:xcursorgen
+app:bdftopcf
+app:beforelight
+app:bitmap
+app:fonttosfnt
+app:fslsfonts
+app:iceauth
+app:listres
+app:luit
+app:mkcomposecache
+app:rendercheck
+app:rgb
+app:transset
+app:viewres
+app:xbacklight
+app:xbiff
+app:xclipboard
+app:xcmsdb
+app:xconsole
+app:xdbedizzy
+app:xditview
+app:xdpyinfo
+app:xdriinfo
+app:xf86dga
+app:xfd
+app:xfontsel
+app:xgamma
+app:xgc
+app:xhost
+app:xinput
+app:xkbevd
+app:xkbprint
+app:xkbutils
+app:xlogo
+app:xlsatoms
+app:xlsclients
 
 
-## data module
-# data:xbitmaps
-# required to build "xcursor-themes"
-# app:xcursorgen
-# data:xcursor-themes
-# data:xkeyboard-config
-
+### data module
+data:xbitmaps
+data:xcursor-themes
+data:xkeyboard-config
 
 
 # misc:libdrm
@@ -111,15 +169,6 @@ xcb:xcb-util-wm
 # misc:xdg-utils
 # misc:x11-skel
 # misc:xterm
-# app:mkfontscale
-# app:mkfontdir
 # misc:liberation-fonts-ttf
-# app:xinit
-# app:xauth
-# app:setxkbmap
-# app:xkbcomp
-# data:xkeyboard-config
-# app:xset
-# app:xsetroot
-# app:xprop
+
 # xserver:xorg-server
