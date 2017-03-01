@@ -1,102 +1,125 @@
 ####
-# Modules: proto data util xcb lib app doc xserver driver font
+# Modules: proto util data xcb lib app doc xserver driver font
 ####
 
-# primarily proto module
-proto:glproto
+## proto module
+proto:bigreqsproto
+proto:compositeproto
+proto:damageproto
+proto:dmxproto
 proto:dri2proto
 proto:dri3proto
-proto:presentproto
-proto:xproto
-proto:xextproto
-proto:kbproto
-proto:inputproto
-proto:damageproto
-proto:fixesproto
-proto:xf86vidmodeproto
-proto:fontsproto
-proto:xcmiscproto
-proto:bigreqsproto
-proto:randrproto
-proto:renderproto
-proto:videoproto
-proto:compositeproto
-proto:resourceproto
-proto:xf86driproto
-proto:xineramaproto
-proto:recordproto
-proto:scrnsaverproto
-proto:dmxproto
 proto:evieext
+proto:fixesproto
 proto:fontcacheproto
+proto:fontsproto
+proto:glproto
+proto:inputproto
+proto:kbproto
+proto:presentproto
 proto:printproto
+proto:randrproto
+proto:recordproto
+proto:renderproto
+proto:resourceproto
+proto:scrnsaverproto
+proto:videoproto
+proto:xcmiscproto
+proto:xextproto
 proto:xf86bigfontproto
 proto:xf86dgaproto
+proto:xf86driproto
 proto:xf86miscproto
+proto:xf86vidmodeproto
+proto:xineramaproto
+proto:xproto
 
-# data module
-data:xbitmaps
-data:xcursor-themes
-data:xkeyboard-config
+## util module
+util:gccmakedep
+util:imake
+util:lndir
+util:makedepend
+util:util-macros
+util:xorg-cf-files
 
-# xcb:libpthread-stubs
-# lib:libpciaccess
+## lib+xcb module
+xcb:libpthread-stubs
+xcb:xcb-proto
+lib:libXau
+lib:libXdmcp
+xcb:libxcb
+lib:xtrans
+lib:libX11
+lib:libpciaccess
+lib:libxshmfence
+lib:libXfixes
+lib:libXdamage
+lib:libXext
+lib:libXxf86vm
+lib:libXi
+lib:libICE
+lib:libSM
+lib:libXt
+lib:libXmu
+lib:libXpm
+lib:libXaw
+lib:libfontenc
+lib:pixman
+lib:libXfont
+lib:libXfont2
+lib:libxkbfile
+lib:libXrender
+lib:libXcursor
+lib:libXtst
+lib:libXinerama
+lib:libXScrnSaver
+# required to build "fontconfig"
+misc:links
+# required to build "libXft"
+misc:fontconfig
+lib:libXft
+xcb:xpyb
+xcb:xcb-util
+xcb:xcb-util-renderutil
+xcb:xcb-util-image
+xcb:xcb-util-cursor
+xcb:xcb-util-keysyms
+xcb:xcb-util-wm
+
+
+## data module
+# data:xbitmaps
+# required to build "xcursor-themes"
+# app:xcursorgen
+# data:xcursor-themes
+# data:xkeyboard-config
+
+
+
 # misc:libdrm
-# xcb:xcb-proto
-# lib:libXau
-# lib:libXdmcp
-# xcb:libxcb
-# lib:libxshmfence
-# lib:xtrans
-# lib:libX11
-# lib:libXfixes
-# lib:libXdamage
-# lib:libXext
 # misc:libvdpau
-# lib:libXxf86vm
 # misc:mesa
 # misc:glu
 # misc:glew
-# lib:libXi
 # misc:freeglut
 # misc:mesa-demos
-# util:util-macros
 # misc:libepoxy
 # misc:libevdev
 # misc:libva
 # misc:m17n-lib
 # misc:xdg-user-dirs
-# misc:links
 # misc:xdg-utils
 # misc:x11-skel
-# lib:libICE
-# lib:libSM
-# lib:libXt
-# lib:libXmu
-# lib:libXpm
-# lib:libXaw
 # misc:xterm
-# lib:libfontenc
 # app:mkfontscale
 # app:mkfontdir
 # misc:liberation-fonts-ttf
-# misc:fontconfig
-# lib:pixman
-# lib:libXfont
-# lib:libXfont2
-# lib:libxkbfile
 # app:xinit
 # app:xauth
 # app:setxkbmap
 # app:xkbcomp
 # data:xkeyboard-config
-# lib:libXrender
-# lib:libXft
-# lib:libXcursor
-# lib:libXtst
-# lib:libXinerama
 # app:xset
 # app:xsetroot
 # app:xprop
-# lib:libXScrnSaver
 # xserver:xorg-server

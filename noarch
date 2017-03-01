@@ -1,5 +1,6 @@
-xtrans
-util-macros
+gccmakedep
 mkfontdir
-xkeyboard-config
+util-macros
 xcursor-themes
+xkeyboard-config
+xtrans

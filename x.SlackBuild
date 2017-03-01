@@ -196,7 +196,7 @@ for LINE in ${QUEUELINES}; do
         # source code for "xkeyboard-config" package in a separate directory
         [[ "${PKGNAME}" == "xkeyboard-config" ]] &&
             DOWNLOADURL="${DOWNLOADURL}/${PKGNAME}"
-        VERSION=$(wget -q -O - "${DOWNLOADURL}" | grep "${PKGNAME}-" | \
+        VERSION=$(wget -q -O - "${DOWNLOADURL}" | grep "${PKGNAME}-[0-9]" | \
             grep 'tar.bz2"' | grep -v "\-rc[0-9]" | cut -d \" -f 8 | rev | \
             cut -d - -f 1 | cut -d . -f 3- | rev | sort -V | tail -n 1)
         echo "${VERSION}"
@@ -239,10 +239,10 @@ for LINE in ${QUEUELINES}; do
     # otherwise use default configure script
     CONFIGURE="${CWD}/configure/${PKGNAME}.sh"
     ! [ -r "${CONFIGURE}" ] && CONFIGURE="${CWD}/configure/configure.sh"
-    . "${CONFIGURE}"
+    . "${CONFIGURE}" || exit 1
 
     make "${NUMJOBS}" || make || exit 1
-    make install DESTDIR="${PKG}"
+    make install DESTDIR="${PKG}" || exit 1
 
     . "${CWD}"/additional-scripts/strip-binaries.sh
     . "${CWD}"/additional-scripts/copydocs.sh
