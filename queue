@@ -1,5 +1,5 @@
 ####
-# Modules: proto util lib xcb app data misc xserver driver font
+# Modules: proto util lib xcb app data font misc xserver driver
 ####
 
 ### proto module
@@ -107,6 +107,8 @@ app:xauth
 app:setxkbmap
 app:xkbcomp
 app:xset
+# required to build "xsetroot"
+data:xbitmaps
 app:xsetroot
 app:xprop
 app:appres
@@ -128,7 +130,6 @@ app:xconsole
 app:xdbedizzy
 app:xditview
 app:xdpyinfo
-app:xdriinfo
 app:xf86dga
 app:xfd
 app:xfontsel
@@ -156,26 +157,38 @@ app:xwininfo
 app:xwud
 
 ### data module
-data:xbitmaps
 data:xcursor-themes
 data:xkeyboard-config
 
+### font module
+font:encodings
+font:font-alias
+font:font-util
 
-# misc:libdrm
-# misc:libvdpau
-# misc:mesa
+### misc module
+misc:libdrm
+misc:libvdpau
+misc:libevdev
+misc:libva
+misc:m17n-lib
+misc:xdg-user-dirs
+misc:xdg-utils
+misc:x11-skel
+misc:xterm
+misc:liberation-fonts-ttf
+misc:mesa
+# required GL library (mesa package)
+# app:xdriinfo
 # misc:glu
 # misc:glew
 # misc:freeglut
 # misc:mesa-demos
 # misc:libepoxy
-# misc:libevdev
-# misc:libva
-# misc:m17n-lib
-# misc:xdg-user-dirs
-# misc:xdg-utils
-# misc:x11-skel
-# misc:xterm
-# misc:liberation-fonts-ttf
 
-# xserver:xorg-server
+### xserver module
+xserver:xorg-server
+
+### driver module
+driver:xf86-input-evdev
+driver:xf86-video-vesa
+driver:xf86-video-nouveau
