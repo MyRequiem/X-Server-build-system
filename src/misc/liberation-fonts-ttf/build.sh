@@ -5,10 +5,9 @@ PKGNAME="liberation-fonts-ttf"
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    DOWNLOAD="https://fedorahosted.org/releases/l/i/liberation-fonts/"
-    VERSION=$(wget -q -O - "${DOWNLOAD}" | \
-        grep 'href="liberation-fonts-ttf-' | grep -v -e ".beta" -e ".devel" | \
-        grep '.tar.gz"' | cut -d \" -f 2 | rev | cut -d - -f 1 | \
+    DOWNLOAD="http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/"
+    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep "${PKGNAME}" | \
+        grep ".tar.gz" | cut -d \" -f 7 | cut -d - -f 4 | rev | \
         cut -d . -f 3- | rev | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.gz"
     echo "${VERSION}"
@@ -16,7 +15,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # download source archive if does not exist
     if ! [ -r "${SOURCE}" ]; then
         echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
-        wget "${DOWNLOAD}/${SOURCE}"
+        wget "${DOWNLOAD}${SOURCE}"
     fi
 else
     SOURCE=$(find . -type f -name "${PKGNAME}-[0-9]*.tar.?z*" | head -n 1 | \

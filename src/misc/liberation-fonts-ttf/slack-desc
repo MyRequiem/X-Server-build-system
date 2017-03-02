@@ -13,7 +13,7 @@ liberation-fonts-ttf: families: Liberation Sans, Liberation Serif and
 liberation-fonts-ttf: Liberation Mono. These fonts are metric-compatible with
 liberation-fonts-ttf: Arial, Times New Roman, and Courier New respectively.
 liberation-fonts-ttf:
-liberation-fonts-ttf: Homepage: https://fedorahosted.org/liberation-fonts/
+liberation-fonts-ttf:
 liberation-fonts-ttf: Download:
-liberation-fonts-ttf: https://fedorahosted.org/releases/l/i/liberation-fonts/
+liberation-fonts-ttf: http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/
 liberation-fonts-ttf:

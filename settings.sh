@@ -21,5 +21,7 @@ export CHECK_PACKAGE_VERSION="true"
 export ONLY_DOWNLOAD="false"
 # ========================== End of settings ===================================
 
-# if ONLY_DOWNLOAD="true" variable CHECK_PACKAGE_VERSION must be set "true"
-[[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true"
+# if ONLY_DOWNLOAD="true" variables BUILD_ONLY_NOT_EXIST and
+# CHECK_PACKAGE_VERSION must be set "true"
+[[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true" &&
+    BUILD_ONLY_NOT_EXIST="false"
