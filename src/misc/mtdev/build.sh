@@ -1,21 +1,19 @@
 #!/bin/sh
 
-PKGNAME="libevdev"
+PKGNAME="mtdev"
 
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    DOWNLOAD="https://www.freedesktop.org/software/libevdev/"
-    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep '<a href="libevdev' | \
-        grep ".tar.xz<" | cut -d \" -f 8 | cut -d - -f 2 | rev | \
-        cut -d . -f 3- | rev | sort -V | tail -n 1)
-    SOURCE="${PKGNAME}-${VERSION}.tar.xz"
+    URL="http://bitmath.org/code/mtdev/"
+    VERSION=$(wget -q -O - "${URL}" | grep "${PKGNAME}" | grep ".tar.bz2" | \
+        head -n 1 | cut -d - -f 3 | rev | cut -d . -f 3- | rev)
+    SOURCE="${PKGNAME}-${VERSION}.tar.bz2"
     echo "${VERSION}"
 
-    # download source archive if does not exist
     if ! [ -r "${SOURCE}" ]; then
-        echo -e "${YELLOW}Downloading ${SOURCE} source archive${CDEF}"
-        wget "${DOWNLOAD}/${SOURCE}"
+        echo -e "${YELLOW}Clone and creating ${SOURCE} source archive${CDEF}"
+        wget "${URL}${SOURCE}"
     fi
 else
     SOURCE=$(find . -type f -name "${PKGNAME}-[0-9]*.tar.?z*" | head -n 1 | \
@@ -37,7 +35,6 @@ tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
 . "${CWDD}"/additional-scripts/setperm.sh
 
-
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
 ./configure \
@@ -46,18 +43,19 @@ CXXFLAGS="${SLKCFLAGS}" \
     --sysconfdir=/etc \
     --localstatedir=/var \
     --mandir=/usr/man \
-    --docdir=/usr/doc/"${PKGNAME}"-"${VERSION}" \
-    --build="${ARCH}"-slackware-linux || exit 1
+    --docdir=/usr/doc/"${PKGNAME}-${VERSION}" \
+    --build="${ARCH}"-slackware-linux \
+    --disable-static
 
 make "${NUMJOBS}" || make || exit 1
-make install-strip DESTDIR="${PKG}" || exit 1
+make install DESTDIR="${PKG}" || exit 1
 
 . "${CWDD}"/additional-scripts/strip-binaries.sh
 . "${CWDD}"/additional-scripts/copydocs.sh
 . "${CWDD}"/additional-scripts/compressmanpages.sh
 
-mkdir -p "${PKG}/install"
-cat "${CWD}/slack-desc" > "${PKG}/install/slack-desc"
+mkdir -p "${PKG}"/install
+cat "${CWD}"/slack-desc > "${PKG}"/install/slack-desc
 
 cd "${PKG}" || exit 1
 mkdir -p "${OUTPUT}/misc"

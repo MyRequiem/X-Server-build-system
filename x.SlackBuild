@@ -165,10 +165,7 @@ for LINE in ${QUEUELINES}; do
     # if package name is specified
     [[ "x$2" != "x" && "$2" != "${PKGNAME}" ]] && continue
 
-    BUILD="1"
-    BUILDFILE="${CWD}/build/${PKGNAME}"
-    [ -r "${BUILDFILE}" ] && BUILD=$(cat "${BUILDFILE}")
-
+    BUILD=$(cat "${CWD}/build/${PKGNAME}" 2>/dev/null || echo "1")
     # if package already exist in ${OUTPUT} directory
     if [[ "${BUILD_ONLY_NOT_EXIST}" == "true" ]]; then
         if [ -d "${OUTPUT}/${MODULE}" ]; then
@@ -215,7 +212,8 @@ for LINE in ${QUEUELINES}; do
         fi
     else
         SOURCE=$(find "${SRCDIR}/${MODULE}" -type f \
-            -name "${PKGNAME}-[0-9]*.tar.?z*" | rev | cut -d / -f 1 | rev)
+            -name "${PKGNAME}-[0-9]*.tar.?z*" | head -n 1 | rev | \
+            cut -d / -f 1 | rev)
         VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
     fi
 

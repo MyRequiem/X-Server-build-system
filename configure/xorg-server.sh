@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEFAULTFONTPATH=""
-FONTDIRS="100dpi 75dpi OTF Speedo TTF Type1 cyrillic misc"
+FONTDIRS="TTF Type1"
 for FONTDIR in ${FONTDIRS}; do
     [[ "x${DEFAULTFONTPATH}" != "x" ]] && DEFAULTFONTPATH="${DEFAULTFONTPATH},"
     DEFAULTFONTPATH="${DEFAULTFONTPATH}/usr/share/fonts/${FONTDIR}"
@@ -61,7 +61,6 @@ CFLAGS="${SLKCFLAGS}" \
     --disable-listen-tcp \
     --disable-record \
     --disable-unit-tests \
-    --disable-vbe \
     --disable-libunwind \
     --disable-xtrans-send-fds \
     --build="${ARCH}"-slackware-linux

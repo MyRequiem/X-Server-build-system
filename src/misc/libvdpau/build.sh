@@ -19,7 +19,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
         rm -rf "${PKGNAME}-${VERSION}"
     fi
 else
-    SOURCE=$(ls "${PKGNAME}-"*.tar.?z*)
+    SOURCE=$(find . -type f -name "${PKGNAME}-[0-9]*.tar.?z*" | head -n 1 | \
+        rev | cut -d / -f 1 | rev)
     VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
 fi
 
@@ -75,7 +76,7 @@ cat "${CWD}"/doinst.sh > "${PKG}"/install/doinst.sh
 
 cd "${PKG}" || exit 1
 mkdir -p "${OUTPUT}/misc"
-BUILD=$(cat "${CWDD}/build/${PKGNAME}")
+BUILD=$(cat "${CWDD}/build/${PKGNAME}" 2>/dev/null || echo "1")
 PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}_${TAG}.${EXT}"
 rm -f "${PKG}"
 makepkg -l y -c n "${PKG}"

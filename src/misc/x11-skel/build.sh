@@ -47,7 +47,7 @@ sed -e "s#lib/#lib${LIBDIRSUFFIX}/#g" \
     "${CWD}/slack-desc" > "${PKG}/install/slack-desc"
 
 mkdir -p "${OUTPUT}/misc"
-BUILD=$(cat "${CWDD}/build/${PKGNAME}")
+BUILD=$(cat "${CWDD}/build/${PKGNAME}" 2>/dev/null || echo "1")
 PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}_${TAG}.${EXT}"
 rm -f "${PKG}"
 makepkg -l y -c n "${PKG}"

@@ -178,12 +178,13 @@ misc:xterm
 misc:liberation-fonts-ttf
 misc:mesa
 # required GL library (mesa package)
-# app:xdriinfo
-# misc:glu
-# misc:glew
-# misc:freeglut
-# misc:mesa-demos
-# misc:libepoxy
+app:xdriinfo
+misc:glu
+misc:glew
+misc:freeglut
+misc:mesa-demos
+misc:libepoxy
+misc:mtdev
 
 ### xserver module
 xserver:xorg-server
