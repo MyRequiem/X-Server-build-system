@@ -5,15 +5,15 @@
 # make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':'.
 
-       |-----handy-ruler-------------------------------------------------------|
-viewres: viewres (view widget class hierarchy of the Athena Widget Set)
-viewres:
-viewres:
-viewres: Graphical class browser for Xt
-viewres:
-viewres:
-viewres:
-viewres:
-viewres:
-viewres: Download: https://www.x.org/archive/individual/app/
-viewres:
+        |-----handy-ruler------------------------------------------------------|
+xlsfonts: xlsfonts (X11 font utility to list available fonts)
+xlsfonts:
+xlsfonts:
+xlsfonts: xlsfonts lists fonts available from an X server via the X11 core
+xlsfonts: protocol.
+xlsfonts:
+xlsfonts:
+xlsfonts:
+xlsfonts:
+xlsfonts: Download: https://www.x.org/archive/individual/app/
+xlsfonts:

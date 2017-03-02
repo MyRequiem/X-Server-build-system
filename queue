@@ -112,10 +112,8 @@ app:xprop
 app:appres
 app:xcursorgen
 app:bdftopcf
-app:beforelight
 app:bitmap
 app:fonttosfnt
-app:fslsfonts
 app:iceauth
 app:listres
 app:luit
@@ -123,9 +121,7 @@ app:mkcomposecache
 app:rendercheck
 app:rgb
 app:transset
-app:viewres
 app:xbacklight
-app:xbiff
 app:xclipboard
 app:xcmsdb
 app:xconsole
@@ -137,16 +133,27 @@ app:xf86dga
 app:xfd
 app:xfontsel
 app:xgamma
-app:xgc
 app:xhost
 app:xinput
 app:xkbevd
 app:xkbprint
 app:xkbutils
-app:xlogo
 app:xlsatoms
 app:xlsclients
-
+app:xlsfonts
+app:xmag
+app:xmodmap
+app:xrandr
+app:xrdb
+app:xrefresh
+app:xscope
+app:xsm
+app:xstdcmap
+app:xvidtune
+app:xvinfo
+app:xwd
+app:xwininfo
+app:xwud
 
 ### data module
 data:xbitmaps

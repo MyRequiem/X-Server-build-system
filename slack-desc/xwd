@@ -6,14 +6,14 @@
 # customary to leave one space after the ':'.
 
    |-----handy-ruler-----------------------------------------------------------|
-xgc: xgc (X11 demo client)
-xgc:
-xgc:
-xgc: xgc is an X11 graphics demo that shows various features of the X11
-xgc: core protocol graphics primitives.
-xgc:
-xgc:
-xgc:
-xgc:
-xgc: Download: https://www.x.org/archive/individual/app/
-xgc:
+xwd: xwd (dump an image of an X window)
+xwd:
+xwd:
+xwd: Xwd is an X Window System window dumping utility. Xwd allows X users to
+xwd: store window images in a specially formatted dump file. This file can then
+xwd: be read by various other X utilities for redisplay, printing, editing,
+xwd: formatting, archiving, image processing, etc.
+xwd:
+xwd:
+xwd: Download: https://www.x.org/archive/individual/app/
+xwd:
