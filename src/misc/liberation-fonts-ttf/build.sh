@@ -6,7 +6,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
     DOWNLOAD="http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/"
-    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep "${PKGNAME}" | \
+    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep "${PKGNAME}-1" | \
         grep ".tar.gz" | cut -d \" -f 7 | cut -d - -f 4 | rev | \
         cut -d . -f 3- | rev | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.gz"

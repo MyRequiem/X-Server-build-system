@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEFAULTFONTPATH=""
-FONTDIRS="TTF Type1"
+FONTDIRS="TTF 100dpi Type1 cyrillic 75dpi misc Speedo"
 for FONTDIR in ${FONTDIRS}; do
     [[ "x${DEFAULTFONTPATH}" != "x" ]] && DEFAULTFONTPATH="${DEFAULTFONTPATH},"
     DEFAULTFONTPATH="${DEFAULTFONTPATH}/usr/share/fonts/${FONTDIR}"

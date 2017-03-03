@@ -4,7 +4,7 @@
 # temp directory for building packages
 export TEMP="/tmp/x-build"
 # output for packages
-export OUTPUT="/tmp/x"
+export OUTPUT="/tmp/x-packages"
 # package extension
 export EXT="txz"
 # tag for package

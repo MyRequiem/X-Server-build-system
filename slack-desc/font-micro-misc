@@ -6,14 +6,14 @@
 # customary to leave one space after the ':'.
 
                |-----handy-ruler-----------------------------------------------|
-xf86-video-vesa: xf86-video-vesa (Generic VESA video driver for X server)
-xf86-video-vesa:
-xf86-video-vesa:
-xf86-video-vesa: Generic VESA video driver for X server
-xf86-video-vesa:
-xf86-video-vesa:
-xf86-video-vesa:
-xf86-video-vesa:
-xf86-video-vesa:
-xf86-video-vesa: Download: https://www.x.org/archive/individual/driver/
-xf86-video-vesa:
+font-micro-misc: font-micro-misc (bitmap fonts for X11)
+font-micro-misc:
+font-micro-misc:
+font-micro-misc: bitmap fonts for X11
+font-micro-misc:
+font-micro-misc:
+font-micro-misc:
+font-micro-misc:
+font-micro-misc:
+font-micro-misc: Download: https://www.x.org/archive/individual/font/
+font-micro-misc:
