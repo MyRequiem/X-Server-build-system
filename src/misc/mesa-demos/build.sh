@@ -5,15 +5,15 @@ PKGNAME="mesa-demos"
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    VERSION=$(wget -q -O - https://www.mesa3d.org/ | grep "demos" | \
-        grep released | head -n 1 | cut -d " " -f 3)
+    URL="https://mesa.freedesktop.org/archive/demos/"
+    VERSION=$(wget -q -O - "${URL}" | grep "href=" | grep "/folder.gif" | \
+        cut -d \" -f 8 | cut -d / -f 1 | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.bz2"
     echo "${VERSION}"
 
     if ! [ -r "${SOURCE}" ]; then
         echo -e "${YELLOW}Download ${PKGNAME} source archive${CDEF}"
-        DOWNLOAD="https://mesa.freedesktop.org/archive"
-        wget "${DOWNLOAD}/demos/${VERSION}/${SOURCE}"
+        wget "${URL}${VERSION}/${SOURCE}"
     fi
 else
     SOURCE=$(find . -type f -name "${PKGNAME}-[0-9]*.tar.?z*" | head -n 1 | \

@@ -5,15 +5,16 @@ PKGNAME="mesa"
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    VERSION=$(wget -q -O - https://www.mesa3d.org/ \
-        | grep ">Mesa ${MESA_BRANCH}." | grep "is released" | head -n 1 | \
-        cut -d " " -f 3 | cut -d "<" -f 1)
+    URL="https://mesa.freedesktop.org/archive/"
+    VERSION=$(wget -q -O - "${URL}" | grep "${PKGNAME}" | grep ".tar.xz<" | \
+        grep -v '\-rc' | cut -d \" -f 8 | rev | cut -d . -f 3- | \
+        cut -d - -f 1 | rev | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.xz"
     echo "${VERSION}"
 
     if ! [ -r "${SOURCE}" ]; then
         echo -e "${YELLOW}Download ${SOURCE} source archive${CDEF}"
-        wget "https://mesa.freedesktop.org/archive/${VERSION}/${SOURCE}"
+        wget "${URL}${SOURCE}"
     fi
 else
     SOURCE=$(find . -type f -name "${PKGNAME}-${MESA_BRANCH}.*.tar.?z*" | \

@@ -2,26 +2,34 @@
 
 # ============================== Settings ======================================
 # temp directory for building packages
-export TEMP="/tmp/x-build"
+TEMP="/tmp/x-build"
 # output for packages
-export OUTPUT="/tmp/x-packages"
+OUTPUT="/tmp/x-packages"
 # package extension
-export EXT="txz"
+EXT="txz"
 # tag for package
-export TAG="myreq"
-# branch mesa package [https://www.mesa3d.org/]
-export MESA_BRANCH="13"
+TAG="myreq"
 # build package only if it is not in OUTPUT
-export BUILD_ONLY_NOT_EXIST="false"
+BUILD_ONLY_NOT_EXIST="false"
 # install package after build
-export INSTALL_AFTER_BUILD="true"
+INSTALL_AFTER_BUILD="true"
 # check package version
-export CHECK_PACKAGE_VERSION="true"
+CHECK_PACKAGE_VERSION="true"
 # only download source code (without build)
-export ONLY_DOWNLOAD="false"
+ONLY_DOWNLOAD="false"
 # ========================== End of settings ===================================
+
 
 # if ONLY_DOWNLOAD == "true" variable CHECK_PACKAGE_VERSION must be set "true"
 # and BUILD_ONLY_NOT_EXIST must be set "false"
-[[ "${ONLY_DOWNLOAD}" == "true" ]] && export CHECK_PACKAGE_VERSION="true" &&
+[[ "${ONLY_DOWNLOAD}" == "true" ]] && CHECK_PACKAGE_VERSION="true" &&
     BUILD_ONLY_NOT_EXIST="false"
+
+export TEMP
+export OUTPUT
+export EXT
+export TAG
+export BUILD_ONLY_NOT_EXIST
+export INSTALL_AFTER_BUILD
+export CHECK_PACKAGE_VERSION
+export ONLY_DOWNLOAD
