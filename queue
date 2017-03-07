@@ -187,11 +187,9 @@ font:font-micro-misc
 font:font-cursor-misc
 font:font-dec-misc
 font:font-misc-misc
-font:font-mutt-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
-font:font-screen-cyrillic
 # TTF
 font:font-bh-ttf
 # Speedo
