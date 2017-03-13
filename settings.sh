@@ -10,9 +10,9 @@ EXT="txz"
 # tag for package
 TAG="myreq"
 # build package only if it is not in OUTPUT
-BUILD_ONLY_NOT_EXIST="false"
+BUILD_ONLY_NOT_EXIST="true"
 # install package after build
-INSTALL_AFTER_BUILD="true"
+INSTALL_AFTER_BUILD="false"
 # check package version
 CHECK_PACKAGE_VERSION="true"
 # only download source code (without build)
