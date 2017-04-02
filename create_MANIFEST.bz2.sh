@@ -12,6 +12,7 @@ if ! [ -d "${PKGDIR}" ]; then
     exit 1
 fi
 
+rm -f MANIFEST.bz2
 :>MANIFEST
 PKGS="$(find "${PKGDIR}" -type f -name "*.t?z" | sort)"
 for PKG in ${PKGS}; do

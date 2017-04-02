@@ -1,4 +1,4 @@
-PACKAGES.TXT;  Sun Mar 26 12:25:01 UTC 2017
+PACKAGES.TXT;  Sun Apr  2 18:53:35 UTC 2017
 
 PACKAGE NAME:  appres-1.0.4-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -531,6 +531,20 @@ fontcacheproto:
 fontcacheproto: Download: https://www.x.org/archive/individual/proto/
 fontcacheproto:
 
+PACKAGE NAME:  fontconfig-2.12.1-x86_64-1_myreq
+--------------------------------------------------------------------------------
+fontconfig: fontconfig (Font library and tools)
+fontconfig:
+fontconfig:
+fontconfig: Fontconfig is a library and tools designed to provide system-wide
+fontconfig: font configuration, customization, and application access.
+fontconfig:
+fontconfig:
+fontconfig:
+fontconfig: Homepage: https://www.freedesktop.org/software/fontconfig/
+fontconfig: Download: https://www.freedesktop.org/software/fontconfig/release/
+fontconfig:
+
 PACKAGE NAME:  fontsproto-2.1.3-x86_64-1_myreq
 --------------------------------------------------------------------------------
 fontsproto: fontsproto (C prototypes for X11 X Fonts Extension)
@@ -559,6 +573,20 @@ fonttosfnt:
 fonttosfnt: Download: https://www.x.org/archive/individual/app/
 fonttosfnt:
 
+PACKAGE NAME:  freeglut-3.0.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+freeglut: freeglut (alternative GLUT library)
+freeglut:
+freeglut:
+freeglut: FreeGLUT is a completely OpenSourced (freely licensed) and improved
+freeglut: alternative to the OpenGL Utility Toolkit (GLUT) library.
+freeglut:
+freeglut:
+freeglut:
+freeglut:
+freeglut: Homepage: http://freeglut.sourceforge.net/
+freeglut:
+
 PACKAGE NAME:  gccmakedep-1.0.3-noarch-1_myreq
 --------------------------------------------------------------------------------
 gccmakedep: gccmakedep (create dependencies in makefiles)
@@ -573,6 +601,20 @@ gccmakedep:
 gccmakedep: Download: https://www.x.org/archive/individual/util/
 gccmakedep:
 
+PACKAGE NAME:  glew-2.0.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+glew: glew (the OpenGL Extension Wrangler Library)
+glew:
+glew:
+glew: The OpenGL Extension Wrangler Library (GLEW) is a cross-platform
+glew: open-source C/C++ extension loading library. GLEW provides efficient
+glew: run-time mechanisms for determining which OpenGL extensions are supported
+glew: on the target platform.
+glew:
+glew:
+glew: Homepage: http://glew.sourceforge.net/
+glew:
+
 PACKAGE NAME:  glproto-1.4.17-x86_64-1_myreq
 --------------------------------------------------------------------------------
 glproto: glproto (C prototypes for X11 OpenGL Extension)
@@ -586,6 +628,20 @@ glproto:
 glproto: Download: https://www.x.org/archive/individual/proto/
 glproto:
 glproto:
+
+PACKAGE NAME:  glu-9.0.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+glu: glu (Mesa OpenGL utility library)
+glu:
+glu:
+glu: glu is the Mesa OpenGL utility library (libGLU).
+glu:
+glu:
+glu:
+glu: Homepage: http://cgit.freedesktop.org/mesa/glu/
+glu: Download: git clone git://anongit.freedesktop.org/mesa/glu
+glu:
+glu:
 
 PACKAGE NAME:  iceauth-1.0.7-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1133,6 +1189,62 @@ libdmx:
 libdmx: Download: https://www.x.org/archive/individual/lib/
 libdmx:
 
+PACKAGE NAME:  libdrm-2.4.76-x86_64-1_myreq
+--------------------------------------------------------------------------------
+libdrm: libdrm (A library to support Direct Rendering)
+libdrm:
+libdrm:
+libdrm:
+libdrm: This library implements an interface to the kernel's DRM services.
+libdrm: It is used to support hardware accelerated 3-D rendering.
+libdrm:
+libdrm:
+libdrm:
+libdrm: Download: https://dri.freedesktop.org/libdrm/
+libdrm:
+
+PACKAGE NAME:  libepoxy-1.4-x86_64-1_myreq
+--------------------------------------------------------------------------------
+libepoxy: libepoxy (OpenGL function pointer management library)
+libepoxy:
+libepoxy: Epoxy is a library for handling OpenGL function pointer management.
+libepoxy:   - automatically initializes as new GL functions are used
+libepoxy:   - GL 4.5 core and compatibility context support
+libepoxy:   - GLES 1/2/3 context support
+libepoxy:   - EGL, GLX, and WGL support
+libepoxy:
+libepoxy: Homepage: https://github.com/anholt/libepoxy
+libepoxy: Download: https://github.com/anholt/libepoxy/releases/
+libepoxy:
+
+PACKAGE NAME:  liberation-fonts-ttf-1.06.0.20100721-noarch-1_myreq
+--------------------------------------------------------------------------------
+liberation-fonts-ttf: liberation-fonts-ttf (Liberation TTF Fonts)
+liberation-fonts-ttf:
+liberation-fonts-ttf: Liberation is the collective name of three TrueType font
+liberation-fonts-ttf: families: Liberation Sans, Liberation Serif and
+liberation-fonts-ttf: Liberation Mono. These fonts are metric-compatible with
+liberation-fonts-ttf: Arial, Times New Roman, and Courier New respectively.
+liberation-fonts-ttf:
+liberation-fonts-ttf:
+liberation-fonts-ttf: Download:
+liberation-fonts-ttf: http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/
+liberation-fonts-ttf:
+
+PACKAGE NAME:  libevdev-1.5.6-x86_64-1_myreq
+--------------------------------------------------------------------------------
+libevdev: libevdev (wrapper library for evdev devices)
+libevdev:
+libevdev: Wrapper library for evdev devices. It moves the common tasks
+libevdev: when dealing with evdev devices into a library and provides a
+libevdev: library interface to the callers, thus avoiding erroneous
+libevdev: ioctls, etc.
+libevdev:
+libevdev:
+libevdev: Homepage: http://www.freedesktop.org/wiki/Software/libevdev/
+libevdev: Download: https://www.freedesktop.org/software/libevdev/
+libevdev:
+
 PACKAGE NAME:  libfontenc-1.1.3-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libfontenc: libfontenc (font encoding library)
@@ -1174,6 +1286,34 @@ libpthread-stubs: single-threaded.
 libpthread-stubs:
 libpthread-stubs: Download: https://www.x.org/archive/individual/xcb/
 libpthread-stubs:
+
+PACKAGE NAME:  libva-1.8.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+libva: libva (Video Acceleration API)
+libva:
+libva:
+libva: The main motivation for VAAPI (Video Acceleration API) is to enable
+libva: hardware accelerated video decode/encode at various entry-points (VLD,
+libva: IDCT, Motion Compensation etc.) for the prevailing coding standards
+libva: today (MPEG-2, MPEG-4 ASP/H.263, MPEG-4 AVC/H.264, and VC-1/VMW3)
+libva:
+libva: Homepage: https://github.com/01org/libva
+libva: Download: https://www.freedesktop.org/software/vaapi/releases/libva/
+libva:
+
+PACKAGE NAME:  libvdpau-1.1.1-x86_64-1_myreq
+--------------------------------------------------------------------------------
+libvdpau: libvdpau (VDPAU wrapper library)
+libvdpau:
+libvdpau: VDPAU - The Video Decode and Presentation API for UNIX
+libvdpau:
+libvdpau: This package contains the libvdpau wrapper library and the
+libvdpau: libvdpau_trace debugging library, along with the header files needed
+libvdpau: to build VDPAU applications.
+libvdpau:
+libvdpau: Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
+libvdpau: Download: git clone git://people.freedesktop.org/~aplattner/libvdpau
+libvdpau:
 
 PACKAGE NAME:  libxcb-1.12-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1217,6 +1357,20 @@ libxshmfence: Download: https://www.x.org/archive/individual/lib/
 libxshmfence:
 libxshmfence:
 
+PACKAGE NAME:  links-2.14-x86_64-1_myreq
+--------------------------------------------------------------------------------
+links: links (WWW browser for the console)
+links:
+links: Links is a console mode WWW browser, supporting colors, correct table
+links: rendering, background downloading, frames, Javascript, and a menu
+links: driven configuration interface.  The default is text output, but
+links: graphical output (using -g) is also supported using the Linux
+links: framebuffer console or SVGAlib.
+links:
+links: Homepage: http://www.jikos.cz/~mikulas/links/
+links: Download: http://links.twibright.com/download/
+links:
+
 PACKAGE NAME:  listres-1.0.3-x86_64-1_myreq
 --------------------------------------------------------------------------------
 listres: listres (X11 resource lister)
@@ -1259,6 +1413,20 @@ luit:
 luit: Download: https://www.x.org/archive/individual/app/
 luit:
 
+PACKAGE NAME:  m17n-lib-1.7.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+m17n-lib: m17n-lib (application multilingualization library)
+m17n-lib:
+m17n-lib:
+m17n-lib: M17n is an abbreviation of Multilingualization.  The m17n library
+m17n-lib: implements multilingualization for many applications.  The m17n
+m17n-lib: library supports functions to handle M-texts.  This package also
+m17n-lib: contains the m17n database.
+m17n-lib:
+m17n-lib: Homepage: http://m17n.org/
+m17n-lib: Download: http://download.savannah.nongnu.org/releases/m17n/
+m17n-lib:
+
 PACKAGE NAME:  makedepend-1.0.5-x86_64-1_myreq
 --------------------------------------------------------------------------------
 makedepend: makedepend (create dependencies in makefiles)
@@ -1272,6 +1440,34 @@ makedepend:
 makedepend:
 makedepend: Download: https://www.x.org/archive/individual/util/
 makedepend:
+
+PACKAGE NAME:  mesa-17.0.3-x86_64-1_myreq
+--------------------------------------------------------------------------------
+mesa: mesa (a 3-D graphics library)
+mesa:
+mesa:
+mesa: Mesa is a 3-D graphics library with an API very similar to that of
+mesa: another well-known 3-D graphics library. The Mesa libraries are
+mesa: used by X to provide both software and hardware accelerated graphics.
+mesa:
+mesa:
+mesa: Homepage: https://www.mesa3d.org/
+mesa: Download: https://mesa.freedesktop.org/archive/
+mesa:
+
+PACKAGE NAME:  mesa-demos-8.3.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+mesa-demos: mesa-demos (OpenGL demonstration and test programs)
+mesa-demos:
+mesa-demos:
+mesa-demos: The Mesa Demos package contains a large number of OpenGL
+mesa-demos: demonstration and test programs such as gears glinfo glthreads
+mesa-demos: glxcontexts glxdemo glxgears glxgears_fbconfig glxheads glxinfo
+mesa-demos: glxpbdemo glxpixmap.
+mesa-demos:
+mesa-demos:
+mesa-demos: Download: https://mesa.freedesktop.org/archive/demos/
+mesa-demos:
 
 PACKAGE NAME:  mkcomposecache-1.2.1-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1314,6 +1510,20 @@ mkfontscale:
 mkfontscale: Download: https://www.x.org/archive/individual/app/
 mkfontscale:
 mkfontscale:
+
+PACKAGE NAME:  mtdev-1.1.5-x86_64-1_myreq
+--------------------------------------------------------------------------------
+mtdev: mtdev (multitouch device library)
+mtdev:
+mtdev: mtdev is a stand-alone library which transforms all variants of kernel
+mtdev: MT events to the slotted type B protocol.  The events put into mtdev may
+mtdev: be from any MT device, specifically type A without contact tracking,
+mtdev: type A with contact tracking, or type B with contact tracking.
+mtdev:
+mtdev:
+mtdev:
+mtdev: Homepage: http://bitmath.org/code/mtdev/
+mtdev:
 
 PACKAGE NAME:  pixman-0.34.0-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1510,6 +1720,20 @@ videoproto:
 videoproto:
 videoproto: Download: https://www.x.org/archive/individual/proto/
 videoproto:
+
+PACKAGE NAME:  x11-skel-1.0-x86_64-1_myreq
+--------------------------------------------------------------------------------
+x11-skel: x11-skel (Miscellaneous things required for X)
+x11-skel:
+x11-skel:
+x11-skel:
+x11-skel: These are some symlinks needed by X11 after moving some files and
+x11-skel: directories to conform with the Linux FHS.  For example, the fonts
+x11-skel: are now in the /usr/share/fonts directory, and this package makes
+x11-skel: a symlink to there from /usr/lib/X11/fonts (the default location).
+x11-skel:
+x11-skel:
+x11-skel:
 
 PACKAGE NAME:  xauth-1.0.10-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1748,6 +1972,34 @@ xdbedizzy:
 xdbedizzy:
 xdbedizzy: Download: https://www.x.org/archive/individual/app/
 xdbedizzy:
+
+PACKAGE NAME:  xdg-user-dirs-0.15-x86_64-1_myreq
+--------------------------------------------------------------------------------
+xdg-user-dirs: xdg-user-dirs (manage XDG user directories)
+xdg-user-dirs:
+xdg-user-dirs: xdg-user-dirs is a tool used by various XDG compliant desktop
+xdg-user-dirs: environments to locate user well-known user directories such as
+xdg-user-dirs: the Desktop folder.  It also handles localization/translation
+xdg-user-dirs: of the filenames.
+xdg-user-dirs:
+xdg-user-dirs:
+xdg-user-dirs: Homepage: https://freedesktop.org/wiki/Software/xdg-user-dirs/
+xdg-user-dirs: Download: https://user-dirs.freedesktop.org/releases/
+xdg-user-dirs:
+
+PACKAGE NAME:  xdg-utils-1.1.1-noarch-1_myreq
+--------------------------------------------------------------------------------
+xdg-utils: xdg-utils (command line tools that assist applications)
+xdg-utils:
+xdg-utils: Xdg-utils is a set of command line tools that assist applications
+xdg-utils: with a variety of desktop integration tasks.  About half of the
+xdg-utils: tools focus on tasks commonly required during the installation of
+xdg-utils: a desktop application and the other half focuses on integration
+xdg-utils: with the desktop environment while the application is running.
+xdg-utils:
+xdg-utils: Homepage: https://freedesktop.org/wiki/Software/xdg-utils/
+xdg-utils: Download: https://portland.freedesktop.org/download/
+xdg-utils:
 
 PACKAGE NAME:  xditview-1.0.4-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -2336,6 +2588,20 @@ xstdcmap:
 xstdcmap:
 xstdcmap: Download: https://www.x.org/archive/individual/app/
 xstdcmap:
+
+PACKAGE NAME:  xterm-327-x86_64-1_myreq
+--------------------------------------------------------------------------------
+xterm: xterm (terminal emulator for X)
+xterm:
+xterm:
+xterm: The xterm program is a terminal emulator for the X Window System.
+xterm: It provides DEC VT102/VT220 (VTxxx) and Tektronix 4014 compatible
+xterm: terminals for programs that cannot use the window system directly.
+xterm:
+xterm:
+xterm: Homepage: http://invisible-island.net/xterm/xterm.html
+xterm: Download: http://invisible-mirror.net/archives/xterm/
+xterm:
 
 PACKAGE NAME:  xtrans-1.3.5-noarch-1_myreq
 --------------------------------------------------------------------------------

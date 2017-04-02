@@ -6,7 +6,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
     DOWNLOAD="https://www.freedesktop.org/software/vaapi/releases/libva/"
-    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep '<a href="libva-' | \
+    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep "<a href=\"${PKGNAME}-[0-9]" | \
         grep ".tar.bz2<" | cut -d \" -f 8 | cut -d - -f 2 | rev | \
         cut -d . -f 3- | rev | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.bz2"

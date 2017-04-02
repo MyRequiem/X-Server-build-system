@@ -4,7 +4,7 @@
 # temp directory for building packages
 TEMP="/tmp/x-build"
 # output for packages
-OUTPUT="/tmp/x-packages"
+OUTPUT="/root/src/x-packages"
 # package extension
 EXT="txz"
 # tag for package
@@ -16,7 +16,7 @@ INSTALL_AFTER_BUILD="false"
 # check package version
 CHECK_PACKAGE_VERSION="true"
 # only download source code (without build)
-ONLY_DOWNLOAD="false"
+ONLY_DOWNLOAD="true"
 # ========================== End of settings ===================================
 
 
