@@ -1,4 +1,4 @@
-PACKAGES.TXT;  Sun Apr  2 18:53:35 UTC 2017
+PACKAGES.TXT;  Wed Apr 12 08:32:42 UTC 2017
 
 PACKAGE NAME:  appres-1.0.4-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1189,7 +1189,7 @@ libdmx:
 libdmx: Download: https://www.x.org/archive/individual/lib/
 libdmx:
 
-PACKAGE NAME:  libdrm-2.4.76-x86_64-1_myreq
+PACKAGE NAME:  libdrm-2.4.79-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libdrm: libdrm (A library to support Direct Rendering)
 libdrm:
@@ -1259,7 +1259,7 @@ libfontenc:
 libfontenc: Download: http://www.x.org/archive/individual/lib/
 libfontenc:
 
-PACKAGE NAME:  libpciaccess-0.13.4-x86_64-1_myreq
+PACKAGE NAME:  libpciaccess-0.13.5-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libpciaccess: libpciaccess (Generic PCI access library)
 libpciaccess:
@@ -1287,7 +1287,7 @@ libpthread-stubs:
 libpthread-stubs: Download: https://www.x.org/archive/individual/xcb/
 libpthread-stubs:
 
-PACKAGE NAME:  libva-1.8.0-x86_64-1_myreq
+PACKAGE NAME:  libva-1.8.1-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libva: libva (Video Acceleration API)
 libva:
