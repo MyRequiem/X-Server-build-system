@@ -1,4 +1,4 @@
-PACKAGES.TXT;  Wed Apr 12 08:32:42 UTC 2017
+PACKAGES.TXT;  Thu May  4 16:07:55 UTC 2017
 
 PACKAGE NAME:  appres-1.0.4-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1189,7 +1189,7 @@ libdmx:
 libdmx: Download: https://www.x.org/archive/individual/lib/
 libdmx:
 
-PACKAGE NAME:  libdrm-2.4.79-x86_64-1_myreq
+PACKAGE NAME:  libdrm-2.4.80-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libdrm: libdrm (A library to support Direct Rendering)
 libdrm:
@@ -1441,7 +1441,7 @@ makedepend:
 makedepend: Download: https://www.x.org/archive/individual/util/
 makedepend:
 
-PACKAGE NAME:  mesa-17.0.3-x86_64-1_myreq
+PACKAGE NAME:  mesa-17.0.5-x86_64-1_myreq
 --------------------------------------------------------------------------------
 mesa: mesa (a 3-D graphics library)
 mesa:
@@ -2071,7 +2071,7 @@ xf86-input-evdev:
 xf86-input-evdev: Download: https://www.x.org/archive/individual/driver/
 xf86-input-evdev:
 
-PACKAGE NAME:  xf86-video-nouveau-1.0.14-x86_64-1_myreq
+PACKAGE NAME:  xf86-video-nouveau-1.0.15-x86_64-1_myreq
 --------------------------------------------------------------------------------
 xf86-video-nouveau: xf86-video-nouveau (open source driver for nVidia cards)
 xf86-video-nouveau:
@@ -2267,7 +2267,7 @@ xinput:
 xinput: Download: https://www.x.org/archive/individual/app/
 xinput:
 
-PACKAGE NAME:  xkbcomp-1.3.1-x86_64-1_myreq
+PACKAGE NAME:  xkbcomp-1.4.0-x86_64-1_myreq
 --------------------------------------------------------------------------------
 xkbcomp: xkbcomp (X Keyboard Extension)
 xkbcomp:
