@@ -17,7 +17,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
         wget "${URL}${SOURCE}"
     fi
 else
-    SOURCE=$(find . -type f -name "${PKGNAME}-${MESA_BRANCH}.*.tar.?z*" | \
+    SOURCE=$(find . -type f -name "${PKGNAME}-*.tar.?z*" | \
         head -n 1 | rev | cut -d / -f 1 | rev)
     VERSION=$(echo "${SOURCE}" | rev | cut -d - -f 1 | cut -d . -f 3- | rev)
 fi
@@ -51,9 +51,13 @@ sed -i 's/LLVM_SO_NAME=.*/LLVM_SO_NAME=LLVM/' configure.ac
 autoreconf -fi
 
 # be sure this list is up-to-date:
-DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
-GALLIUM_DRIVERS="nouveau,r300,r600,svga,radeonsi,swrast"
-EGL_PLATFORMS="drm,x11"
+# DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
+DRI_DRIVERS="nouveau,swrast"
+# GALLIUM_DRIVERS="i915,nouveau,r300,r600,radeonsi,freedreno,svga,swrast,swr,\
+#     vc4,virgl,etnaviv,imx"
+GALLIUM_DRIVERS="nouveau,swrast"
+# PLATFORMS="x11,drm,wayland,surfaceless"
+PLATFORMS="drm,x11"
 
 CFLAGS="${SLKCFLAGS}" \
 ./configure \
@@ -65,7 +69,7 @@ CFLAGS="${SLKCFLAGS}" \
     --with-dri-driverdir=/usr/lib"${LIBDIRSUFFIX}"/xorg/modules/dri \
     --with-dri-drivers="${DRI_DRIVERS}" \
     --with-gallium-drivers="${GALLIUM_DRIVERS}" \
-    --with-egl-platforms="${EGL_PLATFORMS}" \
+    --with-platforms="${PLATFORMS}" \
     --enable-gallium-llvm \
     --enable-llvm-shared-libs \
     --enable-egl \

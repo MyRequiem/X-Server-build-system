@@ -1,4 +1,4 @@
-PACKAGES.TXT;  Thu May  4 16:07:55 UTC 2017
+PACKAGES.TXT;  Wed May 10 22:04:56 UTC 2017
 
 PACKAGE NAME:  appres-1.0.4-x86_64-1_myreq
 --------------------------------------------------------------------------------
@@ -1231,7 +1231,7 @@ liberation-fonts-ttf: Download:
 liberation-fonts-ttf: http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/
 liberation-fonts-ttf:
 
-PACKAGE NAME:  libevdev-1.5.6-x86_64-1_myreq
+PACKAGE NAME:  libevdev-1.5.7-x86_64-1_myreq
 --------------------------------------------------------------------------------
 libevdev: libevdev (wrapper library for evdev devices)
 libevdev:
@@ -1441,7 +1441,7 @@ makedepend:
 makedepend: Download: https://www.x.org/archive/individual/util/
 makedepend:
 
-PACKAGE NAME:  mesa-17.0.5-x86_64-1_myreq
+PACKAGE NAME:  mesa-17.1.0-x86_64-1_myreq
 --------------------------------------------------------------------------------
 mesa: mesa (a 3-D graphics library)
 mesa:
@@ -1987,7 +1987,7 @@ xdg-user-dirs: Homepage: https://freedesktop.org/wiki/Software/xdg-user-dirs/
 xdg-user-dirs: Download: https://user-dirs.freedesktop.org/releases/
 xdg-user-dirs:
 
-PACKAGE NAME:  xdg-utils-1.1.1-noarch-1_myreq
+PACKAGE NAME:  xdg-utils-1.1.2-noarch-1_myreq
 --------------------------------------------------------------------------------
 xdg-utils: xdg-utils (command line tools that assist applications)
 xdg-utils:

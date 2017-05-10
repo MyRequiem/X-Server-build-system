@@ -37,7 +37,7 @@ tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
 . "${CWDD}"/additional-scripts/setperm.sh
 
-CFLAGS="$SLKCFLAGS" \
+CFLAGS="${SLKCFLAGS}" \
 ./configure \
     --prefix=/usr \
     --libdir=/usr/lib"${LIBDIRSUFFIX}" \
