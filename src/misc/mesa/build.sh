@@ -59,6 +59,10 @@ GALLIUM_DRIVERS="nouveau,swrast"
 # PLATFORMS="x11,drm,wayland,surfaceless"
 PLATFORMS="drm,x11"
 
+# from ./configure --help
+# --with-egl-platforms[=DIRS...] DEPRECATED: use --with-platforms instead
+# --enable-gallium-llvm DEPRECATED: use --enable-llvm instead
+
 CFLAGS="${SLKCFLAGS}" \
 ./configure \
     --prefix=/usr \
@@ -70,7 +74,7 @@ CFLAGS="${SLKCFLAGS}" \
     --with-dri-drivers="${DRI_DRIVERS}" \
     --with-gallium-drivers="${GALLIUM_DRIVERS}" \
     --with-platforms="${PLATFORMS}" \
-    --enable-gallium-llvm \
+    --enable-llvm \
     --enable-llvm-shared-libs \
     --enable-egl \
     --enable-texture-float \
@@ -82,10 +86,11 @@ CFLAGS="${SLKCFLAGS}" \
     --enable-dri3 \
     --enable-gbm \
     --enable-glx \
-    --enable-glx-tls \
+    --disable-glx-tls \
     --enable-gles1 \
     --enable-gles2 \
     --enable-vdpau \
+    --disable-asm \
     --build="${ARCH}"-slackware-linux
 
 make "${NUMJOBS}" || make || exit 1
