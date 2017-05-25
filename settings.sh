@@ -12,11 +12,11 @@ TAG="myreq"
 # build package only if it is not in OUTPUT
 BUILD_ONLY_NOT_EXIST="true"
 # install package after build
-INSTALL_AFTER_BUILD="false"
+INSTALL_AFTER_BUILD="true"
 # check package version
-CHECK_PACKAGE_VERSION="true"
+CHECK_PACKAGE_VERSION="false"
 # only download source code (without build)
-ONLY_DOWNLOAD="true"
+ONLY_DOWNLOAD="false"
 # ========================== End of settings ===================================
 
 

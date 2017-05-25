@@ -37,8 +37,10 @@ tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
 . "${CWDD}"/additional-scripts/setperm.sh
 
-zcat "${CWD}/dejavu.diff.gz" | patch -p1 --verbose || exit 1
-zcat "${CWD}/font.dir.list.diff.gz" | patch -p1 --verbose || exit 1
+zcat "${CWD}/patches/liberation.diff.gz" | patch -p1 --verbose || exit 1
+zcat "${CWD}/patches/font.dir.list.diff.gz" | patch -p1 --verbose || exit 1
+zcat "${CWD}/patches/avoid-conflicts-with-integer.patch.gz" | \
+    patch -p1 --verbose || exit 1
 
 CFLAGS="${SLKCFLAGS}" \
 ./configure \
