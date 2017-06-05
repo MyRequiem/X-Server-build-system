@@ -3,7 +3,7 @@
 [[ "${ONLY_DOWNLOAD}" == "true" ]] && exit 0
 
 PKGNAME="x11-skel"
-VERSION="1.0"
+VERSION="7.7"
 
 CWD="$(pwd)"
 TMP="${TEMP}/misc"
@@ -48,7 +48,7 @@ sed -e "s#lib/#lib${LIBDIRSUFFIX}/#g" \
 
 mkdir -p "${OUTPUT}/misc"
 BUILD=$(cat "${CWDD}/build/${PKGNAME}" 2>/dev/null || echo "1")
-PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}_${TAG}.${EXT}"
+PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}${TAG}.${EXT}"
 rm -f "${PKG}"
 makepkg -l y -c n "${PKG}"
 

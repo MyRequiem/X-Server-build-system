@@ -1,6 +1,6 @@
-PACKAGES.TXT;  Thu May 25 13:49:03 UTC 2017
+PACKAGES.TXT;  Mon Jun  5 12:29:20 UTC 2017
 
-PACKAGE NAME:  appres-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  appres-1.0.4-x86_64-2
 --------------------------------------------------------------------------------
 appres: appres (X resource inspection utility)
 appres:
@@ -14,7 +14,7 @@ appres:
 appres: Download: https://www.x.org/archive/individual/app/
 appres:
 
-PACKAGE NAME:  bdftopcf-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  bdftopcf-1.0.5-x86_64-2
 --------------------------------------------------------------------------------
 bdftopcf: bdftopcf (font compiler for the X server and font server)
 bdftopcf:
@@ -28,7 +28,7 @@ bdftopcf:
 bdftopcf: Download: https://www.x.org/archive/individual/app/
 bdftopcf:
 
-PACKAGE NAME:  bigreqsproto-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  bigreqsproto-1.1.2-noarch-1
 --------------------------------------------------------------------------------
 bigreqsproto: bigreqsproto (C prototypes for X11 Big Requests Extension)
 bigreqsproto:
@@ -42,7 +42,7 @@ bigreqsproto:
 bigreqsproto: Download: https://www.x.org/archive/individual/proto/
 bigreqsproto:
 
-PACKAGE NAME:  bitmap-1.0.8-x86_64-1_myreq
+PACKAGE NAME:  bitmap-1.0.8-x86_64-2
 --------------------------------------------------------------------------------
 bitmap: bitmap (XBM - X bitmap editor and converter utilities)
 bitmap:
@@ -56,7 +56,7 @@ bitmap:
 bitmap: Download: https://www.x.org/archive/individual/app/
 bitmap:
 
-PACKAGE NAME:  compositeproto-0.4.2-x86_64-1_myreq
+PACKAGE NAME:  compositeproto-0.4.2-noarch-1
 --------------------------------------------------------------------------------
 compositeproto: compositeproto (C prototypes for X11 Composite Extension)
 compositeproto:
@@ -70,7 +70,7 @@ compositeproto:
 compositeproto: Download: https://www.x.org/archive/individual/proto/
 compositeproto:
 
-PACKAGE NAME:  damageproto-1.2.1-x86_64-1_myreq
+PACKAGE NAME:  damageproto-1.2.1-noarch-1
 --------------------------------------------------------------------------------
 damageproto: damageproto (C prototypes for X11 Damage Extension)
 damageproto:
@@ -84,7 +84,7 @@ damageproto:
 damageproto: Download: https://www.x.org/archive/individual/proto/
 damageproto:
 
-PACKAGE NAME:  dmxproto-2.3.1-x86_64-1_myreq
+PACKAGE NAME:  dmxproto-2.3.1-noarch-1
 --------------------------------------------------------------------------------
 dmxproto: dmxproto (C prototypes for X11 Distributed Multihead X Extension)
 dmxproto:
@@ -98,7 +98,7 @@ dmxproto:
 dmxproto: Download: https://www.x.org/archive/individual/proto/
 dmxproto:
 
-PACKAGE NAME:  dri2proto-2.8-x86_64-1_myreq
+PACKAGE NAME:  dri2proto-2.8-x86_64-2
 --------------------------------------------------------------------------------
 dri2proto: dri2proto (C prototypes for X11 Direct Rendering Infrastructure 2)
 dri2proto:
@@ -112,7 +112,7 @@ dri2proto:
 dri2proto: Download: https://www.x.org/archive/individual/proto/
 dri2proto:
 
-PACKAGE NAME:  dri3proto-1.0-x86_64-1_myreq
+PACKAGE NAME:  dri3proto-1.0-x86_64-2
 --------------------------------------------------------------------------------
 dri3proto: dri3proto (C prototypes for X11 Direct Rendering Infrastructure 3)
 dri3proto:
@@ -125,7 +125,7 @@ dri3proto:
 dri3proto:
 dri3proto:
 
-PACKAGE NAME:  encodings-1.0.4-noarch-1_myreq
+PACKAGE NAME:  encodings-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 encodings: encodings (X11 font encodings)
 encodings:
@@ -139,7 +139,7 @@ encodings:
 encodings: Download: https://www.x.org/archive/individual/font/
 encodings:
 
-PACKAGE NAME:  evieext-1.1.1-x86_64-1_myreq
+PACKAGE NAME:  evieext-1.1.1-noarch-1
 --------------------------------------------------------------------------------
 evieext: evieext (C prototypes for X11 Extended Visual Information Extension)
 evieext:
@@ -153,7 +153,7 @@ evieext:
 evieext: Download: https://www.x.org/archive/individual/proto/
 evieext:
 
-PACKAGE NAME:  fixesproto-5.0-x86_64-1_myreq
+PACKAGE NAME:  fixesproto-5.0-x86_64-2
 --------------------------------------------------------------------------------
 fixesproto: fixesproto (C prototypes for X11 X Fixes Extension)
 fixesproto:
@@ -167,7 +167,7 @@ fixesproto: Download: https://www.x.org/archive/individual/proto/
 fixesproto:
 fixesproto:
 
-PACKAGE NAME:  font-adobe-100dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-adobe-100dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-adobe-100dpi: font-adobe-100dpi (bitmap fonts for X11)
 font-adobe-100dpi:
@@ -181,7 +181,7 @@ font-adobe-100dpi:
 font-adobe-100dpi: Download: https://www.x.org/archive/individual/font/
 font-adobe-100dpi:
 
-PACKAGE NAME:  font-adobe-75dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-adobe-75dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-adobe-75dpi: font-adobe-75dpi (bitmap fonts for X11)
 font-adobe-75dpi:
@@ -195,7 +195,7 @@ font-adobe-75dpi:
 font-adobe-75dpi: Download: https://www.x.org/archive/individual/font/
 font-adobe-75dpi:
 
-PACKAGE NAME:  font-adobe-utopia-100dpi-1.0.4-noarch-1_myreq
+PACKAGE NAME:  font-adobe-utopia-100dpi-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 font-adobe-utopia-100dpi: font-adobe-utopia-100dpi (bitmap fonts for X11)
 font-adobe-utopia-100dpi:
@@ -209,7 +209,7 @@ font-adobe-utopia-100dpi:
 font-adobe-utopia-100dpi: Download: https://www.x.org/archive/individual/font/
 font-adobe-utopia-100dpi:
 
-PACKAGE NAME:  font-adobe-utopia-75dpi-1.0.4-noarch-1_myreq
+PACKAGE NAME:  font-adobe-utopia-75dpi-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 font-adobe-utopia-75dpi: font-adobe-utopia-75dpi (bitmap fonts for X11)
 font-adobe-utopia-75dpi:
@@ -223,7 +223,7 @@ font-adobe-utopia-75dpi:
 font-adobe-utopia-75dpi: Download: https://www.x.org/archive/individual/font/
 font-adobe-utopia-75dpi:
 
-PACKAGE NAME:  font-adobe-utopia-type1-1.0.4-noarch-1_myreq
+PACKAGE NAME:  font-adobe-utopia-type1-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 font-adobe-utopia-type1: font-adobe-utopia-type1 (scalable fonts for X11)
 font-adobe-utopia-type1:
@@ -237,7 +237,7 @@ font-adobe-utopia-type1:
 font-adobe-utopia-type1: Download: https://www.x.org/archive/individual/font/
 font-adobe-utopia-type1:
 
-PACKAGE NAME:  font-alias-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-alias-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-alias: font-alias (X11 font aliases)
 font-alias:
@@ -251,7 +251,7 @@ font-alias:
 font-alias: Download: https://www.x.org/archive/individual/font/
 font-alias:
 
-PACKAGE NAME:  font-bh-100dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-100dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-100dpi: font-bh-100dpi (bitmap fonts for X11)
 font-bh-100dpi:
@@ -265,7 +265,7 @@ font-bh-100dpi:
 font-bh-100dpi: Download: https://www.x.org/archive/individual/font/
 font-bh-100dpi:
 
-PACKAGE NAME:  font-bh-75dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-75dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-75dpi: font-bh-75dpi (bitmap fonts for X11)
 font-bh-75dpi:
@@ -279,7 +279,7 @@ font-bh-75dpi:
 font-bh-75dpi: Download: https://www.x.org/archive/individual/font/
 font-bh-75dpi:
 
-PACKAGE NAME:  font-bh-lucidatypewriter-100dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-lucidatypewriter-100dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-lucidatypewriter-100dpi: font-bh-lucidatypewriter-100dpi (bitmap fonts for X11)
 font-bh-lucidatypewriter-100dpi:
@@ -293,7 +293,7 @@ font-bh-lucidatypewriter-100dpi:
 font-bh-lucidatypewriter-100dpi: Download: https://www.x.org/archive/individual/font/
 font-bh-lucidatypewriter-100dpi:
 
-PACKAGE NAME:  font-bh-lucidatypewriter-75dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-lucidatypewriter-75dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-lucidatypewriter-75dpi: font-bh-lucidatypewriter-75dpi (bitmap fonts for X11)
 font-bh-lucidatypewriter-75dpi:
@@ -307,7 +307,7 @@ font-bh-lucidatypewriter-75dpi:
 font-bh-lucidatypewriter-75dpi: Download: https://www.x.org/archive/individual/font/
 font-bh-lucidatypewriter-75dpi:
 
-PACKAGE NAME:  font-bh-ttf-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-ttf-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-ttf: font-bh-ttf (scalable fonts for X11)
 font-bh-ttf:
@@ -321,7 +321,7 @@ font-bh-ttf:
 font-bh-ttf: Download: https://www.x.org/archive/individual/font/
 font-bh-ttf:
 
-PACKAGE NAME:  font-bh-type1-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bh-type1-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bh-type1: font-bh-type1 (scalable fonts for X11)
 font-bh-type1:
@@ -335,7 +335,7 @@ font-bh-type1:
 font-bh-type1: Download: https://www.x.org/archive/individual/font/
 font-bh-type1:
 
-PACKAGE NAME:  font-bitstream-100dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bitstream-100dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bitstream-100dpi: font-bitstream-100dpi (bitmap fonts for X11)
 font-bitstream-100dpi:
@@ -349,7 +349,7 @@ font-bitstream-100dpi:
 font-bitstream-100dpi: Download: https://www.x.org/archive/individual/font/
 font-bitstream-100dpi:
 
-PACKAGE NAME:  font-bitstream-75dpi-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bitstream-75dpi-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bitstream-75dpi: font-bitstream-75dpi (bitmap fonts for X11)
 font-bitstream-75dpi:
@@ -363,7 +363,7 @@ font-bitstream-75dpi:
 font-bitstream-75dpi: Download: https://www.x.org/archive/individual/font/
 font-bitstream-75dpi:
 
-PACKAGE NAME:  font-bitstream-speedo-1.0.2-noarch-1_myreq
+PACKAGE NAME:  font-bitstream-speedo-1.0.2-noarch-1
 --------------------------------------------------------------------------------
 font-bitstream-speedo: font-bitstream-speedo (scalable fonts for X11)
 font-bitstream-speedo:
@@ -377,7 +377,7 @@ font-bitstream-speedo:
 font-bitstream-speedo: Download: https://www.x.org/archive/individual/font/
 font-bitstream-speedo:
 
-PACKAGE NAME:  font-bitstream-type1-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-bitstream-type1-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-bitstream-type1: font-bitstream-type1 (scalable fonts for X11)
 font-bitstream-type1:
@@ -391,7 +391,7 @@ font-bitstream-type1:
 font-bitstream-type1: Download: https://www.x.org/archive/individual/font/
 font-bitstream-type1:
 
-PACKAGE NAME:  font-cronyx-cyrillic-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-cronyx-cyrillic-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-cronyx-cyrillic: font-cronyx-cyrillic (bitmap fonts for X11)
 font-cronyx-cyrillic:
@@ -405,7 +405,7 @@ font-cronyx-cyrillic:
 font-cronyx-cyrillic: Download: https://www.x.org/archive/individual/font/
 font-cronyx-cyrillic:
 
-PACKAGE NAME:  font-cursor-misc-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-cursor-misc-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-cursor-misc: font-cursor-misc (bitmap fonts for X11)
 font-cursor-misc:
@@ -419,7 +419,7 @@ font-cursor-misc:
 font-cursor-misc: Download: https://www.x.org/archive/individual/font/
 font-cursor-misc:
 
-PACKAGE NAME:  font-dec-misc-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-dec-misc-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-dec-misc: font-dec-misc (bitmap fonts for X11)
 font-dec-misc:
@@ -433,7 +433,7 @@ font-dec-misc:
 font-dec-misc: Download: https://www.x.org/archive/individual/font/
 font-dec-misc:
 
-PACKAGE NAME:  font-ibm-type1-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-ibm-type1-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-ibm-type1: font-ibm-type1 (scalable fonts for X11)
 font-ibm-type1:
@@ -447,7 +447,7 @@ font-ibm-type1:
 font-ibm-type1: Download: https://www.x.org/archive/individual/font/
 font-ibm-type1:
 
-PACKAGE NAME:  font-micro-misc-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-micro-misc-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-micro-misc: font-micro-misc (bitmap fonts for X11)
 font-micro-misc:
@@ -461,7 +461,7 @@ font-micro-misc:
 font-micro-misc: Download: https://www.x.org/archive/individual/font/
 font-micro-misc:
 
-PACKAGE NAME:  font-misc-cyrillic-1.0.3-noarch-1_myreq
+PACKAGE NAME:  font-misc-cyrillic-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 font-misc-cyrillic: font-misc-cyrillic (bitmap fonts for X11)
 font-misc-cyrillic:
@@ -475,7 +475,7 @@ font-misc-cyrillic:
 font-misc-cyrillic: Download: https://www.x.org/archive/individual/font/
 font-misc-cyrillic:
 
-PACKAGE NAME:  font-misc-misc-1.1.2-noarch-1_myreq
+PACKAGE NAME:  font-misc-misc-1.1.2-noarch-1
 --------------------------------------------------------------------------------
 font-misc-misc: font-misc-misc (bitmap fonts for X11)
 font-misc-misc:
@@ -489,7 +489,7 @@ font-misc-misc:
 font-misc-misc: Download: https://www.x.org/archive/individual/font/
 font-misc-misc:
 
-PACKAGE NAME:  font-util-1.3.1-x86_64-1_myreq
+PACKAGE NAME:  font-util-1.3.1-x86_64-2
 --------------------------------------------------------------------------------
 font-util: font-util (X.Org font package creation/installation utilities)
 font-util:
@@ -503,7 +503,7 @@ font-util:
 font-util: Download: https://www.x.org/archive/individual/font/
 font-util:
 
-PACKAGE NAME:  font-xfree86-type1-1.0.4-noarch-1_myreq
+PACKAGE NAME:  font-xfree86-type1-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 font-xfree86-type1: font-xfree86-type1 (scalable fonts for X11)
 font-xfree86-type1:
@@ -517,7 +517,7 @@ font-xfree86-type1:
 font-xfree86-type1: Download: https://www.x.org/archive/individual/font/
 font-xfree86-type1:
 
-PACKAGE NAME:  fontcacheproto-0.1.3-x86_64-1_myreq
+PACKAGE NAME:  fontcacheproto-0.1.3-noarch-1
 --------------------------------------------------------------------------------
 fontcacheproto: fontcacheproto (C prototypes for X11 Font Cache Extension)
 fontcacheproto:
@@ -531,7 +531,7 @@ fontcacheproto:
 fontcacheproto: Download: https://www.x.org/archive/individual/proto/
 fontcacheproto:
 
-PACKAGE NAME:  fontconfig-2.12.1-x86_64-1_myreq
+PACKAGE NAME:  fontconfig-2.12.1-x86_64-2
 --------------------------------------------------------------------------------
 fontconfig: fontconfig (Font library and tools)
 fontconfig:
@@ -545,7 +545,7 @@ fontconfig: Homepage: https://www.freedesktop.org/software/fontconfig/
 fontconfig: Download: https://www.freedesktop.org/software/fontconfig/release/
 fontconfig:
 
-PACKAGE NAME:  fontsproto-2.1.3-x86_64-1_myreq
+PACKAGE NAME:  fontsproto-2.1.3-noarch-1
 --------------------------------------------------------------------------------
 fontsproto: fontsproto (C prototypes for X11 X Fonts Extension)
 fontsproto:
@@ -559,7 +559,7 @@ fontsproto: Download: https://www.x.org/archive/individual/proto/
 fontsproto:
 fontsproto:
 
-PACKAGE NAME:  fonttosfnt-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  fonttosfnt-1.0.4-x86_64-2
 --------------------------------------------------------------------------------
 fonttosfnt: fonttosfnt (utility to wrap a bitmap font in a sfnt wrapper)
 fonttosfnt:
@@ -573,7 +573,7 @@ fonttosfnt:
 fonttosfnt: Download: https://www.x.org/archive/individual/app/
 fonttosfnt:
 
-PACKAGE NAME:  freeglut-3.0.0-x86_64-1_myreq
+PACKAGE NAME:  freeglut-3.0.0-x86_64-1
 --------------------------------------------------------------------------------
 freeglut: freeglut (alternative GLUT library)
 freeglut:
@@ -587,7 +587,7 @@ freeglut:
 freeglut: Homepage: http://freeglut.sourceforge.net/
 freeglut:
 
-PACKAGE NAME:  gccmakedep-1.0.3-noarch-1_myreq
+PACKAGE NAME:  gccmakedep-1.0.3-noarch-1
 --------------------------------------------------------------------------------
 gccmakedep: gccmakedep (create dependencies in makefiles)
 gccmakedep:
@@ -601,7 +601,7 @@ gccmakedep:
 gccmakedep: Download: https://www.x.org/archive/individual/util/
 gccmakedep:
 
-PACKAGE NAME:  glew-2.0.0-x86_64-1_myreq
+PACKAGE NAME:  glew-1.13.0-x86_64-1
 --------------------------------------------------------------------------------
 glew: glew (the OpenGL Extension Wrangler Library)
 glew:
@@ -615,7 +615,7 @@ glew:
 glew: Homepage: http://glew.sourceforge.net/
 glew:
 
-PACKAGE NAME:  glproto-1.4.17-x86_64-1_myreq
+PACKAGE NAME:  glproto-1.4.17-noarch-1
 --------------------------------------------------------------------------------
 glproto: glproto (C prototypes for X11 OpenGL Extension)
 glproto:
@@ -629,7 +629,7 @@ glproto: Download: https://www.x.org/archive/individual/proto/
 glproto:
 glproto:
 
-PACKAGE NAME:  glu-9.0.0-x86_64-1_myreq
+PACKAGE NAME:  glu-9.0.0-x86_64-1
 --------------------------------------------------------------------------------
 glu: glu (Mesa OpenGL utility library)
 glu:
@@ -643,7 +643,7 @@ glu: Download: git clone git://anongit.freedesktop.org/mesa/glu
 glu:
 glu:
 
-PACKAGE NAME:  iceauth-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  iceauth-1.0.7-x86_64-2
 --------------------------------------------------------------------------------
 iceauth: iceauth (display/edit ICE authorization information)
 iceauth:
@@ -657,7 +657,7 @@ iceauth:
 iceauth: Download: https://www.x.org/archive/individual/app/
 iceauth:
 
-PACKAGE NAME:  imake-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  imake-1.0.7-x86_64-2
 --------------------------------------------------------------------------------
 imake: imake (C preprocessor interface to the make utility)
 imake:
@@ -671,7 +671,7 @@ imake:
 imake: Download: https://www.x.org/archive/individual/util/
 imake:
 
-PACKAGE NAME:  inputproto-2.3.2-x86_64-1_myreq
+PACKAGE NAME:  inputproto-2.3.2-noarch-1
 --------------------------------------------------------------------------------
 inputproto: inputproto (C prototypes for X Input extension)
 inputproto:
@@ -685,7 +685,7 @@ inputproto: Download: https://www.x.org/archive/individual/proto/
 inputproto:
 inputproto:
 
-PACKAGE NAME:  kbproto-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  kbproto-1.0.7-noarch-1
 --------------------------------------------------------------------------------
 kbproto: kbproto (C prototypes for X11 X Keyboard Extension)
 kbproto:
@@ -699,7 +699,7 @@ kbproto: Download: https://www.x.org/archive/individual/proto/
 kbproto:
 kbproto:
 
-PACKAGE NAME:  libFS-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  libFS-1.0.7-x86_64-1
 --------------------------------------------------------------------------------
 libFS: libFS (X Font Service client library)
 libFS:
@@ -713,7 +713,7 @@ libFS:
 libFS: Download: https://www.x.org/archive/individual/lib/
 libFS:
 
-PACKAGE NAME:  libICE-1.0.9-x86_64-1_myreq
+PACKAGE NAME:  libICE-1.0.9-x86_64-2
 --------------------------------------------------------------------------------
 libICE: libICE (X Inter-Client Exchange Library)
 libICE:
@@ -727,7 +727,7 @@ libICE:
 libICE: Download: http://www.x.org/archive/individual/lib/
 libICE:
 
-PACKAGE NAME:  libSM-1.2.2-x86_64-1_myreq
+PACKAGE NAME:  libSM-1.2.2-x86_64-2
 --------------------------------------------------------------------------------
 libSM: libSM (X Session Management Library)
 libSM:
@@ -741,7 +741,7 @@ libSM:
 libSM: Download: http://www.x.org/archive/individual/lib/
 libSM:
 
-PACKAGE NAME:  libX11-1.6.5-x86_64-1_myreq
+PACKAGE NAME:  libX11-1.6.5-x86_64-1
 --------------------------------------------------------------------------------
 libX11: libX11 (Core X11 protocol client library)
 libX11:
@@ -755,7 +755,7 @@ libX11:
 libX11: Download: http://www.x.org/archive/individual/lib/
 libX11:
 
-PACKAGE NAME:  libXScrnSaver-1.2.2-x86_64-1_myreq
+PACKAGE NAME:  libXScrnSaver-1.2.2-x86_64-2
 --------------------------------------------------------------------------------
 libXScrnSaver: libXScrnSaver (X11 Screen Saver extension client library)
 libXScrnSaver:
@@ -769,7 +769,7 @@ libXScrnSaver:
 libXScrnSaver: Download: http://www.x.org/archive/individual/lib/
 libXScrnSaver:
 
-PACKAGE NAME:  libXau-1.0.8-x86_64-1_myreq
+PACKAGE NAME:  libXau-1.0.8-x86_64-2
 --------------------------------------------------------------------------------
 libXau: libXau (Sample Authorization Protocol for X)
 libXau:
@@ -783,7 +783,7 @@ libXau:
 libXau: Download: https://www.x.org/archive/individual/lib/
 libXau:
 
-PACKAGE NAME:  libXaw-1.0.13-x86_64-1_myreq
+PACKAGE NAME:  libXaw-1.0.13-x86_64-1
 --------------------------------------------------------------------------------
 libXaw: libXaw (client library for the X Athena Widget Set)
 libXaw:
@@ -797,7 +797,7 @@ libXaw:
 libXaw: Download: https://www.x.org/archive/individual/lib/
 libXaw:
 
-PACKAGE NAME:  libXcomposite-0.4.4-x86_64-1_myreq
+PACKAGE NAME:  libXcomposite-0.4.4-x86_64-2
 --------------------------------------------------------------------------------
 libXcomposite: libXcomposite (client library for the X Composite extension)
 libXcomposite:
@@ -811,7 +811,7 @@ libXcomposite:
 libXcomposite: Download: https://www.x.org/archive/individual/lib/
 libXcomposite:
 
-PACKAGE NAME:  libXcursor-1.1.14-x86_64-1_myreq
+PACKAGE NAME:  libXcursor-1.1.14-x86_64-2
 --------------------------------------------------------------------------------
 libXcursor: libXcursor (X Window System Cursor management library)
 libXcursor:
@@ -825,7 +825,7 @@ libXcursor:
 libXcursor: Download: http://www.x.org/archive/individual/lib/
 libXcursor:
 
-PACKAGE NAME:  libXdamage-1.1.4-x86_64-1_myreq
+PACKAGE NAME:  libXdamage-1.1.4-x86_64-2
 --------------------------------------------------------------------------------
 libXdamage: libXdamage (client library for the X Damage Extension)
 libXdamage:
@@ -839,7 +839,7 @@ libXdamage: Download: https://www.x.org/archive/individual/lib/
 libXdamage:
 libXdamage:
 
-PACKAGE NAME:  libXdmcp-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  libXdmcp-1.1.2-x86_64-2
 --------------------------------------------------------------------------------
 libXdmcp: libXdmcp (X Display Manager Control Protocol library)
 libXdmcp:
@@ -853,7 +853,7 @@ libXdmcp:
 libXdmcp: Download: http://www.x.org/archive/individual/lib/
 libXdmcp:
 
-PACKAGE NAME:  libXevie-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  libXevie-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 libXevie: libXevie (X Event Interception Extension (XEvIE) library)
 libXevie:
@@ -867,7 +867,7 @@ libXevie:
 libXevie: Download: https://www.x.org/archive/individual/lib/
 libXevie:
 
-PACKAGE NAME:  libXext-1.3.3-x86_64-1_myreq
+PACKAGE NAME:  libXext-1.3.3-x86_64-2
 --------------------------------------------------------------------------------
 libXext: libXext (library for common extensions to the X11 protocol)
 libXext:
@@ -881,7 +881,7 @@ libXext: Download: https://www.x.org/archive/individual/lib/
 libXext:
 libXext:
 
-PACKAGE NAME:  libXfixes-5.0.3-x86_64-1_myreq
+PACKAGE NAME:  libXfixes-5.0.3-x86_64-1
 --------------------------------------------------------------------------------
 libXfixes: libXfixes (client library for the Xfixes extension)
 libXfixes:
@@ -895,7 +895,7 @@ libXfixes: Download: https://www.x.org/archive/individual/lib/
 libXfixes:
 libXfixes:
 
-PACKAGE NAME:  libXfont-1.5.2-x86_64-1_myreq
+PACKAGE NAME:  libXfont-1.5.2-x86_64-1
 --------------------------------------------------------------------------------
 libXfont: libXfont (library for legacy X11 font system)
 libXfont:
@@ -909,7 +909,7 @@ libXfont: libX11.
 libXfont:
 libXfont: Download: https://www.x.org/archive/individual/lib/
 
-PACKAGE NAME:  libXfont2-2.0.1-x86_64-1_myreq
+PACKAGE NAME:  libXfont2-2.0.1-x86_64-1
 --------------------------------------------------------------------------------
 libXfont2: libXfont2 (library for legacy X11 font system)
 libXfont2:
@@ -923,7 +923,7 @@ libXfont2: libXft, or the legacy API's in libX11.
 libXfont2:
 libXfont2: Download: https://www.x.org/archive/individual/lib/
 
-PACKAGE NAME:  libXfontcache-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  libXfontcache-1.0.5-x86_64-2
 --------------------------------------------------------------------------------
 libXfontcache: libXfontcache (X-TrueType font cache extension client library)
 libXfontcache:
@@ -937,7 +937,7 @@ libXfontcache:
 libXfontcache: Download: https://www.x.org/archive/individual/lib/
 libXfontcache:
 
-PACKAGE NAME:  libXft-2.3.2-x86_64-1_myreq
+PACKAGE NAME:  libXft-2.3.2-x86_64-3
 --------------------------------------------------------------------------------
 libXft: libXft (X FreeType library)
 libXft:
@@ -951,7 +951,7 @@ libXft:
 libXft: Download: http://www.x.org/archive/individual/lib/
 libXft:
 
-PACKAGE NAME:  libXi-1.7.9-x86_64-1_myreq
+PACKAGE NAME:  libXi-1.7.9-x86_64-1
 --------------------------------------------------------------------------------
 libXi: libXi (library for the X Input Extension)
 libXi:
@@ -965,7 +965,7 @@ libXi: Download: https://www.x.org/archive/individual/lib/
 libXi:
 libXi:
 
-PACKAGE NAME:  libXinerama-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  libXinerama-1.1.3-x86_64-2
 --------------------------------------------------------------------------------
 libXinerama: libXinerama (library for Xinerama extension to X11 Protocol)
 libXinerama:
@@ -979,7 +979,7 @@ libXinerama:
 libXinerama: Download: http://www.x.org/archive/individual/lib/
 libXinerama:
 
-PACKAGE NAME:  libXmu-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  libXmu-1.1.2-x86_64-2
 --------------------------------------------------------------------------------
 libXmu: libXmu (X miscellaneous utility library)
 libXmu:
@@ -993,7 +993,7 @@ libXmu:
 libXmu: Download: http://www.x.org/archive/individual/lib/
 libXmu:
 
-PACKAGE NAME:  libXp-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  libXp-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 libXp: libXp (X Print Client Library)
 libXp:
@@ -1007,7 +1007,7 @@ libXp:
 libXp: Download: https://www.x.org/archive/individual/lib/
 libXp:
 
-PACKAGE NAME:  libXpm-3.5.12-x86_64-1_myreq
+PACKAGE NAME:  libXpm-3.5.12-x86_64-1
 --------------------------------------------------------------------------------
 libXpm: libXpm (X Pixmap (XPM) image file format library)
 libXpm:
@@ -1021,7 +1021,7 @@ libXpm:
 libXpm: Download: http://www.x.org/archive/individual/lib/
 libXpm:
 
-PACKAGE NAME:  libXpresent-1.0.0-x86_64-1_myreq
+PACKAGE NAME:  libXpresent-1.0.0-x86_64-1
 --------------------------------------------------------------------------------
 libXpresent: libXpresent (library for the Present extension to the X11 protocol)
 libXpresent:
@@ -1035,7 +1035,7 @@ libXpresent:
 libXpresent: Download: https://www.x.org/archive/individual/lib/
 libXpresent:
 
-PACKAGE NAME:  libXrandr-1.5.1-x86_64-1_myreq
+PACKAGE NAME:  libXrandr-1.5.1-x86_64-1
 --------------------------------------------------------------------------------
 libXrandr: libXrandr (X Resize, Rotate and Reflection extension library)
 libXrandr:
@@ -1049,7 +1049,7 @@ libXrandr:
 libXrandr: Download: https://www.x.org/archive/individual/lib/
 libXrandr:
 
-PACKAGE NAME:  libXrender-0.9.10-x86_64-1_myreq
+PACKAGE NAME:  libXrender-0.9.10-x86_64-1
 --------------------------------------------------------------------------------
 libXrender: libXrender (library for the Render Extension to the X11 protocol)
 libXrender:
@@ -1063,7 +1063,7 @@ libXrender:
 libXrender: Download: http://www.x.org/archive/individual/lib/
 libXrender:
 
-PACKAGE NAME:  libXres-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  libXres-1.0.7-x86_64-2
 --------------------------------------------------------------------------------
 libXres: libXres (X-Resource extension client library)
 libXres:
@@ -1077,7 +1077,7 @@ libXres:
 libXres: Download: https://www.x.org/archive/individual/lib/
 libXres:
 
-PACKAGE NAME:  libXt-1.1.5-x86_64-1_myreq
+PACKAGE NAME:  libXt-1.1.5-x86_64-1
 --------------------------------------------------------------------------------
 libXt: libXt (X Toolkit Intrinsics library)
 libXt:
@@ -1091,7 +1091,7 @@ libXt:
 libXt: Download: http://www.x.org/archive/individual/lib/
 libXt:
 
-PACKAGE NAME:  libXtst-1.2.3-x86_64-1_myreq
+PACKAGE NAME:  libXtst-1.2.3-x86_64-1
 --------------------------------------------------------------------------------
 libXtst: libXtst (client library for the XTEST & RECORD extensions)
 libXtst:
@@ -1105,7 +1105,7 @@ libXtst:
 libXtst: Download: http://www.x.org/archive/individual/lib/
 libXtst:
 
-PACKAGE NAME:  libXv-1.0.11-x86_64-1_myreq
+PACKAGE NAME:  libXv-1.0.11-x86_64-1
 --------------------------------------------------------------------------------
 libXv: libXv (library for the X Video (Xv) extension to the X Window System)
 libXv:
@@ -1119,7 +1119,7 @@ libXv:
 libXv: Download: https://www.x.org/archive/individual/lib/
 libXv:
 
-PACKAGE NAME:  libXvMC-1.0.10-x86_64-1_myreq
+PACKAGE NAME:  libXvMC-1.0.10-x86_64-1
 --------------------------------------------------------------------------------
 libXvMC: libXvMC (X.Org X11 libXvMC runtime library)
 libXvMC:
@@ -1133,7 +1133,7 @@ libXvMC:
 libXvMC: Download: https://www.x.org/archive/individual/lib/
 libXvMC:
 
-PACKAGE NAME:  libXxf86dga-1.1.4-x86_64-1_myreq
+PACKAGE NAME:  libXxf86dga-1.1.4-x86_64-2
 --------------------------------------------------------------------------------
 libXxf86dga: libXxf86dga (client library for the XFree86-DGA extension)
 libXxf86dga:
@@ -1147,7 +1147,7 @@ libXxf86dga:
 libXxf86dga: Download: https://www.x.org/archive/individual/lib/
 libXxf86dga:
 
-PACKAGE NAME:  libXxf86misc-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  libXxf86misc-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 libXxf86misc: libXxf86misc (Extension library for the XFree86-Misc X extension)
 libXxf86misc:
@@ -1161,7 +1161,7 @@ libXxf86misc:
 libXxf86misc: Download: https://www.x.org/archive/individual/lib/
 libXxf86misc:
 
-PACKAGE NAME:  libXxf86vm-1.1.4-x86_64-1_myreq
+PACKAGE NAME:  libXxf86vm-1.1.4-x86_64-2
 --------------------------------------------------------------------------------
 libXxf86vm: libXxf86vm (library for the XFree86-VidMode X extension)
 libXxf86vm:
@@ -1175,7 +1175,7 @@ libXxf86vm:
 libXxf86vm: Download: http://www.x.org/archive/individual/lib/
 libXxf86vm:
 
-PACKAGE NAME:  libdmx-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  libdmx-1.1.3-x86_64-2
 --------------------------------------------------------------------------------
 libdmx: libdmx (DMX - Distributed Multihead X extension library)
 libdmx:
@@ -1189,7 +1189,7 @@ libdmx:
 libdmx: Download: https://www.x.org/archive/individual/lib/
 libdmx:
 
-PACKAGE NAME:  libdrm-2.4.80-x86_64-1_myreq
+PACKAGE NAME:  libdrm-2.4.80-x86_64-1
 --------------------------------------------------------------------------------
 libdrm: libdrm (A library to support Direct Rendering)
 libdrm:
@@ -1203,7 +1203,7 @@ libdrm:
 libdrm: Download: https://dri.freedesktop.org/libdrm/
 libdrm:
 
-PACKAGE NAME:  libepoxy-1.4-x86_64-1_myreq
+PACKAGE NAME:  libepoxy-1.4.2-x86_64-1
 --------------------------------------------------------------------------------
 libepoxy: libepoxy (OpenGL function pointer management library)
 libepoxy:
@@ -1217,7 +1217,7 @@ libepoxy: Homepage: https://github.com/anholt/libepoxy
 libepoxy: Download: https://github.com/anholt/libepoxy/releases/
 libepoxy:
 
-PACKAGE NAME:  liberation-fonts-ttf-1.06.0.20100721-noarch-1_myreq
+PACKAGE NAME:  liberation-fonts-ttf-2.00.1-noarch-1
 --------------------------------------------------------------------------------
 liberation-fonts-ttf: liberation-fonts-ttf (Liberation TTF Fonts)
 liberation-fonts-ttf:
@@ -1231,7 +1231,7 @@ liberation-fonts-ttf: Download:
 liberation-fonts-ttf: http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/
 liberation-fonts-ttf:
 
-PACKAGE NAME:  libevdev-1.5.7-x86_64-1_myreq
+PACKAGE NAME:  libevdev-1.5.7-x86_64-1
 --------------------------------------------------------------------------------
 libevdev: libevdev (wrapper library for evdev devices)
 libevdev:
@@ -1245,7 +1245,7 @@ libevdev: Homepage: http://www.freedesktop.org/wiki/Software/libevdev/
 libevdev: Download: https://www.freedesktop.org/software/libevdev/
 libevdev:
 
-PACKAGE NAME:  libfontenc-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  libfontenc-1.1.3-x86_64-1
 --------------------------------------------------------------------------------
 libfontenc: libfontenc (font encoding library)
 libfontenc:
@@ -1259,7 +1259,7 @@ libfontenc:
 libfontenc: Download: http://www.x.org/archive/individual/lib/
 libfontenc:
 
-PACKAGE NAME:  libpciaccess-0.13.5-x86_64-1_myreq
+PACKAGE NAME:  libpciaccess-0.13.5-x86_64-1
 --------------------------------------------------------------------------------
 libpciaccess: libpciaccess (Generic PCI access library)
 libpciaccess:
@@ -1273,7 +1273,7 @@ libpciaccess:
 libpciaccess:
 libpciaccess:
 
-PACKAGE NAME:  libpthread-stubs-0.4-x86_64-1_myreq
+PACKAGE NAME:  libpthread-stubs-0.4-noarch-1
 --------------------------------------------------------------------------------
 libpthread-stubs: libpthread-stubs (thread support stubs)
 libpthread-stubs:
@@ -1287,7 +1287,7 @@ libpthread-stubs:
 libpthread-stubs: Download: https://www.x.org/archive/individual/xcb/
 libpthread-stubs:
 
-PACKAGE NAME:  libva-1.8.1-x86_64-1_myreq
+PACKAGE NAME:  libva-1.8.0-x86_64-1
 --------------------------------------------------------------------------------
 libva: libva (Video Acceleration API)
 libva:
@@ -1301,7 +1301,7 @@ libva: Homepage: https://github.com/01org/libva
 libva: Download: https://www.freedesktop.org/software/vaapi/releases/libva/
 libva:
 
-PACKAGE NAME:  libvdpau-1.1.1-x86_64-1_myreq
+PACKAGE NAME:  libvdpau-1.1.1-x86_64-1
 --------------------------------------------------------------------------------
 libvdpau: libvdpau (VDPAU wrapper library)
 libvdpau:
@@ -1315,7 +1315,7 @@ libvdpau: Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
 libvdpau: Download: git clone git://people.freedesktop.org/~aplattner/libvdpau
 libvdpau:
 
-PACKAGE NAME:  libxcb-1.12-x86_64-1_myreq
+PACKAGE NAME:  libxcb-1.12-x86_64-1
 --------------------------------------------------------------------------------
 libxcb: libxcb (X protocol C-language Binding)
 libxcb:
@@ -1329,7 +1329,7 @@ libxcb:
 libxcb: Download: https://www.x.org/archive/individual/xcb/
 libxcb:
 
-PACKAGE NAME:  libxkbfile-1.0.9-x86_64-1_myreq
+PACKAGE NAME:  libxkbfile-1.0.9-x86_64-1
 --------------------------------------------------------------------------------
 libxkbfile: libxkbfile (X11 keyboard file manipulation library)
 libxkbfile:
@@ -1343,7 +1343,7 @@ libxkbfile:
 libxkbfile: Download: http://www.x.org/archive/individual/lib/
 libxkbfile:
 
-PACKAGE NAME:  libxshmfence-1.2-x86_64-1_myreq
+PACKAGE NAME:  libxshmfence-1.2-x86_64-2
 --------------------------------------------------------------------------------
 libxshmfence: libxshmfence (The X Shared Memory Fence Library)
 libxshmfence:
@@ -1357,21 +1357,10 @@ libxshmfence: Download: https://www.x.org/archive/individual/lib/
 libxshmfence:
 libxshmfence:
 
-PACKAGE NAME:  links-2.14-x86_64-1_myreq
+PACKAGE NAME:  links-2.14-x86_64-2
 --------------------------------------------------------------------------------
-links: links (WWW browser for the console)
-links:
-links: Links is a console mode WWW browser, supporting colors, correct table
-links: rendering, background downloading, frames, Javascript, and a menu
-links: driven configuration interface.  The default is text output, but
-links: graphical output (using -g) is also supported using the Linux
-links: framebuffer console or SVGAlib.
-links:
-links: Homepage: http://www.jikos.cz/~mikulas/links/
-links: Download: http://links.twibright.com/download/
-links:
 
-PACKAGE NAME:  listres-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  listres-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 listres: listres (X11 resource lister)
 listres:
@@ -1385,7 +1374,7 @@ listres:
 listres: Download: https://www.x.org/archive/individual/app/
 listres:
 
-PACKAGE NAME:  lndir-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  lndir-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 lndir: lndir (create shadow directory of symbolic links to another directory)
 lndir:
@@ -1399,7 +1388,7 @@ lndir:
 lndir: Download: https://www.x.org/archive/individual/util/
 lndir:
 
-PACKAGE NAME:  luit-1.1.1-x86_64-1_myreq
+PACKAGE NAME:  luit-1.1.1-x86_64-2
 --------------------------------------------------------------------------------
 luit: luit (character encoding convertor for X11 terminals)
 luit:
@@ -1413,7 +1402,7 @@ luit:
 luit: Download: https://www.x.org/archive/individual/app/
 luit:
 
-PACKAGE NAME:  m17n-lib-1.7.0-x86_64-1_myreq
+PACKAGE NAME:  m17n-lib-1.7.0-x86_64-1
 --------------------------------------------------------------------------------
 m17n-lib: m17n-lib (application multilingualization library)
 m17n-lib:
@@ -1427,7 +1416,7 @@ m17n-lib: Homepage: http://m17n.org/
 m17n-lib: Download: http://download.savannah.nongnu.org/releases/m17n/
 m17n-lib:
 
-PACKAGE NAME:  makedepend-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  makedepend-1.0.5-x86_64-2
 --------------------------------------------------------------------------------
 makedepend: makedepend (create dependencies in makefiles)
 makedepend:
@@ -1441,7 +1430,7 @@ makedepend:
 makedepend: Download: https://www.x.org/archive/individual/util/
 makedepend:
 
-PACKAGE NAME:  mesa-17.1.0-x86_64-1_myreq
+PACKAGE NAME:  mesa-17.1.1-x86_64-1
 --------------------------------------------------------------------------------
 mesa: mesa (a 3-D graphics library)
 mesa:
@@ -1455,7 +1444,7 @@ mesa: Homepage: https://www.mesa3d.org/
 mesa: Download: https://mesa.freedesktop.org/archive/
 mesa:
 
-PACKAGE NAME:  mesa-demos-8.3.0-x86_64-1_myreq
+PACKAGE NAME:  mesa-demos-8.3.0-x86_64-1
 --------------------------------------------------------------------------------
 mesa-demos: mesa-demos (OpenGL demonstration and test programs)
 mesa-demos:
@@ -1469,7 +1458,7 @@ mesa-demos:
 mesa-demos: Download: https://mesa.freedesktop.org/archive/demos/
 mesa-demos:
 
-PACKAGE NAME:  mkcomposecache-1.2.1-x86_64-1_myreq
+PACKAGE NAME:  mkcomposecache-1.2.1-x86_64-2
 --------------------------------------------------------------------------------
 mkcomposecache: mkcomposecache (creates global Compose cache files)
 mkcomposecache:
@@ -1483,7 +1472,7 @@ mkcomposecache:
 mkcomposecache: Download: https://www.x.org/archive/individual/app/
 mkcomposecache:
 
-PACKAGE NAME:  mkfontdir-1.0.7-noarch-1_myreq
+PACKAGE NAME:  mkfontdir-1.0.7-noarch-1
 --------------------------------------------------------------------------------
 mkfontdir: mkfontdir (X11 font utility)
 mkfontdir:
@@ -1497,7 +1486,7 @@ mkfontdir:
 mkfontdir: Download: https://www.x.org/archive/individual/app/
 mkfontdir:
 
-PACKAGE NAME:  mkfontscale-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  mkfontscale-1.1.2-x86_64-2
 --------------------------------------------------------------------------------
 mkfontscale: mkfontscale (X11 font utility)
 mkfontscale:
@@ -1511,7 +1500,7 @@ mkfontscale: Download: https://www.x.org/archive/individual/app/
 mkfontscale:
 mkfontscale:
 
-PACKAGE NAME:  mtdev-1.1.5-x86_64-1_myreq
+PACKAGE NAME:  mtdev-1.1.5-x86_64-1
 --------------------------------------------------------------------------------
 mtdev: mtdev (multitouch device library)
 mtdev:
@@ -1525,7 +1514,7 @@ mtdev:
 mtdev: Homepage: http://bitmath.org/code/mtdev/
 mtdev:
 
-PACKAGE NAME:  pixman-0.34.0-x86_64-1_myreq
+PACKAGE NAME:  pixman-0.34.0-x86_64-1
 --------------------------------------------------------------------------------
 pixman: pixman (pixel manipulation library)
 pixman:
@@ -1539,7 +1528,7 @@ pixman: Download: https://www.x.org/archive/individual/lib/
 pixman:
 pixman:
 
-PACKAGE NAME:  presentproto-1.1-x86_64-1_myreq
+PACKAGE NAME:  presentproto-1.1-x86_64-1
 --------------------------------------------------------------------------------
 presentproto: presentproto (X.Org Present protocol specification)
 presentproto:
@@ -1553,7 +1542,7 @@ presentproto:
 presentproto:
 presentproto:
 
-PACKAGE NAME:  printproto-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  printproto-1.0.5-noarch-1
 --------------------------------------------------------------------------------
 printproto: printproto (C prototypes for X11 Xprint extension)
 printproto:
@@ -1567,7 +1556,7 @@ printproto:
 printproto: Download: https://www.x.org/archive/individual/proto/
 printproto:
 
-PACKAGE NAME:  randrproto-1.5.0-x86_64-1_myreq
+PACKAGE NAME:  randrproto-1.5.0-noarch-1
 --------------------------------------------------------------------------------
 randrproto: randrproto (C prototypes for RandR)
 randrproto:
@@ -1581,7 +1570,7 @@ randrproto:
 randrproto: Download: https://www.x.org/archive/individual/proto/
 randrproto:
 
-PACKAGE NAME:  recordproto-1.14.2-x86_64-1_myreq
+PACKAGE NAME:  recordproto-1.14.2-noarch-1
 --------------------------------------------------------------------------------
 recordproto: recordproto (C prototypes for X Record Extension)
 recordproto:
@@ -1595,7 +1584,7 @@ recordproto:
 recordproto: Download: http://www.x.org/archive/individual/proto/
 recordproto:
 
-PACKAGE NAME:  rendercheck-1.5-x86_64-1_myreq
+PACKAGE NAME:  rendercheck-1.5-x86_64-1
 --------------------------------------------------------------------------------
 rendercheck: rendercheck (test X11 Render support)
 rendercheck:
@@ -1609,7 +1598,7 @@ rendercheck:
 rendercheck: Download: https://www.x.org/archive/individual/app/
 rendercheck:
 
-PACKAGE NAME:  renderproto-0.11.1-x86_64-1_myreq
+PACKAGE NAME:  renderproto-0.11.1-noarch-1
 --------------------------------------------------------------------------------
 renderproto: renderproto (C prototypes for X Rendering Extension)
 renderproto:
@@ -1623,7 +1612,7 @@ renderproto:
 renderproto: Download: https://www.x.org/archive/individual/proto/
 renderproto:
 
-PACKAGE NAME:  resourceproto-1.2.0-x86_64-1_myreq
+PACKAGE NAME:  resourceproto-1.2.0-noarch-1
 --------------------------------------------------------------------------------
 resourceproto: resourceproto (C prototypes for X Resource Extension)
 resourceproto:
@@ -1637,7 +1626,7 @@ resourceproto:
 resourceproto: Download: https://www.x.org/archive/individual/proto/
 resourceproto:
 
-PACKAGE NAME:  rgb-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  rgb-1.0.6-x86_64-2
 --------------------------------------------------------------------------------
 rgb: rgb (X color name database)
 rgb:
@@ -1651,7 +1640,7 @@ rgb:
 rgb: Download: https://www.x.org/archive/individual/app/
 rgb:
 
-PACKAGE NAME:  scrnsaverproto-1.2.2-x86_64-1_myreq
+PACKAGE NAME:  scrnsaverproto-1.2.2-noarch-1
 --------------------------------------------------------------------------------
 scrnsaverproto: scrnsaverproto (C prototypes for X11 MIT Screen Saver Extension)
 scrnsaverproto:
@@ -1665,7 +1654,7 @@ scrnsaverproto:
 scrnsaverproto: Download: http://www.x.org/archive/individual/proto/
 scrnsaverproto:
 
-PACKAGE NAME:  setxkbmap-1.3.1-x86_64-1_myreq
+PACKAGE NAME:  setxkbmap-1.3.1-x86_64-1
 --------------------------------------------------------------------------------
 setxkbmap: setxkbmap (change X11 keyboard layout)
 setxkbmap:
@@ -1679,7 +1668,7 @@ setxkbmap:
 setxkbmap: Download: https://www.x.org/archive/individual/app/
 setxkbmap:
 
-PACKAGE NAME:  transset-1.0.1-x86_64-1_myreq
+PACKAGE NAME:  transset-1.0.1-x86_64-2
 --------------------------------------------------------------------------------
 transset: transset (utility for setting opacity property)
 transset:
@@ -1693,7 +1682,7 @@ transset:   * increase or decrease opacity
 transset:
 transset: Download: https://www.x.org/archive/individual/app/
 
-PACKAGE NAME:  util-macros-1.19.1-noarch-1_myreq
+PACKAGE NAME:  util-macros-1.19.1-noarch-1
 --------------------------------------------------------------------------------
 util-macros: util-macros (autoconf support for X11)
 util-macros:
@@ -1707,7 +1696,7 @@ util-macros:
 util-macros: Download: https://www.x.org/archive/individual/util/
 util-macros:
 
-PACKAGE NAME:  videoproto-2.3.3-x86_64-1_myreq
+PACKAGE NAME:  videoproto-2.3.3-noarch-1
 --------------------------------------------------------------------------------
 videoproto: videoproto (C prototypes for X Video Extension)
 videoproto:
@@ -1721,7 +1710,7 @@ videoproto:
 videoproto: Download: https://www.x.org/archive/individual/proto/
 videoproto:
 
-PACKAGE NAME:  x11-skel-1.0-x86_64-1_myreq
+PACKAGE NAME:  x11-skel-7.7-x86_64-1
 --------------------------------------------------------------------------------
 x11-skel: x11-skel (Miscellaneous things required for X)
 x11-skel:
@@ -1735,7 +1724,7 @@ x11-skel:
 x11-skel:
 x11-skel:
 
-PACKAGE NAME:  xauth-1.0.10-x86_64-1_myreq
+PACKAGE NAME:  xauth-1.0.10-x86_64-1
 --------------------------------------------------------------------------------
 xauth: xauth (X11 authorization utility)
 xauth:
@@ -1749,7 +1738,7 @@ xauth:
 xauth: Download: https://www.x.org/archive/individual/app/
 xauth:
 
-PACKAGE NAME:  xbacklight-1.2.1-x86_64-1_myreq
+PACKAGE NAME:  xbacklight-1.2.1-x86_64-2
 --------------------------------------------------------------------------------
 xbacklight: xbacklight (adjust the backlight brightness where supported)
 xbacklight:
@@ -1763,7 +1752,7 @@ xbacklight:
 xbacklight: Download: https://www.x.org/archive/individual/app/
 xbacklight:
 
-PACKAGE NAME:  xbitmaps-1.1.1-x86_64-1_myreq
+PACKAGE NAME:  xbitmaps-1.1.1-x86_64-2
 --------------------------------------------------------------------------------
 xbitmaps: xbitmaps (miscellaneous X bitmap files)
 xbitmaps:
@@ -1777,7 +1766,7 @@ xbitmaps:
 xbitmaps: Download: http://www.x.org/archive/individual/data/
 xbitmaps:
 
-PACKAGE NAME:  xcb-proto-1.12-x86_64-1_myreq
+PACKAGE NAME:  xcb-proto-1.12-x86_64-1
 --------------------------------------------------------------------------------
 xcb-proto: xcb-proto (X protocol C-language Binding protocol descriptions)
 xcb-proto:
@@ -1791,7 +1780,7 @@ xcb-proto:
 xcb-proto: Download: https://www.x.org/archive/individual/xcb/
 xcb-proto:
 
-PACKAGE NAME:  xcb-util-0.4.0-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-0.4.0-x86_64-2
 --------------------------------------------------------------------------------
 xcb-util: xcb-util (utility libraries for X protocol C-language Binding)
 xcb-util:
@@ -1805,7 +1794,7 @@ xcb-util:
 xcb-util: Download: https://www.x.org/archive/individual/xcb/
 xcb-util:
 
-PACKAGE NAME:  xcb-util-cursor-0.1.3-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-cursor-0.1.3-x86_64-1
 --------------------------------------------------------------------------------
 xcb-util-cursor: xcb-util-cursor (XCB cursor management library)
 xcb-util-cursor:
@@ -1819,7 +1808,7 @@ xcb-util-cursor:
 xcb-util-cursor: Download: https://www.x.org/archive/individual/xcb/
 xcb-util-cursor:
 
-PACKAGE NAME:  xcb-util-image-0.4.0-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-image-0.4.0-x86_64-2
 --------------------------------------------------------------------------------
 xcb-util-image: xcb-util-image (port of Xlib's XImage and XShmImage functions)
 xcb-util-image:
@@ -1833,7 +1822,7 @@ xcb-util-image:
 xcb-util-image: Download: https://www.x.org/archive/individual/xcb/
 xcb-util-image:
 
-PACKAGE NAME:  xcb-util-keysyms-0.4.0-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-keysyms-0.4.0-x86_64-2
 --------------------------------------------------------------------------------
 xcb-util-keysyms: xcb-util-keysyms (keysyms library for XCB)
 xcb-util-keysyms:
@@ -1847,7 +1836,7 @@ xcb-util-keysyms:
 xcb-util-keysyms: Download: https://www.x.org/archive/individual/xcb/
 xcb-util-keysyms:
 
-PACKAGE NAME:  xcb-util-renderutil-0.3.9-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-renderutil-0.3.9-x86_64-2
 --------------------------------------------------------------------------------
 xcb-util-renderutil: xcb-util-renderutil (XCB renderutil library)
 xcb-util-renderutil:
@@ -1861,7 +1850,7 @@ xcb-util-renderutil:
 xcb-util-renderutil: Download: https://www.x.org/archive/individual/xcb/
 xcb-util-renderutil:
 
-PACKAGE NAME:  xcb-util-wm-0.4.1-x86_64-1_myreq
+PACKAGE NAME:  xcb-util-wm-0.4.1-x86_64-2
 --------------------------------------------------------------------------------
 xcb-util-wm: xcb-util-wm (XCB libraries for EWMH and ICCCM)
 xcb-util-wm:
@@ -1875,7 +1864,7 @@ xcb-util-wm:
 xcb-util-wm: Download: https://www.x.org/archive/individual/xcb/
 xcb-util-wm:
 
-PACKAGE NAME:  xclipboard-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  xclipboard-1.1.3-x86_64-2
 --------------------------------------------------------------------------------
 xclipboard: xclipboard (X11 clipboard utility)
 xclipboard:
@@ -1889,7 +1878,7 @@ xclipboard:
 xclipboard: Download: https://www.x.org/archive/individual/app/
 xclipboard:
 
-PACKAGE NAME:  xcmiscproto-1.2.2-x86_64-1_myreq
+PACKAGE NAME:  xcmiscproto-1.2.2-noarch-1
 --------------------------------------------------------------------------------
 xcmiscproto: xcmiscproto (C prototypes for X11 XC-MISC Extension)
 xcmiscproto:
@@ -1903,7 +1892,7 @@ xcmiscproto:
 xcmiscproto: Download: https://www.x.org/archive/individual/proto/
 xcmiscproto:
 
-PACKAGE NAME:  xcmsdb-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  xcmsdb-1.0.5-x86_64-1
 --------------------------------------------------------------------------------
 xcmsdb: xcmsdb (X11 color utility)
 xcmsdb:
@@ -1917,7 +1906,7 @@ xcmsdb:
 xcmsdb: Download: https://www.x.org/archive/individual/app/
 xcmsdb:
 
-PACKAGE NAME:  xconsole-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  xconsole-1.0.7-x86_64-1
 --------------------------------------------------------------------------------
 xconsole: xconsole (X11 console)
 xconsole:
@@ -1931,7 +1920,7 @@ xconsole:
 xconsole: Download: https://www.x.org/archive/individual/app/
 xconsole:
 
-PACKAGE NAME:  xcursor-themes-1.0.4-noarch-1_myreq
+PACKAGE NAME:  xcursor-themes-1.0.4-noarch-1
 --------------------------------------------------------------------------------
 xcursor-themes: xcursor-themes (X11 cursor themes)
 xcursor-themes:
@@ -1945,7 +1934,7 @@ xcursor-themes:
 xcursor-themes: Download: https://www.x.org/archive/individual/data/
 xcursor-themes:
 
-PACKAGE NAME:  xcursorgen-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  xcursorgen-1.0.6-x86_64-3
 --------------------------------------------------------------------------------
 xcursorgen: xcursorgen (prepares X11 cursor sets for use with libXcursor)
 xcursorgen:
@@ -1959,7 +1948,7 @@ xcursorgen:
 xcursorgen: Download: https://www.x.org/archive/individual/app/
 xcursorgen:
 
-PACKAGE NAME:  xdbedizzy-1.1.0-x86_64-1_myreq
+PACKAGE NAME:  xdbedizzy-1.1.0-x86_64-2
 --------------------------------------------------------------------------------
 xdbedizzy: xdbedizzy (X11 test utility)
 xdbedizzy:
@@ -1973,7 +1962,7 @@ xdbedizzy:
 xdbedizzy: Download: https://www.x.org/archive/individual/app/
 xdbedizzy:
 
-PACKAGE NAME:  xdg-user-dirs-0.15-x86_64-1_myreq
+PACKAGE NAME:  xdg-user-dirs-0.15-x86_64-1
 --------------------------------------------------------------------------------
 xdg-user-dirs: xdg-user-dirs (manage XDG user directories)
 xdg-user-dirs:
@@ -1987,7 +1976,7 @@ xdg-user-dirs: Homepage: https://freedesktop.org/wiki/Software/xdg-user-dirs/
 xdg-user-dirs: Download: https://user-dirs.freedesktop.org/releases/
 xdg-user-dirs:
 
-PACKAGE NAME:  xdg-utils-1.1.2-noarch-1_myreq
+PACKAGE NAME:  xdg-utils-1.1.2-noarch-1
 --------------------------------------------------------------------------------
 xdg-utils: xdg-utils (command line tools that assist applications)
 xdg-utils:
@@ -2001,7 +1990,7 @@ xdg-utils: Homepage: https://freedesktop.org/wiki/Software/xdg-utils/
 xdg-utils: Download: https://portland.freedesktop.org/download/
 xdg-utils:
 
-PACKAGE NAME:  xditview-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  xditview-1.0.4-x86_64-1
 --------------------------------------------------------------------------------
 xditview: xditview (displays ditroff output on an X display)
 xditview:
@@ -2015,7 +2004,7 @@ xditview:
 xditview: Download: https://www.x.org/archive/individual/app/
 xditview:
 
-PACKAGE NAME:  xdpyinfo-1.3.2-x86_64-1_myreq
+PACKAGE NAME:  xdpyinfo-1.3.2-x86_64-1
 --------------------------------------------------------------------------------
 xdpyinfo: xdpyinfo (utility for displaying information about an X server)
 xdpyinfo:
@@ -2029,7 +2018,7 @@ xdpyinfo:
 xdpyinfo: Download: https://www.x.org/archive/individual/app/
 xdpyinfo:
 
-PACKAGE NAME:  xdriinfo-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  xdriinfo-1.0.5-x86_64-1
 --------------------------------------------------------------------------------
 xdriinfo: xdriinfo (query configuration information of X11 DRI drivers)
 xdriinfo:
@@ -2043,7 +2032,7 @@ xdriinfo:
 xdriinfo: Download: https://www.x.org/archive/individual/app/
 xdriinfo:
 
-PACKAGE NAME:  xextproto-7.3.0-x86_64-1_myreq
+PACKAGE NAME:  xextproto-7.3.0-x86_64-2
 --------------------------------------------------------------------------------
 xextproto: xextproto (C prototypes for X Protocol Extensions)
 xextproto:
@@ -2057,7 +2046,7 @@ xextproto: Download: https://www.x.org/archive/individual/proto/
 xextproto:
 xextproto:
 
-PACKAGE NAME:  xf86-input-evdev-2.10.5-x86_64-1_myreq
+PACKAGE NAME:  xf86-input-evdev-2.10.5-x86_64-1
 --------------------------------------------------------------------------------
 xf86-input-evdev: xf86-input-evdev (Generic Linux input driver for X server)
 xf86-input-evdev:
@@ -2071,7 +2060,7 @@ xf86-input-evdev:
 xf86-input-evdev: Download: https://www.x.org/archive/individual/driver/
 xf86-input-evdev:
 
-PACKAGE NAME:  xf86-video-nouveau-1.0.15-x86_64-1_myreq
+PACKAGE NAME:  xf86-video-nouveau-1.0.15-x86_64-1
 --------------------------------------------------------------------------------
 xf86-video-nouveau: xf86-video-nouveau (open source driver for nVidia cards)
 xf86-video-nouveau:
@@ -2085,7 +2074,7 @@ xf86-video-nouveau: Homepage: https://nouveau.freedesktop.org/
 xf86-video-nouveau: Download: https://www.x.org/archive/individual/driver/
 xf86-video-nouveau:
 
-PACKAGE NAME:  xf86bigfontproto-1.2.0-x86_64-1_myreq
+PACKAGE NAME:  xf86bigfontproto-1.2.0-noarch-1
 --------------------------------------------------------------------------------
 xf86bigfontproto: xf86bigfontproto (X.Org XF86BIGFONT protocol headers)
 xf86bigfontproto:
@@ -2099,7 +2088,7 @@ xf86bigfontproto:
 xf86bigfontproto: Download: https://www.x.org/archive/individual/proto/
 xf86bigfontproto:
 
-PACKAGE NAME:  xf86dga-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  xf86dga-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 xf86dga: xf86dga (simple test client for the XFree86-DGA extension)
 xf86dga:
@@ -2113,7 +2102,7 @@ xf86dga:
 xf86dga: Download: https://www.x.org/archive/individual/app/
 xf86dga:
 
-PACKAGE NAME:  xf86dgaproto-2.1-x86_64-1_myreq
+PACKAGE NAME:  xf86dgaproto-2.1-noarch-1
 --------------------------------------------------------------------------------
 xf86dgaproto: xf86dgaproto (X.Org XFree86-DGA protocol headers)
 xf86dgaproto:
@@ -2127,7 +2116,7 @@ xf86dgaproto:
 xf86dgaproto: Download: https://www.x.org/archive/individual/proto/
 xf86dgaproto:
 
-PACKAGE NAME:  xf86driproto-2.1.1-x86_64-1_myreq
+PACKAGE NAME:  xf86driproto-2.1.1-noarch-1
 --------------------------------------------------------------------------------
 xf86driproto: xf86driproto (C prototypes for XFree86 DRI)
 xf86driproto:
@@ -2141,7 +2130,7 @@ xf86driproto:
 xf86driproto: Download: https://www.x.org/archive/individual/proto/
 xf86driproto:
 
-PACKAGE NAME:  xf86miscproto-0.9.3-x86_64-1_myreq
+PACKAGE NAME:  xf86miscproto-0.9.3-noarch-1
 --------------------------------------------------------------------------------
 xf86miscproto: xf86miscproto (C prototypes for XFree86-Misc)
 xf86miscproto:
@@ -2155,7 +2144,7 @@ xf86miscproto:
 xf86miscproto: Download: https://www.x.org/archive/individual/proto/
 xf86miscproto:
 
-PACKAGE NAME:  xf86vidmodeproto-2.3.1-x86_64-1_myreq
+PACKAGE NAME:  xf86vidmodeproto-2.3.1-noarch-1
 --------------------------------------------------------------------------------
 xf86vidmodeproto: xf86vidmodeproto (C proto for XFree86 Video Mode Extension)
 xf86vidmodeproto:
@@ -2169,7 +2158,7 @@ xf86vidmodeproto:
 xf86vidmodeproto: Download: https://www.x.org/archive/individual/proto/
 xf86vidmodeproto:
 
-PACKAGE NAME:  xfd-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  xfd-1.1.2-x86_64-2
 --------------------------------------------------------------------------------
 xfd: xfd (X11 font utility)
 xfd:
@@ -2183,7 +2172,7 @@ xfd:
 xfd: Download: https://www.x.org/archive/individual/app/
 xfd:
 
-PACKAGE NAME:  xfontsel-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  xfontsel-1.0.5-x86_64-2
 --------------------------------------------------------------------------------
 xfontsel: xfontsel (X11 font selector)
 xfontsel:
@@ -2197,7 +2186,7 @@ xfontsel:
 xfontsel: Download: https://www.x.org/archive/individual/app/
 xfontsel:
 
-PACKAGE NAME:  xgamma-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  xgamma-1.0.6-x86_64-1
 --------------------------------------------------------------------------------
 xgamma: xgamma (X11 gamma utility)
 xgamma:
@@ -2211,7 +2200,7 @@ xgamma:
 xgamma: Download: https://www.x.org/archive/individual/app/
 xgamma:
 
-PACKAGE NAME:  xhost-1.0.7-x86_64-1_myreq
+PACKAGE NAME:  xhost-1.0.7-x86_64-1
 --------------------------------------------------------------------------------
 xhost: xhost (X11 authorization utility)
 xhost:
@@ -2225,7 +2214,7 @@ xhost:
 xhost: Download: https://www.x.org/archive/individual/app/
 xhost:
 
-PACKAGE NAME:  xineramaproto-1.2.1-x86_64-1_myreq
+PACKAGE NAME:  xineramaproto-1.2.1-noarch-1
 --------------------------------------------------------------------------------
 xineramaproto: xineramaproto (C prototypes for X11 Xinerama Extension)
 xineramaproto:
@@ -2239,7 +2228,7 @@ xineramaproto:
 xineramaproto: Download: https://www.x.org/archive/individual/proto/
 xineramaproto:
 
-PACKAGE NAME:  xinit-1.3.4-x86_64-1_myreq
+PACKAGE NAME:  xinit-1.3.4-x86_64-2
 --------------------------------------------------------------------------------
 xinit: xinit (scripts to start X11 servers)
 xinit:
@@ -2253,7 +2242,7 @@ xinit:
 xinit: Download: http://www.x.org/archive/individual/app/
 xinit:
 
-PACKAGE NAME:  xinput-1.6.2-x86_64-1_myreq
+PACKAGE NAME:  xinput-1.6.2-x86_64-1
 --------------------------------------------------------------------------------
 xinput: xinput (utility to configure and test X11 input devices)
 xinput:
@@ -2267,7 +2256,7 @@ xinput:
 xinput: Download: https://www.x.org/archive/individual/app/
 xinput:
 
-PACKAGE NAME:  xkbcomp-1.4.0-x86_64-1_myreq
+PACKAGE NAME:  xkbcomp-1.4.0-x86_64-1
 --------------------------------------------------------------------------------
 xkbcomp: xkbcomp (X Keyboard Extension)
 xkbcomp:
@@ -2281,7 +2270,7 @@ xkbcomp:
 xkbcomp: Download: https://www.x.org/archive/individual/app/
 xkbcomp:
 
-PACKAGE NAME:  xkbevd-1.1.4-x86_64-1_myreq
+PACKAGE NAME:  xkbevd-1.1.4-x86_64-1
 --------------------------------------------------------------------------------
 xkbevd: xkbevd (X11 keyboard event daemon)
 xkbevd:
@@ -2295,7 +2284,7 @@ xkbevd:
 xkbevd: Download: https://www.x.org/archive/individual/app/
 xkbevd:
 
-PACKAGE NAME:  xkbprint-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  xkbprint-1.0.4-x86_64-1
 --------------------------------------------------------------------------------
 xkbprint: xkbprint (X11 keyboard utility)
 xkbprint:
@@ -2309,7 +2298,7 @@ xkbprint:
 xkbprint: Download: https://www.x.org/archive/individual/app/
 xkbprint:
 
-PACKAGE NAME:  xkbutils-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  xkbutils-1.0.4-x86_64-2
 --------------------------------------------------------------------------------
 xkbutils: xkbutils (X11 keyboard utilities)
 xkbutils:
@@ -2323,7 +2312,7 @@ xkbutils:
 xkbutils: Download: https://www.x.org/archive/individual/app/
 xkbutils:
 
-PACKAGE NAME:  xkeyboard-config-2.20-noarch-1_myreq
+PACKAGE NAME:  xkeyboard-config-2.21-noarch-1
 --------------------------------------------------------------------------------
 xkeyboard-config: xkeyboard-config (X Keyboard Extension config files)
 xkeyboard-config:
@@ -2337,7 +2326,7 @@ xkeyboard-config: accessible to people with physical impairments.
 xkeyboard-config:
 xkeyboard-config: Download: https://www.x.org/archive/individual/data/
 
-PACKAGE NAME:  xlsatoms-1.1.2-x86_64-1_myreq
+PACKAGE NAME:  xlsatoms-1.1.2-x86_64-1
 --------------------------------------------------------------------------------
 xlsatoms: xlsatoms (lists the interned atoms defined on an X11 server)
 xlsatoms:
@@ -2351,7 +2340,7 @@ xlsatoms:
 xlsatoms: Download: https://www.x.org/archive/individual/app/
 xlsatoms:
 
-PACKAGE NAME:  xlsclients-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  xlsclients-1.1.3-x86_64-2
 --------------------------------------------------------------------------------
 xlsclients: xlsclients (X11 utility for listing X client info)
 xlsclients:
@@ -2365,7 +2354,7 @@ xlsclients:
 xlsclients: Download: https://www.x.org/archive/individual/app/
 xlsclients:
 
-PACKAGE NAME:  xlsfonts-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  xlsfonts-1.0.5-x86_64-1
 --------------------------------------------------------------------------------
 xlsfonts: xlsfonts (X11 font utility to list available fonts)
 xlsfonts:
@@ -2379,7 +2368,7 @@ xlsfonts:
 xlsfonts: Download: https://www.x.org/archive/individual/app/
 xlsfonts:
 
-PACKAGE NAME:  xmag-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  xmag-1.0.6-x86_64-1
 --------------------------------------------------------------------------------
 xmag: xmag (X11 accessibility utility)
 xmag:
@@ -2393,7 +2382,7 @@ xmag:
 xmag: Download: https://www.x.org/archive/individual/app/
 xmag:
 
-PACKAGE NAME:  xmodmap-1.0.9-x86_64-1_myreq
+PACKAGE NAME:  xmodmap-1.0.9-x86_64-1
 --------------------------------------------------------------------------------
 xmodmap: xmodmap (X11 keyboard utility)
 xmodmap:
@@ -2407,7 +2396,7 @@ xmodmap:
 xmodmap: Download: https://www.x.org/archive/individual/app/
 xmodmap:
 
-PACKAGE NAME:  xorg-cf-files-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  xorg-cf-files-1.0.6-x86_64-2
 --------------------------------------------------------------------------------
 xorg-cf-files: xorg-cf-files (X11 config files for imake)
 xorg-cf-files:
@@ -2421,7 +2410,7 @@ xorg-cf-files:
 xorg-cf-files: Download: https://www.x.org/archive/individual/util/
 xorg-cf-files:
 
-PACKAGE NAME:  xorg-server-1.19.3-x86_64-1_myreq
+PACKAGE NAME:  xorg-server-1.19.3-x86_64-1
 --------------------------------------------------------------------------------
 xorg-server: xorg-server (The Xorg server, the core of the X Window System)
 xorg-server:
@@ -2435,7 +2424,7 @@ xorg-server: Homepage: http://www.x.org
 xorg-server: Download: https://www.x.org/archive/individual/xserver/
 xorg-server:
 
-PACKAGE NAME:  xprop-1.2.2-x86_64-1_myreq
+PACKAGE NAME:  xprop-1.2.2-x86_64-2
 --------------------------------------------------------------------------------
 xprop: xprop (displays window and font properties of an X server)
 xprop:
@@ -2449,7 +2438,7 @@ xprop:
 xprop: Download: http://www.x.org/archive/individual/app/
 xprop:
 
-PACKAGE NAME:  xproto-7.0.31-x86_64-1_myreq
+PACKAGE NAME:  xproto-7.0.31-noarch-1
 --------------------------------------------------------------------------------
 xproto: xproto (C prototypes for X Window System Core Protocol)
 xproto:
@@ -2463,7 +2452,7 @@ xproto: Download: https://www.x.org/archive/individual/proto/
 xproto:
 xproto:
 
-PACKAGE NAME:  xpyb-1.3.1-x86_64-1_myreq
+PACKAGE NAME:  xpyb-1.3.1-x86_64-3
 --------------------------------------------------------------------------------
 xpyb: xpyb (Python bindings for X)
 xpyb:
@@ -2477,7 +2466,7 @@ xpyb:
 xpyb: Download: https://www.x.org/archive/individual/xcb/
 xpyb:
 
-PACKAGE NAME:  xrandr-1.5.0-x86_64-1_myreq
+PACKAGE NAME:  xrandr-1.5.0-x86_64-1
 --------------------------------------------------------------------------------
 xrandr: xrandr (X11 RandR utility)
 xrandr:
@@ -2491,7 +2480,7 @@ xrandr:
 xrandr: Download: https://www.x.org/archive/individual/app/
 xrandr:
 
-PACKAGE NAME:  xrdb-1.1.0-x86_64-1_myreq
+PACKAGE NAME:  xrdb-1.1.0-x86_64-2
 --------------------------------------------------------------------------------
 xrdb: xrdb (X server resource database utility)
 xrdb:
@@ -2505,7 +2494,7 @@ xrdb:
 xrdb: Download: https://www.x.org/archive/individual/app/
 xrdb:
 
-PACKAGE NAME:  xrefresh-1.0.5-x86_64-1_myreq
+PACKAGE NAME:  xrefresh-1.0.5-x86_64-2
 --------------------------------------------------------------------------------
 xrefresh: xrefresh (refresh all or part of an X screen)
 xrefresh:
@@ -2519,7 +2508,7 @@ xrefresh:
 xrefresh: Download: https://www.x.org/archive/individual/app/
 xrefresh:
 
-PACKAGE NAME:  xscope-1.4.1-x86_64-1_myreq
+PACKAGE NAME:  xscope-1.4.1-x86_64-2
 --------------------------------------------------------------------------------
 xscope: xscope (program to monitor X11/Client conversations)
 xscope:
@@ -2533,7 +2522,7 @@ xscope:
 xscope: Download: https://www.x.org/archive/individual/app/
 xscope:
 
-PACKAGE NAME:  xset-1.2.3-x86_64-1_myreq
+PACKAGE NAME:  xset-1.2.3-x86_64-2
 --------------------------------------------------------------------------------
 xset: xset (get and set various preferences and properties)
 xset:
@@ -2547,7 +2536,7 @@ xset:
 xset: Download: http://www.x.org/archive/individual/app/
 xset:
 
-PACKAGE NAME:  xsetroot-1.1.1-x86_64-1_myreq
+PACKAGE NAME:  xsetroot-1.1.1-x86_64-2
 --------------------------------------------------------------------------------
 xsetroot: xsetroot (root window parameter setting utility for X)
 xsetroot:
@@ -2561,7 +2550,7 @@ xsetroot:
 xsetroot: Download: http://www.x.org/archive/individual/app/
 xsetroot:
 
-PACKAGE NAME:  xsm-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  xsm-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 xsm: xsm (X11 Session Manager)
 xsm:
@@ -2575,7 +2564,7 @@ xsm:
 xsm: Download: https://www.x.org/archive/individual/app/
 xsm:
 
-PACKAGE NAME:  xstdcmap-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  xstdcmap-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 xstdcmap: xstdcmap (X11 color utility)
 xstdcmap:
@@ -2589,7 +2578,7 @@ xstdcmap:
 xstdcmap: Download: https://www.x.org/archive/individual/app/
 xstdcmap:
 
-PACKAGE NAME:  xterm-327-x86_64-1_myreq
+PACKAGE NAME:  xterm-328-x86_64-1
 --------------------------------------------------------------------------------
 xterm: xterm (terminal emulator for X)
 xterm:
@@ -2603,7 +2592,7 @@ xterm: Homepage: http://invisible-island.net/xterm/xterm.html
 xterm: Download: http://invisible-mirror.net/archives/xterm/
 xterm:
 
-PACKAGE NAME:  xtrans-1.3.5-noarch-1_myreq
+PACKAGE NAME:  xtrans-1.3.5-noarch-1
 --------------------------------------------------------------------------------
 xtrans: xtrans (X network transport library)
 xtrans:
@@ -2617,7 +2606,7 @@ xtrans: Download: https://www.x.org/archive/individual/lib/
 xtrans:
 xtrans:
 
-PACKAGE NAME:  xvidtune-1.0.3-x86_64-1_myreq
+PACKAGE NAME:  xvidtune-1.0.3-x86_64-2
 --------------------------------------------------------------------------------
 xvidtune: xvidtune (X11 video mode tuner)
 xvidtune:
@@ -2631,7 +2620,7 @@ xvidtune:
 xvidtune: Download: https://www.x.org/archive/individual/app/
 xvidtune:
 
-PACKAGE NAME:  xvinfo-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  xvinfo-1.1.3-x86_64-1
 --------------------------------------------------------------------------------
 xvinfo: xvinfo (X11 X-Video utility)
 xvinfo:
@@ -2645,7 +2634,7 @@ xvinfo:
 xvinfo: Download: https://www.x.org/archive/individual/app/
 xvinfo:
 
-PACKAGE NAME:  xwd-1.0.6-x86_64-1_myreq
+PACKAGE NAME:  xwd-1.0.6-x86_64-2
 --------------------------------------------------------------------------------
 xwd: xwd (dump an image of an X window)
 xwd:
@@ -2659,7 +2648,7 @@ xwd:
 xwd: Download: https://www.x.org/archive/individual/app/
 xwd:
 
-PACKAGE NAME:  xwininfo-1.1.3-x86_64-1_myreq
+PACKAGE NAME:  xwininfo-1.1.3-x86_64-2
 --------------------------------------------------------------------------------
 xwininfo: xwininfo (prints information about windows on an X server)
 xwininfo:
@@ -2673,7 +2662,7 @@ xwininfo:
 xwininfo: Download: https://www.x.org/archive/individual/app/
 xwininfo:
 
-PACKAGE NAME:  xwud-1.0.4-x86_64-1_myreq
+PACKAGE NAME:  xwud-1.0.4-x86_64-2
 --------------------------------------------------------------------------------
 xwud: xwud (X screen dump viewer)
 xwud:

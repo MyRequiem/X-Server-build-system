@@ -8,7 +8,7 @@ OUTPUT="/root/src/x-packages"
 # package extension
 EXT="txz"
 # tag for package
-TAG="myreq"
+TAG=""
 # build package only if it is not in OUTPUT
 BUILD_ONLY_NOT_EXIST="true"
 # install package after build

@@ -73,8 +73,6 @@ lib:libXcursor
 lib:libXtst
 lib:libXinerama
 lib:libXScrnSaver
-# required to build "fontconfig"
-misc:links
 # required to build "libXft"
 misc:fontconfig
 lib:libXft

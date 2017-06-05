@@ -106,7 +106,7 @@ cat "${CWD}"/slack-desc > "${PKG}"/install/slack-desc
 cd "${PKG}" || exit 1
 mkdir -p "${OUTPUT}/misc"
 BUILD=$(cat "${CWDD}/build/${PKGNAME}" 2>/dev/null || echo "1")
-PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}_${TAG}.${EXT}"
+PKG="${OUTPUT}/misc/${PKGNAME}-${VERSION}-${ARCH}-${BUILD}${TAG}.${EXT}"
 rm -f "${PKG}"
 makepkg -l y -c n "${PKG}"
 

@@ -170,7 +170,7 @@ for LINE in ${QUEUELINES}; do
     if [[ "${BUILD_ONLY_NOT_EXIST}" == "true" ]]; then
         if [ -d "${OUTPUT}/${MODULE}" ]; then
             BINPKG=$(find "${OUTPUT}/${MODULE}" -type f \
-                -name "${PKGNAME}-[0-9]*-${BUILD}_${TAG}.${EXT}")
+                -name "${PKGNAME}-[0-9]*-${BUILD}${TAG}.${EXT}")
             if [[ "x${BINPKG}" != "x" ]]; then
                 echo -e "${MAGENTA}Already exists: ${BROWN}${BINPKG}${CDEF}"
                 continue
@@ -278,7 +278,7 @@ for LINE in ${QUEUELINES}; do
     cd "${PKG}" || exit 1
     OUTPUTMOD="${OUTPUT}/${MODULE}"
     mkdir -p "${OUTPUTMOD}"
-    PKG="${OUTPUTMOD}/${PKGNAME}-${VERSION}-${PKGARCH}-${BUILD}_${TAG}.${EXT}"
+    PKG="${OUTPUTMOD}/${PKGNAME}-${VERSION}-${PKGARCH}-${BUILD}${TAG}.${EXT}"
     rm -f "${PKG}"
     makepkg -l y -c n "${PKG}"
 
