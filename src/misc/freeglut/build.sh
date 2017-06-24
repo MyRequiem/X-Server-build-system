@@ -37,23 +37,22 @@ tar xvf "${CWD}/${SOURCE}"
 cd "${PKGNAME}-${VERSION}" || exit 1
 . "${CWDD}"/additional-scripts/setperm.sh
 
-mkdir build
-cd build || exit 1
-cmake \
-    -DCMAKE_C_FLAGS:STRING="${SLKCFLAGS}" \
-    -DCMAKE_C_FLAGS_RELEASE:STRING="${SLKCFLAGS}" \
-    -DCMAKE_CXX_FLAGS:STRING="${SLKCFLAGS}" \
-    -DCMAKE_CXX_FLAGS_RELEASE:STRING="${SLKCFLAGS}" \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DMAN_INSTALL_DIR=/usr/man \
-    -DSYSCONF_INSTALL_DIR=/etc \
-    -DLIB_SUFFIX="${LIBDIRSUFFIX}" \
-    ..
+CFLAGS="${SLKCFLAGS}" \
+CXXFLAGS="${SLKCFLAGS}" \
+./configure \
+    --prefix=/usr \
+    --libdir="/usr/lib${LIBDIRSUFFIX}" \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --infodir=/usr/info \
+    --mandir=/usr/man \
+    --docdir="/usr/doc/${PKGNAME}-${MODULAR_PACKAGE_VERSION}" \
+    --with-udev-rules-dir=/lib/udev/rules.d \
+    --disable-static \
+    --build="${ARCH}-slackware-linux"
 
 make "${NUMJOBS}" || make || exit 1
 make install DESTDIR="${PKG}"
-cd ..
 
 . "${CWDD}"/additional-scripts/strip-binaries.sh
 . "${CWDD}"/additional-scripts/copydocs.sh
