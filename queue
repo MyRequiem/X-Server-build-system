@@ -153,6 +153,7 @@ app:xvinfo
 app:xwd
 app:xwininfo
 app:xwud
+app:xmessage
 
 ### data module
 data:xcursor-themes
