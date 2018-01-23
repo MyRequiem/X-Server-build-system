@@ -44,7 +44,6 @@ CFLAGS="${SLKCFLAGS}" \
     --mandir=/usr/man \
     --enable-udev \
     --disable-intel \
-    --disable-radeon \
     --build="${ARCH}"-slackware-linux
 
 make "${NUMJOBS}" || make || exit 1

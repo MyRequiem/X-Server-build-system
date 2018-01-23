@@ -55,7 +55,7 @@ CFLAGS="${SLKCFLAGS}" \
     --disable-xfake \
     --disable-ipv6 \
     --disable-xvfb \
-    --disable-glamor \
+    --enable-glamor \
     --disable-xwin \
     --disable-kdrive \
     --disable-listen-tcp \
