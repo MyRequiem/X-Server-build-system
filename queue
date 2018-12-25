@@ -154,6 +154,7 @@ app:xwd
 app:xwininfo
 app:xwud
 app:xmessage
+app:xcalc
 
 ### data module
 data:xcursor-themes
@@ -221,4 +222,4 @@ xserver:xorg-server
 ### driver module
 driver:xf86-input-evdev
 driver:xf86-video-nouveau
-driver:xf86-video-ati
+# driver:xf86-video-ati
