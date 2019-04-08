@@ -224,3 +224,5 @@ driver:xf86-input-evdev
 # driver:xf86-video-nouveau
 # driver:xf86-video-intel
 # driver:xf86-video-ati
+## Synaptics TouchPad driver
+# driver:xf86-input-synaptics

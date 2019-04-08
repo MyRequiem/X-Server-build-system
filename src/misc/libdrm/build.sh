@@ -43,7 +43,6 @@ CFLAGS="${SLKCFLAGS}" \
     --libdir=/usr/lib"${LIBDIRSUFFIX}" \
     --mandir=/usr/man \
     --enable-udev \
-    --disable-intel \
     --build="${ARCH}"-slackware-linux
 
 make "${NUMJOBS}" || make || exit 1

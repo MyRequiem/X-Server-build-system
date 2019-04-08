@@ -54,7 +54,7 @@ autoreconf -fi
 DRI_DRIVERS="i915,i965,nouveau,r200,radeon,swrast"
 # GALLIUM_DRIVERS="i915,nouveau,r300,r600,radeonsi,freedreno,svga,swrast,swr,\
 #     vc4,virgl,etnaviv,imx"
-GALLIUM_DRIVERS="i915,nouveau,r300,r600,radeonsi,svga,swrast"
+GALLIUM_DRIVERS="i915,nouveau,r300,r600,svga,swrast"
 # PLATFORMS="x11,drm,wayland,surfaceless"
 PLATFORMS="drm,x11"
 
