@@ -87,6 +87,7 @@ fi
 . "${CWD}"/settings.sh
 
 SRCDIR="src"
+
 # check exist source archives berore building packages
 # (for x11-skel package source code not needed)
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
@@ -96,10 +97,12 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             MISC=""
             [[ "$1" == "misc" ]] && MISC="/$2"
             ARCHDIR="${SRCDIR}/$1${MISC}"
+            SRCNAME="$2"
+            [[ "${SRCNAME}" == "sazanami-fonts-ttf" ]] && SRCNAME="sazanami"
             SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-                -name "$2-*${SRCEXT}")
+                -name "${SRCNAME}-*${SRCEXT}")
             if [[ "x${SOURCEARCH}" == "x" ]]; then
-                src_arch_not_found_mess "$2" "${ARCHDIR}"
+                src_arch_not_found_mess "${SRCNAME}" "${ARCHDIR}"
                 exit 1
             fi
         fi
@@ -112,10 +115,13 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                     MISC=""
                     [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                     ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
+                    SRCNAME=${PKGNAME}
+                    [[ "${SRCNAME}" == "sazanami-fonts-ttf" ]] && \
+                        SRCNAME="sazanami"
                     SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-                        -name "${PKGNAME}-*${SRCEXT}")
+                        -name "${SRCNAME}-*${SRCEXT}")
                     if [[ "x${SOURCEARCH}" == "x" ]]; then
-                        src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
+                        src_arch_not_found_mess "${SRCNAME}" "${ARCHDIR}"
                         exit 1
                     fi
                 fi
@@ -129,10 +135,12 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                 ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
+                SRCNAME=${PKGNAME}
+                [[ "${SRCNAME}" == "sazanami-fonts-ttf" ]] && SRCNAME="sazanami"
                 SOURCEARCH=$(find "${ARCHDIR}" -maxdepth 1 -type f \
-                    -name "${PKGNAME}-*${SRCEXT}")
+                    -name "${SRCNAME}-*${SRCEXT}")
                 if [[ "x${SOURCEARCH}" == "x" ]]; then
-                    src_arch_not_found_mess "${PKGNAME}" "${ARCHDIR}"
+                    src_arch_not_found_mess "${SRCNAME}" "${ARCHDIR}"
                     exit 1
                 fi
             fi

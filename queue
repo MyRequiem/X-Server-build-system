@@ -207,6 +207,7 @@ misc:x11-skel
 misc:xterm
 misc:liberation-fonts-ttf
 misc:dejavu-fonts-ttf
+misc:sazanami-fonts-ttf
 misc:mesa
 # required GL library (mesa package)
 app:xdriinfo
