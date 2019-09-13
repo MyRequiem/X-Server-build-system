@@ -5,9 +5,9 @@ PKGNAME="liberation-fonts-ttf"
 if [[ "${CHECK_PACKAGE_VERSION}" == "true" ]]; then
     # check latest release version
     echo -en "${GREY}Check ${CYAN}${PKGNAME}${GREY} latest release:${CDEF} "
-    DOWNLOAD="http://ftp.nsysu.edu.tw/FreeBSD/ports/local-distfiles/thierry/"
-    VERSION=$(wget -q -O - "${DOWNLOAD}" | grep "${PKGNAME}-1" | \
-        grep ".tar.gz" | cut -d \" -f 7 | cut -d - -f 4 | rev | \
+    DOWNLOAD="https://releases.pagure.org/liberation-fonts/"
+    VERSION=$(wget -q -O - "${DOWNLOAD}" | /bin/grep "${PKGNAME}-1" | \
+        /bin/grep ".tar.gz" | cut -d \" -f 8 | cut -d - -f 4 | rev | \
         cut -d . -f 3- | rev | sort -V | tail -n 1)
     SOURCE="${PKGNAME}-${VERSION}.tar.gz"
     echo "${VERSION}"
