@@ -192,9 +192,11 @@ font:font-daewoo-misc
 font:font-isas-misc
 font:font-jis-misc
 font:font-mutt-misc
+font:font-schumacher-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
+font:font-screen-cyrillic
 # TTF/OTF
 font:font-bh-ttf
 font:font-misc-ethiopic
