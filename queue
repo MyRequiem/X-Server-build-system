@@ -193,10 +193,13 @@ font:font-isas-misc
 font:font-jis-misc
 font:font-mutt-misc
 font:font-schumacher-misc
+font:font-sony-misc
+font:font-sun-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
 font:font-screen-cyrillic
+font:font-winitzki-cyrillic
 # TTF/OTF
 font:font-bh-ttf
 font:font-misc-ethiopic
