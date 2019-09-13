@@ -211,6 +211,7 @@ misc:sazanami-fonts-ttf
 misc:sinhala_lklug-font-ttf
 misc:tibmachuni-font-ttf
 misc:ttf-indic-fonts
+misc:wqy-zenhei-font-ttf
 misc:mesa
 # required GL library (mesa package)
 app:xdriinfo

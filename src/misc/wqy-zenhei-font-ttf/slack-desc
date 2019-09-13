@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                   |-----handy-ruler-------------------------------------------|
+wqy-zenhei-font-ttf: wqy-zenhei-font-ttf (Wen Quan Yi Zen Hei CJK Font)
+wqy-zenhei-font-ttf:
+wqy-zenhei-font-ttf: The WenQuanYi Zen Hei font is a Chinese (or CJK) outline
+wqy-zenhei-font-ttf: font with Hei Ti style (a sans-serif style) Hanzi glyphs.
+wqy-zenhei-font-ttf: This font is developed for general purpose use of Chinese
+wqy-zenhei-font-ttf: for formating, printing and on-screen display. This font is
+wqy-zenhei-font-ttf: also targeted at platform independence and the utility for
+wqy-zenhei-font-ttf: document exchange between various operating systems.
+wqy-zenhei-font-ttf:
+wqy-zenhei-font-ttf: home: http://wqy.sourceforge.net/en/
+wqy-zenhei-font-ttf:
