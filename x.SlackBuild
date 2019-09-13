@@ -89,11 +89,11 @@ fi
 SRCDIR="src"
 
 # check exist source archives berore building packages
-# (for x11-skel package source code not needed)
+# (for packages x11-skel, sinhala_lklug-font-ttf source code not needed)
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
     SRCEXT=".tar.?z*"
     if [[ $# -eq 2 ]]; then
-        if [[ "$2" != "x11-skel" ]]; then
+        if [[ "$2" != "x11-skel" && "$2" != "sinhala_lklug-font-ttf" ]]; then
             MISC=""
             [[ "$1" == "misc" ]] && MISC="/$2"
             ARCHDIR="${SRCDIR}/$1${MISC}"
@@ -111,7 +111,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
             if [[ "${MODULE}" == "$1" ]]; then
                 PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
-                if [[ "${PKGNAME}" != "x11-skel" ]]; then
+                if [[ "${PKGNAME}" != "x11-skel" && \
+                        "${PKGNAME}" != "sinhala_lklug-font-ttf" ]]; then
                     MISC=""
                     [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                     ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
@@ -131,7 +132,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
         for LINE in ${QUEUELINES}; do
             MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
             PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
-            if [[ "${PKGNAME}" != "x11-skel" ]]; then
+            if [[ "${PKGNAME}" != "x11-skel" && \
+                    "${PKGNAME}" != "sinhala_lklug-font-ttf" ]]; then
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                 ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
