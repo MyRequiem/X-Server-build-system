@@ -92,6 +92,7 @@ SRCDIR="src"
 # (for packages:
 #   x11-skel
 #   sinhala_lklug-font-ttf
+#   ttf-indic-fonts
 #   tibmachuni-font-ttf
 # source code not needed)
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
@@ -99,6 +100,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
     if [[ $# -eq 2 ]]; then
         if [[ "$2" != "x11-skel" && \
                 "$2" != "sinhala_lklug-font-ttf" && \
+                "$2" != "ttf-indic-fonts" && \
                 "$2" != "tibmachuni-font-ttf" ]]; then
             MISC=""
             [[ "$1" == "misc" ]] && MISC="/$2"
@@ -119,6 +121,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
                 PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
                 if [[ "${PKGNAME}" != "x11-skel" && \
                         "${PKGNAME}" != "sinhala_lklug-font-ttf" && \
+                        "${PKGNAME}" != "ttf-indic-fonts" && \
                         "${PKGNAME}" != "tibmachuni-font-ttf" ]]; then
                     MISC=""
                     [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
@@ -141,6 +144,7 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
             if [[ "${PKGNAME}" != "x11-skel" && \
                     "${PKGNAME}" != "sinhala_lklug-font-ttf" && \
+                    "${PKGNAME}" != "ttf-indic-fonts" && \
                     "${PKGNAME}" != "tibmachuni-font-ttf" ]]; then
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
