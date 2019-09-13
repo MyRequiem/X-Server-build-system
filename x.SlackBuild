@@ -89,11 +89,17 @@ fi
 SRCDIR="src"
 
 # check exist source archives berore building packages
-# (for packages x11-skel, sinhala_lklug-font-ttf source code not needed)
+# (for packages:
+#   x11-skel
+#   sinhala_lklug-font-ttf
+#   tibmachuni-font-ttf
+# source code not needed)
 if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
     SRCEXT=".tar.?z*"
     if [[ $# -eq 2 ]]; then
-        if [[ "$2" != "x11-skel" && "$2" != "sinhala_lklug-font-ttf" ]]; then
+        if [[ "$2" != "x11-skel" && \
+                "$2" != "sinhala_lklug-font-ttf" && \
+                "$2" != "tibmachuni-font-ttf" ]]; then
             MISC=""
             [[ "$1" == "misc" ]] && MISC="/$2"
             ARCHDIR="${SRCDIR}/$1${MISC}"
@@ -112,7 +118,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             if [[ "${MODULE}" == "$1" ]]; then
                 PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
                 if [[ "${PKGNAME}" != "x11-skel" && \
-                        "${PKGNAME}" != "sinhala_lklug-font-ttf" ]]; then
+                        "${PKGNAME}" != "sinhala_lklug-font-ttf" && \
+                        "${PKGNAME}" != "tibmachuni-font-ttf" ]]; then
                     MISC=""
                     [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                     ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
@@ -133,7 +140,8 @@ if [[ "${CHECK_PACKAGE_VERSION}" != "true" ]]; then
             MODULE=$(echo "${LINE}" | cut -d ":" -f 1)
             PKGNAME=$(echo "${LINE}" | cut -d ":" -f 2)
             if [[ "${PKGNAME}" != "x11-skel" && \
-                    "${PKGNAME}" != "sinhala_lklug-font-ttf" ]]; then
+                    "${PKGNAME}" != "sinhala_lklug-font-ttf" && \
+                    "${PKGNAME}" != "tibmachuni-font-ttf" ]]; then
                 MISC=""
                 [[ "${MODULE}" == "misc" ]] && MISC="/${PKGNAME}"
                 ARCHDIR="${SRCDIR}/${MODULE}${MISC}"
