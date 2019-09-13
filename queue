@@ -191,12 +191,14 @@ font:font-arabic-misc
 font:font-daewoo-misc
 font:font-isas-misc
 font:font-jis-misc
+font:font-mutt-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
 # TTF/OTF
 font:font-bh-ttf
 font:font-misc-ethiopic
+font:font-misc-meltho
 # Speedo
 font:font-bitstream-speedo
 

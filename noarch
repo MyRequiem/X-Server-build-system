@@ -31,7 +31,9 @@ font-jis-misc
 font-micro-misc
 font-misc-cyrillic
 font-misc-ethiopic
+font-misc-meltho
 font-misc-misc
+font-mutt-misc
 font-xfree86-type1
 fontcacheproto
 fontsproto
