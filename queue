@@ -190,6 +190,7 @@ font:font-misc-misc
 font:font-arabic-misc
 font:font-daewoo-misc
 font:font-isas-misc
+font:font-jis-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
