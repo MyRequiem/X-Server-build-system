@@ -164,18 +164,18 @@ data:xkeyboard-config
 font:encodings
 font:font-alias
 font:font-util
-# 75dpi
-font:font-adobe-75dpi
-font:font-adobe-utopia-75dpi
-font:font-bh-75dpi
-font:font-bh-lucidatypewriter-75dpi
-font:font-bitstream-75dpi
 # 100dpi
 font:font-adobe-100dpi
 font:font-adobe-utopia-100dpi
 font:font-bh-100dpi
 font:font-bh-lucidatypewriter-100dpi
 font:font-bitstream-100dpi
+# 75dpi
+font:font-adobe-75dpi
+font:font-adobe-utopia-75dpi
+font:font-bh-75dpi
+font:font-bh-lucidatypewriter-75dpi
+font:font-bitstream-75dpi
 # Type1
 font:font-adobe-utopia-type1
 font:font-bh-type1
@@ -187,6 +187,9 @@ font:font-micro-misc
 font:font-cursor-misc
 font:font-dec-misc
 font:font-misc-misc
+font:font-arabic-misc
+font:font-daewoo-misc
+font:font-isas-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic

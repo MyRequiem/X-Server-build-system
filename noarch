@@ -10,6 +10,7 @@ font-adobe-utopia-100dpi
 font-adobe-utopia-75dpi
 font-adobe-utopia-type1
 font-alias
+font-arabic-misc
 font-bh-100dpi
 font-bh-75dpi
 font-bh-lucidatypewriter-100dpi
@@ -22,8 +23,10 @@ font-bitstream-speedo
 font-bitstream-type1
 font-cronyx-cyrillic
 font-cursor-misc
+font-daewoo-misc
 font-dec-misc
 font-ibm-type1
+font-isas-misc
 font-micro-misc
 font-misc-cyrillic
 font-misc-misc
