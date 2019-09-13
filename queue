@@ -194,8 +194,9 @@ font:font-jis-misc
 # cyrillic
 font:font-misc-cyrillic
 font:font-cronyx-cyrillic
-# TTF
+# TTF/OTF
 font:font-bh-ttf
+font:font-misc-ethiopic
 # Speedo
 font:font-bitstream-speedo
 
